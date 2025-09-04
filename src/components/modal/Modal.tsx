@@ -4,7 +4,7 @@ export default function Modal(){
   const [open, setOpen] = useState(false) // por defecto cerrado
 
   useEffect(() => {
-    const onEsc = (e)=>{ if(e.key==='Escape' && open) setOpen(false) }
+    const onEsc = (e: KeyboardEvent)=>{ if(e.key==='Escape' && open) setOpen(false) }
     document.addEventListener('keydown', onEsc)
     return () => document.removeEventListener('keydown', onEsc)
   }, [open])
@@ -23,5 +23,6 @@ export default function Modal(){
     </div>
   )
 }
-const backdropS = {position:'fixed', inset:0, background:'rgba(0,0,0,.5)', backdropFilter:'blur(2px)', zIndex:1500}
-const modalS = {position:'fixed', inset:'50% auto auto 50%', transform:'translate(-50%,-50%)', maxWidth:520, background:'var(--card)', border:'1px solid var(--line)', borderRadius:'.9rem', padding:'1rem', boxShadow:'0 20px 40px rgba(0,0,0,.25)', zIndex:1501}
+
+const backdropS = {position:'fixed' as const, inset:0, background:'rgba(0,0,0,.5)', backdropFilter:'blur(2px)', zIndex:1500}
+const modalS = {position:'fixed' as const, inset:'50% auto auto 50%', transform:'translate(-50%,-50%)', maxWidth:520, background:'var(--card)', border:'1px solid var(--line)', borderRadius:'.9rem', padding:'1rem', boxShadow:'0 20px 40px rgba(0,0,0,.25)', zIndex:1501}
