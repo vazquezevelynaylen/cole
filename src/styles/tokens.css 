@@ -13,9 +13,4 @@
   --info:#2563eb; --info-bg:#dbeafe;
   --warn:#b45309; --warn-bg:#fef3c7;
 }
-:root[data-theme="dark"]{
-  --bg:#0f1115; --fg:#e5e7eb; --muted:#9ca3af;
-  --brand:#2b2a28; --accent:#d4b483;
-  --card:#17181c; --line:#2a2d33;
-}
-:root { color-scheme: light dark; }
+:root{ color-scheme: light dark; }
