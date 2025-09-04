@@ -1,28 +1,35 @@
-import { useEffect, useState } from 'react'
+import { ReactNode, useEffect } from 'react';
+import './modal.css';
 
-export default function Modal(){
-  const [open, setOpen] = useState(false) // por defecto cerrado
-
+export default function Modal({
+  open,
+  onClose,
+  title,
+  children
+}: {
+  open: boolean;
+  onClose: () => void;
+  title: string;
+  children: ReactNode;
+}) {
   useEffect(() => {
-    const onEsc = (e: KeyboardEvent)=>{ if(e.key==='Escape' && open) setOpen(false) }
-    document.addEventListener('keydown', onEsc)
-    return () => document.removeEventListener('keydown', onEsc)
-  }, [open])
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape' && open) onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open, onClose]);
 
+  if (!open) return null;
   return (
-    <div id="modal-aviso" hidden={!open}>
-      <div className="modal-backdrop" style={backdropS} onClick={()=>setOpen(false)}></div>
-      <div className="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style={modalS}>
-        <h3 id="modal-title">⚠️ Aviso urgente</h3>
-        <p id="modal-msg">Suspensión de clases por corte de luz — Turno mañana.</p>
-        <div style={{display:'flex', gap:'.5rem', justifyContent:'flex-end'}}>
-          <button id="modal-cancel" type="button" onClick={()=>setOpen(false)}>Cerrar</button>
-          <button id="modal-ok" type="button" autoFocus onClick={()=>setOpen(false)}>Entendido</button>
+    <div className="modal-root" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div className="modal-backdrop" onClick={onClose} />
+      <div className="modal">
+        <h3 id="modal-title">{title}</h3>
+        <div>{children}</div>
+        <div className="modal-actions">
+          <button type="button" onClick={onClose}>Cerrar</button>
+          <button type="button" autoFocus onClick={onClose}>Entendido</button>
         </div>
       </div>
     </div>
-  )
+  );
 }
-
-const backdropS = {position:'fixed' as const, inset:0, background:'rgba(0,0,0,.5)', backdropFilter:'blur(2px)', zIndex:1500}
-const modalS = {position:'fixed' as const, inset:'50% auto auto 50%', transform:'translate(-50%,-50%)', maxWidth:520, background:'var(--card)', border:'1px solid var(--line)', borderRadius:'.9rem', padding:'1rem', boxShadow:'0 20px 40px rgba(0,0,0,.25)', zIndex:1501}
