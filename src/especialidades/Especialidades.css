@@ -1,0 +1,12 @@
+.especialidades{
+  width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;
+  background:#fff; padding:125px 20px; text-align:center;
+}
+.especialidades .wrap{
+  display:grid; gap:20px; grid-template-columns:repeat(2, minmax(0,1fr));
+  max-width:1200px; margin:0 auto; padding:0 40px;
+}
+.especialidad figure{ margin:0 }
+.especialidad-img{ width:100%; height:auto; display:block; border-radius:12px; object-fit:cover; aspect-ratio:3/2 }
+.especialidad h2{ margin-top:12px; font-size:1.5rem; color:#000 }
+@media (max-width:800px){ .especialidades .wrap{ grid-template-columns:1fr } }
