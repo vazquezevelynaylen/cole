@@ -1,25 +1,32 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App'
-import './styles/tokens.css'
-import './styles/global.css'
-import './styles/components.css'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './App';
+import Home from './routes/Home';
+import NotFound from './routes/NotFound';
 
-// Tema inicial + alto contraste (igual que tu HTML original)
-(function initTheme() {
-  const saved = localStorage.getItem('theme')
-  const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches
-  const theme = saved || (prefersDark ? 'dark' : 'light')
-  document.documentElement.dataset.theme = theme
+import '@styles/tokens.css';
+import '@styles/dark.css';
+import '@styles/globals.css';
+import '@styles/utilities.css';
 
-  const HC_KEY = 'hc-enabled'
-  const on = localStorage.getItem(HC_KEY) === '1'
-  document.documentElement.classList.toggle('high-contrast', on)
-})()
+import { registerPwa } from '@lib/pwa';
 
-const el = document.getElementById('root')!
-createRoot(el).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <NotFound />,
+    children: [
+      { index: true, element: <Home /> }
+    ]
+  }
+]);
+
+registerPwa();
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
+);
