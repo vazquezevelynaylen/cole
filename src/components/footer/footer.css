@@ -1,0 +1,7 @@
+.site-footer{ padding:24px; border-top:1px solid var(--line); opacity:.95; margin-top:24px; text-align:center }
+.site-footer .legal{ width:100%; display:flex; justify-content:center; border-bottom:1px solid var(--line); padding-bottom:.75rem; margin-bottom:1rem }
+.site-footer .legal nav{ display:flex; justify-content:center; flex-wrap:wrap; gap:1rem }
+.site-footer .legal a{ text-decoration:none; font-weight:600; color:inherit; opacity:.95 }
+.site-footer .legal a:hover{ color:var(--accent) }
+.site-footer address{ font-style:normal; margin:.25rem 0 .4rem; text-align:center }
+.site-footer small{ display:block; margin-top:.4rem; opacity:.75 }
