@@ -1,4 +1,6 @@
-export default function Footer(){
+import './footer.css';
+
+export default function Footer() {
   return (
     <footer className="site-footer" id="contacto">
       <div className="legal">
@@ -14,5 +16,5 @@ export default function Footer(){
       </address>
       <small>&copy; 2025 E.T. 20 D.E. 20 "Carolina Muzilli"</small>
     </footer>
-  )
+  );
 }
