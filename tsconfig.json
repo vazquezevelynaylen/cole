@@ -1,15 +1,634 @@
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@routes/*": ["src/routes/*"],
-      "@styles/*": ["src/styles/*"],
-      "@features/*": ["src/features/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@lib/*": ["src/lib/*"],
-      "@config/*": ["src/config/*"],
-      "@api/*": ["src/api/*"]
-    }
-  }
-}
+TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+8           <a href="/privacidad">Política de privacidad</a>
+            ~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/footer/ Footer.tsx:9:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+9           <a href="/accesibilidad">Accesibilidad</a>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/footer/ Footer.tsx:10:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+10           <a href="/proteccion-datos">Protección de datos de estudiantes</a>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/footer/ Footer.tsx:13:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+13       <address>
+         ~~~~~~~~~
+
+src/components/footer/ Footer.tsx:15:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+15         <a href="mailto:contacto@colegio.edu.ar">contacto@colegio.edu.ar</a>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/footer/ Footer.tsx:17:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+17       <small>&copy; 2025 E.T. 20 D.E. 20 "Carolina Muzilli"</small>
+         ~~~~~~~
+
+src/components/header/Header.tsx:90:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+90     <>
+       ~~
+
+src/components/header/Header.tsx:91:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+91       <div className="nav-backdrop" hidden></div>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:92:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+92       <header ref={headerRef}>
+         ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:93:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+93         <h1>E.T. 20 D.E. 20 "Carolina Muzilli"</h1>
+           ~~~~
+
+src/components/header/Header.tsx:95:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+95         <button id="nav-toggle" className="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Abrir menú">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:96:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+96           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:97:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+97             <path d="M3 6h18M3 12h18M3 18h18"/>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:101:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+101         <nav aria-label="Navegación principal" id="primary-menu">
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:102:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+102           <ul className="menu">
+              ~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:103:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+103             <li><a href="#top" id="link-inicio">Inicio</a></li>
+                ~~~~
+
+src/components/header/Header.tsx:103:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+103             <li><a href="#top" id="link-inicio">Inicio</a></li>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:105:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+105             <li className="has-submenu">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:106:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+106               <button aria-haspopup="true" aria-expanded={false}>Institucional</button>
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:107:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+107               <ul className="submenu" role="menu">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:108:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+108                 <li><a href="#institucional">Presentación</a></li>
+                    ~~~~
+
+src/components/header/Header.tsx:108:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+108                 <li><a href="#institucional">Presentación</a></li>
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:109:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+109                 <li><a href="#institucional">Autoridades</a></li>
+                    ~~~~
+
+src/components/header/Header.tsx:109:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+109                 <li><a href="#institucional">Autoridades</a></li>
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:110:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+110                 <li><a href="#institucional">Ubicación &amp; 360°</a></li>
+                    ~~~~
+
+src/components/header/Header.tsx:110:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+110                 <li><a href="#institucional">Ubicación &amp; 360°</a></li>
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:114:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+114             <li className="has-submenu">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:115:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+115               <button aria-haspopup="true" aria-expanded={false}>Especialidades</button>
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:116:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+116               <ul className="submenu" role="menu">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:117:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+117                 <li><a href="#especialidades">TICs</a></li>
+                    ~~~~
+
+src/components/header/Header.tsx:117:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+117                 <li><a href="#especialidades">TICs</a></li>
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:118:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+118                 <li><a href="#especialidades">Multimedia</a></li>
+                    ~~~~
+
+src/components/header/Header.tsx:118:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+118                 <li><a href="#especialidades">Multimedia</a></li>
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:119:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+119                 <li><a href="#academico">Calendario</a></li>
+                    ~~~~
+
+src/components/header/Header.tsx:119:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+119                 <li><a href="#academico">Calendario</a></li>
+                        ~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:123:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+123             <li className="has-submenu">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:124:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+124               <button aria-haspopup="true" aria-expanded={false}>Académico</button>
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:125:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+125               <ul className="submenu" role="menu">
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:126:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+126                 <li><a href="#comunicados">Avisos</a></li>
+                    ~~~~
+
+src/components/header/Header.tsx:126:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+126                 <li><a href="#comunicados">Avisos</a></li>
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:127:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+127                 <li><a href="#comunicados">Exámenes</a></li>
+                    ~~~~
+
+src/components/header/Header.tsx:127:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+127                 <li><a href="#comunicados">Exámenes</a></li>
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:128:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+128                 <li><a href="#comunicados">Boletines</a></li>
+                    ~~~~
+
+src/components/header/Header.tsx:128:21 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+128                 <li><a href="#comunicados">Boletines</a></li>
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:132:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+132             <li><a href="#proyectos">Proyectos</a></li>
+                ~~~~
+
+src/components/header/Header.tsx:132:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+132             <li><a href="#proyectos">Proyectos</a></li>
+                    ~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:133:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+133             <li><a href="#novedades">Novedades</a></li>
+                ~~~~
+
+src/components/header/Header.tsx:133:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+133             <li><a href="#novedades">Novedades</a></li>
+                    ~~~~~~~~~~~~~~~~~~~~~
+
+src/components/header/Header.tsx:134:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+134             <li><a href="#contacto">Contacto</a></li>
+                ~~~~
+
+src/components/header/Header.tsx:134:17 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+134             <li><a href="#contacto">Contacto</a></li>
+                    ~~~~~~~~~~~~~~~~~~~~
+
+src/components/hero/Hero.tsx:5:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+5     <section className="hero" id="top" aria-label="Portada">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/hero/Hero.tsx:6:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+6       <div className="hero-inner">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/hero/Hero.tsx:7:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+7         <h2>Formación técnica para el futuro</h2>
+          ~~~~
+
+src/components/hero/Hero.tsx:8:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+8         <p>Especialidades en TICs y Multimedia con proyectos reales y vínculos con la comunidad.</p>
+          ~~~
+
+src/components/hero/Hero.tsx:9:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+9         <div className="cta">
+          ~~~~~~~~~~~~~~~~~~~~~
+
+src/components/hero/Hero.tsx:10:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+10           <a className="btn btn-primary" href="#especialidades">Conocer especialidades</a>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/hero/Hero.tsx:11:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+11           <a className="btn" href="#institucional">Visita 360°</a>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/modal/Modal.tsx:23:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+23     <div className="modal-root" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/modal/Modal.tsx:24:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+24       <div className="modal-backdrop" onClick={onClose} />
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/modal/Modal.tsx:25:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+25       <div className="modal">
+         ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/modal/Modal.tsx:26:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+26         <h3 id="modal-title">{title}</h3>
+           ~~~~~~~~~~~~~~~~~~~~~
+
+src/components/modal/Modal.tsx:27:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+27         <div>{children}</div>
+           ~~~~~
+
+src/components/modal/Modal.tsx:28:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+28         <div className="modal-actions">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/modal/Modal.tsx:29:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+29           <button type="button" onClick={onClose}>Cerrar</button>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/components/modal/Modal.tsx:30:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+30           <button type="button" autoFocus onClick={onClose}>Entendido</button>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/especialidades/Especialidades.tsx:5:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+5     <section className="especialidades" id="especialidades" aria-labelledby="ttl-especialidades">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/especialidades/Especialidades.tsx:6:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+6       <div className="wrap">
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+src/especialidades/Especialidades.tsx:7:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+7         <h2 id="ttl-especialidades" className="visually-hidden">Especialidades</h2>
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/especialidades/Especialidades.tsx:9:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+9         <article className="especialidad">
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/especialidades/Especialidades.tsx:10:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+10           <figure>
+             ~~~~~~~~
+
+src/especialidades/Especialidades.tsx:11:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+11             <img src="/img/aulacompu1.jpg" alt="Laboratorio de TICs" className="especialidad-img" width={1200} height={800} loading="lazy" />
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/especialidades/Especialidades.tsx:12:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+12             <figcaption className="visually-hidden">Laboratorio TICs</figcaption>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/especialidades/Especialidades.tsx:14:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+14           <h2>TIC</h2>
+             ~~~~
+
+src/especialidades/Especialidades.tsx:15:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+15           <p>Programación, redes y sistemas. Proyectos integradores y prácticas en laboratorio.</p>
+             ~~~
+
+src/especialidades/Especialidades.tsx:18:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+18         <article className="especialidad">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/especialidades/Especialidades.tsx:19:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+19           <figure>
+             ~~~~~~~~
+
+src/especialidades/Especialidades.tsx:20:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+20             <img src="/img/multi1.jpg" alt="Producciones de Multimedia" className="especialidad-img" width={1200} height={800} loading="lazy" />
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/especialidades/Especialidades.tsx:21:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+21             <figcaption className="visually-hidden">Área Multimedia</figcaption>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/especialidades/Especialidades.tsx:23:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+23           <h2>Multimedia</h2>
+             ~~~~
+
+src/especialidades/Especialidades.tsx:24:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+24           <p>Diseño, animación y edición. Producciones audiovisuales y comunicación digital.</p>
+             ~~~
+
+src/main.tsx:5:17 - error TS6142: Module './App' was resolved to '/home/project/src/App.tsx', but '--jsx' is not set.
+
+5 import App from './App';
+                  ~~~~~~~
+
+src/main.tsx:10:3 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+10   <StrictMode>
+     ~~~~~~~~~~~~
+
+src/main.tsx:11:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+11     <BrowserRouter>
+       ~~~~~~~~~~~~~~~
+
+src/main.tsx:12:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+12       <App />
+         ~~~~~~~
+
+src/routes/Home.tsx:1:20 - error TS6142: Module '@components/header/Header' was resolved to '/home/project/src/components/header/Header.tsx', but '--jsx' is not set.
+
+1 import Header from '@components/header/Header'
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:2:20 - error TS2307: Cannot find module '@components/nav/Subnav' or its corresponding type declarations.
+
+2 import Subnav from '@components/nav/Subnav'
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:3:18 - error TS6142: Module '@components/hero/Hero' was resolved to '/home/project/src/components/hero/Hero.tsx', but '--jsx' is not set.
+
+3 import Hero from '@components/hero/Hero'
+                   ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:4:28 - error TS2307: Cannot find module '@components/especialidades/Especialidades' or its corresponding type declarations.
+
+4 import Especialidades from '@components/especialidades/Especialidades'
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:5:30 - error TS6142: Module '@components/comunicados/ComunicadosTable' was resolved to '/home/project/src/components/comunicados/ComunicadosTable.tsx', but '--jsx' is not set.
+
+5 import ComunicadosTable from '@components/comunicados/ComunicadosTable'
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:6:21 - error TS6142: Module '@components/comunicados/Filtros' was resolved to '/home/project/src/components/comunicados/Filtros.tsx', but '--jsx' is not set.
+
+6 import Filtros from '@components/comunicados/Filtros'
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:7:26 - error TS6142: Module '@components/a11y/A11yControls' was resolved to '/home/project/src/components/a11y/A11yControls.tsx', but '--jsx' is not set.
+
+7 import A11yControls from '@components/a11y/A11yControls'
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:8:20 - error TS2307: Cannot find module '@components/footer/Footer' or its corresponding type declarations.
+
+8 import Footer from '@components/footer/Footer'
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:20:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+20     <>
+       ~~
+
+src/routes/Home.tsx:21:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+21       <Header />
+         ~~~~~~~~~~
+
+src/routes/Home.tsx:22:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+22       <Subnav />
+         ~~~~~~~~~~
+
+src/routes/Home.tsx:23:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+23       <main id="contenido" tabIndex={-1}>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:24:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+24         <Hero />
+           ~~~~~~~~
+
+src/routes/Home.tsx:25:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+25         <Especialidades />
+           ~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:26:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+26         <section id="comunicados" aria-labelledby="ttl-comunicados">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:27:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+27           <h2 id="ttl-comunicados">Comunicados</h2>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:28:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+28           <div className="comunicados-wrap" aria-label="Listado completo de comunicados">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:29:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+29             <div className="com-head">
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:30:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+30               <h3 className="com-subtitle">Todos los comunicados</h3>
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:31:15 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+31               <Filtros />
+                 ~~~~~~~~~~~
+
+src/routes/Home.tsx:31:16 - error TS2739: Type '{}' is missing the following properties from type '{ value: Tag; onChange: (v: Tag) => void; }': value, onChange
+
+31               <Filtros />
+                  ~~~~~~~
+
+src/routes/Home.tsx:33:13 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+33             <ComunicadosTable />
+               ~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:37:9 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+37         <section id="novedades" style={{ minHeight: 300, padding: '40px 16px' }}>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/Home.tsx:38:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+38           <h2>Novedades</h2>
+             ~~~~
+
+src/routes/Home.tsx:39:11 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+39           <p>Próximamente…</p>
+             ~~~
+
+src/routes/Home.tsx:42:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+42       <Footer />
+         ~~~~~~~~~~
+
+src/routes/Home.tsx:43:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+43       <A11yControls />
+         ~~~~~~~~~~~~~~~~
+
+src/routes/NotFound.tsx:5:5 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+5     <main style={{ padding: 24 }}>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routes/NotFound.tsx:6:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+6       <h1>Página no encontrada</h1>
+        ~~~~
+
+src/routes/NotFound.tsx:7:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+7       <p>La ruta solicitada no existe.</p>
+        ~~~
+
+src/routes/NotFound.tsx:8:7 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+8       <p><Link to="/">Volver al inicio</Link></p>
+        ~~~
+
+src/routes/NotFound.tsx:8:10 - error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+
+8       <p><Link to="/">Volver al inicio</Link></p>
+           ~~~~~~~~~~~~~
+
+vite.config.ts:2:19 - error TS2307: Cannot find module '@vitejs/plugin-react' or its corresponding type declarations.
+  There are types at '/home/project/node_modules/@vitejs/plugin-react/dist/index.d.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+
+2 import react from '@vitejs/plugin-react';
+                    ~~~~~~~~~~~~~~~~~~~~~~
+
+vite.config.ts:3:18 - error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+
+3 import path from 'node:path';
+                   ~~~~~~~~~~~
+
+vite.config.ts:9:35 - error TS2304: Cannot find name '__dirname'.
+
+9       '@components': path.resolve(__dirname, 'src/components'),
+                                    ~~~~~~~~~
+
+vite.config.ts:10:31 - error TS2304: Cannot find name '__dirname'.
+
+10       '@routes': path.resolve(__dirname, 'src/routes'),
+                                 ~~~~~~~~~
+
+vite.config.ts:11:31 - error TS2304: Cannot find name '__dirname'.
+
+11       '@styles': path.resolve(__dirname, 'src/styles'),
+                                 ~~~~~~~~~
+
+vite.config.ts:12:33 - error TS2304: Cannot find name '__dirname'.
+
+12       '@features': path.resolve(__dirname, 'src/features'),
+                                   ~~~~~~~~~
+
+vite.config.ts:13:30 - error TS2304: Cannot find name '__dirname'.
+
+13       '@hooks': path.resolve(__dirname, 'src/hooks'),
+                                ~~~~~~~~~
+
+vite.config.ts:14:28 - error TS2304: Cannot find name '__dirname'.
+
+14       '@lib': path.resolve(__dirname, 'src/lib'),
+                              ~~~~~~~~~
+
+vite.config.ts:15:31 - error TS2304: Cannot find name '__dirname'.
+
+15       '@config': path.resolve(__dirname, 'src/config'),
+                                 ~~~~~~~~~
+
+vite.config.ts:16:28 - error TS2304: Cannot find name '__dirname'.
+
+16       '@api': path.resolve(__dirname, 'src/api'),
+                              ~~~~~~~~~
+
+
+Found 430 errors.
+

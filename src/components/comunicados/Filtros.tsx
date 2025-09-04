@@ -1,31 +1,30 @@
-type Tag = 'urgente' | 'importante' | 'info' | 'all';
+import { Tag } from '@features/comunicados/types'
 
-export default function Filtros({
-  value,
-  onChange
-}: {
-  value: Tag;
-  onChange: (v: Tag) => void;
-}) {
-  const items: {label: string; val: Tag}[] = [
-    { label: 'Todos', val: 'all' },
-    { label: 'Urgentes', val: 'urgente' },
-    { label: 'Importantes', val: 'importante' },
-    { label: 'Informativos', val: 'info' }
-  ];
+type Props = {
+  value: Tag
+  onChange: (v: Tag) => void
+}
+
+const Filtros = ({ value, onChange }: Props) => {
+  const btn = (t: Tag, label: string) => (
+    <button
+      data-filter={t}
+      className={value === t ? 'is-active' : ''}
+      onClick={() => onChange(t)}
+      type="button"
+    >
+      {label}
+    </button>
+  )
+
   return (
     <div className="com-filtros" role="group" aria-label="Filtrar comunicados">
-      {items.map(it => (
-        <button
-          key={it.val}
-          data-filter={it.val}
-          className={value === it.val ? 'is-active' : ''}
-          onClick={() => onChange(it.val)}
-          type="button"
-        >
-          {it.label}
-        </button>
-      ))}
+      {btn('all', 'Todos')}
+      {btn('urgente', 'Urgentes')}
+      {btn('importante', 'Importantes')}
+      {btn('info', 'Informativos')}
     </div>
-  );
+  )
 }
+
+export default Filtros

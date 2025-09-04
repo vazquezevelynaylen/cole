@@ -1,17 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = Filtros;
-function Filtros(_a) {
+var Filtros = function (_a) {
     var value = _a.value, onChange = _a.onChange;
-    var items = [
-        { label: 'Todos', val: 'all' },
-        { label: 'Urgentes', val: 'urgente' },
-        { label: 'Importantes', val: 'importante' },
-        { label: 'Informativos', val: 'info' }
-    ];
+    var btn = function (t, label) { return (<button data-filter={t} className={value === t ? 'is-active' : ''} onClick={function () { return onChange(t); }} type="button">
+      {label}
+    </button>); };
     return (<div className="com-filtros" role="group" aria-label="Filtrar comunicados">
-      {items.map(function (it) { return (<button key={it.val} data-filter={it.val} className={value === it.val ? 'is-active' : ''} onClick={function () { return onChange(it.val); }} type="button">
-          {it.label}
-        </button>); })}
+      {btn('all', 'Todos')}
+      {btn('urgente', 'Urgentes')}
+      {btn('importante', 'Importantes')}
+      {btn('info', 'Informativos')}
     </div>);
-}
+};
+exports.default = Filtros;
