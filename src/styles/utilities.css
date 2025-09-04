@@ -1,0 +1,9 @@
+.btn{ display:inline-block; padding:.8em 1.1em; border-radius:999px; border:1px solid var(--accent); text-decoration:none; transition:transform .12s ease, box-shadow .12s ease; color:#fff }
+.btn:hover{ transform:translateY(-1px); box-shadow:0 10px 18px rgba(0,0,0,.15) }
+.btn-primary{ background:var(--accent); color:#1f2937; font-weight:800 }
+.badge{ display:inline-block; font-weight:600; line-height:1; padding:.35rem .55rem; border-radius:999px; border:1px solid transparent; font-size:.85rem; white-space:nowrap }
+
+/* Alto contraste */
+.high-contrast{
+  filter: contrast(115%);
+}
