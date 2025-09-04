@@ -1,0 +1,6 @@
+.a11y-controls{
+  position:fixed; right:12px; bottom:12px; display:flex; gap:.4rem; z-index:1200
+}
+.a11y-controls button{
+  padding:.35rem .55rem; border-radius:.5rem; border:1px solid var(--line); background:var(--card); color:inherit; cursor:pointer
+}
