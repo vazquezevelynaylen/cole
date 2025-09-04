@@ -1,16 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import App from './App'
-import '@styles/globals.css'
-import '@styles/tokens.css'
-import '@styles/dark.css'
-import '@styles/utilities.css'
+// src/main.tsx
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import '@styles/globals.css';
 
-createRoot(document.getElementById('root')!).render(
+const el = document.getElementById('root')!;
+createRoot(el).render(
   <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>
-)
+);
