@@ -1,0 +1,16 @@
+export type Tag = 'urgente' | 'importante' | 'info';
+
+export interface Comunicado {
+  fecha: string; // ISO yyyy-mm-dd
+  titulo: string;
+  detalle: string;
+  link: string;
+  tag: Tag;
+  estado: string;
+}
+
+export const DATA: Comunicado[] = [
+  { fecha:"2025-08-29", titulo:"Acto por Aniversario", detalle:"Acto institucional en el SUM. Turnos mañana y tarde.", link:"#", tag:"importante", estado:"Vigente" },
+  { fecha:"2025-08-27", titulo:"Inscripción a mesas", detalle:"Abren inscripciones para mesas de septiembre.", link:"#", tag:"info", estado:"Nuevo" },
+  { fecha:"2025-08-21", titulo:"Corte de luz", detalle:"Reprogramación de actividades por mantenimiento eléctrico.", link:"#", tag:"urgente", estado:"Importante" }
+];
