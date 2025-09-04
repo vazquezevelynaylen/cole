@@ -1,6 +1,8 @@
-export default function Hero({ innerRef }){
+import './hero.css';
+
+export default function Hero() {
   return (
-    <section className="hero" id="top" aria-label="Portada" ref={innerRef}>
+    <section className="hero" id="top" aria-label="Portada">
       <div className="hero-inner">
         <h2>Formación técnica para el futuro</h2>
         <p>Especialidades en TICs y Multimedia con proyectos reales y vínculos con la comunidad.</p>
@@ -10,5 +12,5 @@ export default function Hero({ innerRef }){
         </div>
       </div>
     </section>
-  )
+  );
 }
