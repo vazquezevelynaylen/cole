@@ -1,37 +1,51 @@
+
+### `et20-web/index.html`
+```html
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>E.T. 20 D.E. 20 "Carolina Muzilli"</title>
-    <meta name="description" content="E.T. 20 D.E. 20 Carolina Muzilli — Especialidades en TICs y Multimedia, proyectos, exámenes y comunicados importantes.">
+    <meta
+      name="description"
+      content="E.T. 20 D.E. 20 Carolina Muzilli — Especialidades en TICs y Multimedia, proyectos, exámenes y comunicados importantes."
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-    <!-- Theme color por esquema del SO -->
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f1115">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-
-    <!-- Preload HERO -->
-    <link rel="preload" as="image" href="/img/colegio1.jpg" imagesrcset="/img/colegio1.jpg 1200w" imagesizes="100vw">
+    <!-- Preload hero -->
+    <link
+      rel="preload"
+      as="image"
+      href="/img/colegio1.jpg"
+      imagesrcset="/img/colegio1.jpg 1200w"
+      imagesizes="100vw"
+    />
 
     <!-- Fuente -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- PWA -->
-    <link rel="manifest" href="/manifest.webmanifest">
+    <!-- Manifest / PWA -->
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta name="color-scheme" content="light dark">
 
     <!-- Schema básico -->
     <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"School",
-      "name":"E.T. 20 D.E. 20 \"Carolina Muzilli\"",
-      "address":{"@type":"PostalAddress","streetAddress":"Av. Directorio 6462","addressLocality":"CABA","addressRegion":"Buenos Aires","addressCountry":"AR"},
-      "url":"https://tusitio.ejemplo/","telephone":"+54-11-1234-5678"
-    }
+      {
+        "@context":"https://schema.org",
+        "@type":"School",
+        "name":"E.T. 20 D.E. 20 \"Carolina Muzilli\"",
+        "address":{"@type":"PostalAddress","streetAddress":"Av. Directorio 6462","addressLocality":"CABA","addressRegion":"Buenos Aires","addressCountry":"AR"},
+        "url":"https://tusitio.ejemplo/","telephone":"+54-11-1234-5678"
+      }
     </script>
   </head>
   <body>
