@@ -1,34 +1,46 @@
-import Hero from '@components/hero/Hero';
-import Especialidades from '@components/especialidades/Especialidades';
-import ComunicadosTable from '@components/comunicados/ComunicadosTable';
+import Header from '@components/header/Header'
+import Subnav from '@components/nav/Subnav'
+import Hero from '@components/hero/Hero'
+import Especialidades from '@components/especialidades/Especialidades'
+import ComunicadosTable from '@components/comunicados/ComunicadosTable'
+import Filtros from '@components/comunicados/Filtros'
+import A11yControls from '@components/a11y/A11yControls'
+import Footer from '@components/footer/Footer'
+import '@components/header/header.css'
+import '@components/nav/subnav.css'
+import '@components/hero/hero.css'
+import '@components/especialidades/especialidades.css'
+import '@components/comunicados/comunicados.css'
+import '@components/a11y/a11y.css'
+import '@components/modal/modal.css'
+import '@components/footer/footer.css'
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      {/* Compromiso / valores: bloque simple */}
-      <section className="compromiso" aria-labelledby="ttl-compromiso">
-        <div className="compromiso-content">
-          <img src="/img/colegio1.jpg" alt="Logo ET20" className="compromiso-logo" width={300} height={300} loading="lazy" />
-          <div className="compromiso-text">
-            <h2 id="ttl-compromiso" className="visually-hidden">Compromiso y valores</h2>
-            <p><strong>Nuestro compromiso en la educación técnica se basa en el profesionalismo, la formación en valores y la búsqueda constante de la excelencia. Promovemos una educación de calidad en tecnologías que prepare a los estudiantes para los desafíos del futuro, con responsabilidad, ética y visión innovadora.</strong></p>
+      <Header />
+      <Subnav />
+      <main id="contenido" tabIndex={-1}>
+        <Hero />
+        <Especialidades />
+        <section id="comunicados" aria-labelledby="ttl-comunicados">
+          <h2 id="ttl-comunicados">Comunicados</h2>
+          <div className="comunicados-wrap" aria-label="Listado completo de comunicados">
+            <div className="com-head">
+              <h3 className="com-subtitle">Todos los comunicados</h3>
+              <Filtros />
+            </div>
+            <ComunicadosTable />
           </div>
-        </div>
-      </section>
+        </section>
 
-      <Especialidades />
-
-      <section id="comunicados" aria-labelledby="ttl-comunicados">
-        <h2 id="ttl-comunicados">Comunicados</h2>
-        <ComunicadosTable />
-      </section>
-
-      {/* Placeholder Novedades */}
-      <section id="novedades" style={{ minHeight: 300, padding: '40px 16px' }}>
-        <h2>Novedades</h2>
-        <p>Próximamente…</p>
-      </section>
+        <section id="novedades" style={{ minHeight: 300, padding: '40px 16px' }}>
+          <h2>Novedades</h2>
+          <p>Próximamente…</p>
+        </section>
+      </main>
+      <Footer />
+      <A11yControls />
     </>
-  );
+  )
 }
