@@ -1,0 +1,10 @@
+export type Tag = 'urgente' | 'importante' | 'info';
+
+export interface Comunicado {
+  fecha: string;
+  titulo: string;
+  detalle: string;
+  link: string;
+  tag: Tag;
+  estado: string;
+}
