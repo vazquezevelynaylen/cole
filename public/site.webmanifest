@@ -1,10 +1,10 @@
 {
-  "name": "E.T. 20 D.E. 20 \"Carolina Muzilli\"",
+  "name": "ET20 Web",
   "short_name": "ET20",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#ffffff",
   "background_color": "#0f1115",
+  "theme_color": "#0f1115",
   "icons": [
     { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
