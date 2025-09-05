@@ -1,55 +1,17 @@
-
-### `et20-web/index.html`
-```html
 <!doctype html>
-<html lang="es" data-theme="light">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>E.T. 20 D.E. 20 "Carolina Muzilli"</title>
-    <meta
-      name="description"
-      content="E.T. 20 D.E. 20 Carolina Muzilli — Especialidades en TICs y Multimedia, proyectos, exámenes y comunicados importantes."
-    />
-    <meta name="theme-color" content="#ffffff" />
-
-    <!-- Preload hero -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/colegio1.jpg"
-      imagesrcset="/img/colegio1.jpg 1200w"
-      imagesizes="100vw"
-    />
-
-    <!-- Fuente -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Manifest / PWA -->
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-
-    <!-- Schema básico -->
-    <script type="application/ld+json">
-      {
-        "@context":"https://schema.org",
-        "@type":"School",
-        "name":"E.T. 20 D.E. 20 \"Carolina Muzilli\"",
-        "address":{"@type":"PostalAddress","streetAddress":"Av. Directorio 6462","addressLocality":"CABA","addressRegion":"Buenos Aires","addressCountry":"AR"},
-        "url":"https://tusitio.ejemplo/","telephone":"+54-11-1234-5678"
-      }
-    </script>
+    <meta name="description" content="E.T. 20 D.E. 20 Carolina Muzilli — Especialidades en TICs y Multimedia.">
+    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
