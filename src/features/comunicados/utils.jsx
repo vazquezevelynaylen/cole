@@ -1,6 +1,6 @@
-import type { Tag } from './types'
+import React form 'react';
 
-export function fmtFecha(iso: string) {
+export function fmtFecha(iso) {
   const [y, m, d] = iso.split('-')
   return `${d}/${m}/${y}`
 }
