@@ -15,7 +15,7 @@ export function registerPwa() {
         }).catch(()=>caches.match('/')))
       );
     });
-  `;
+  `
   const blob = new Blob([swCode], { type: 'text/javascript' });
   const url = URL.createObjectURL(blob);
   navigator.serviceWorker.register(url);
