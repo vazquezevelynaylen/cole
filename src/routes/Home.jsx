@@ -7,7 +7,7 @@ import Especialidades from "../components/especialidades/Especialidades";
 import ComunicadosTable from "../components/comunicados/ComunicadosTable";
 import SectionHeader from "components/common/SectionHeader";
 
-import A11yControls from '../components/a11y/A11yControls.jsx';
+import A11yControls from '../components/a11y/A11yControls';
 import Footer from '../components/footer/Footer';
 
 import '../components/comunicados/comunicados.css';
