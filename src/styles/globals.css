@@ -1,22 +1,38 @@
-*{margin:0;padding:0;box-sizing:border-box}
-html{ scroll-behavior:smooth }
-html,body{ overflow-x:hidden; }
-body{
-  font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
-  line-height:var(--leading); background:var(--bg); color:var(--fg); letter-spacing:var(--tracking)
+@import './tokens.css';
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-body);
 }
-h1,h2,h3{ line-height:1.15; text-wrap:balance }
-p,li{ text-wrap:pretty }
 
-.visually-hidden{ position:absolute!important; width:1px; height:1px; margin:-1px; border:0; padding:0; clip:rect(0 0 0 0); overflow:hidden; }
-*:focus-visible{ outline:3px solid var(--accent); outline-offset:2px; border-radius:6px }
+h1, h2, h3 {
+  color: var(--color-accent);
+  font-weight: 900;
+}
 
-/* Compromiso */
-.compromiso{ background:#6c6c6c; text-align:center; padding:125px 20px }
-.compromiso-content{ display:flex; justify-content:center; align-items:center; gap:30px; max-width:1200px; margin:0 auto; padding:0 40px }
-.compromiso-logo{ width:150px; height:auto }
-.compromiso-text p{ font-size:1.2rem; color:#fff; max-width:800px; margin:0; padding:0 20px }
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-/* Main container */
-main{ padding:var(--space-4) 16px; max-width:1100px; margin:0 auto }
-section{ margin: var(--space-3) auto }
+.btn {
+  display: inline-block;
+  padding: 0.7em 1.2em;
+  border-radius: 999px;
+  font-weight: 800;
+  background: var(--color-accent);
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
