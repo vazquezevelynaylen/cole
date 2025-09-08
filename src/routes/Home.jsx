@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 
-import Header from '@components/header/Header';
-import Subnav from '@components/nav/Subnav';
-import Hero from '@components/hero/Hero';
-import Especialidades from '@components/especialidades/Especialidades';
-import ComunicadosTable from '@components/comunicados/ComunicadosTable';
-import SectionHeader from '@components/common/SectionHeader';
-import A11yControls from '@components/a11y/A11yControls';
-import Footer from '@components/footer/Footer';
+import Header from '../components/header/Header';
+import Subnav from '../components/nav/Subnav';
+import Hero from '../components/hero/Hero';
+import Especialidades from '../components/especialidades/Especialidades';
+import ComunicadosTable from '../components/comunicados/ComunicadosTable';
+import SectionHeader from '../components/common/SectionHeader';
+import A11yControls from '../components/a11y/A11yControls';
+import Footer from '../components/footer/Footer';
 
 import '../components/comunicados/comunicados.css';
 import '../components/common/section-header.css';
 
 export default function Home(){
   const [tag, setTag] = useState('all');
-
+ 
   // Activar las animaciones reveal (IntersectionObserver)
   useEffect(()=>{
     const io = new IntersectionObserver((entries)=>{
