@@ -1,0 +1,10 @@
+.rail{ display:grid; grid-auto-flow:column; grid-auto-columns:min(360px, 90vw);
+  gap:16px; overflow-x:auto; padding-bottom:6px; scroll-snap-type:x mandatory }
+.rail::-webkit-scrollbar{ height:8px }
+.rail::-webkit-scrollbar-thumb{ background:var(--line); border-radius:999px }
+
+.rail-card{ scroll-snap-align:start; background:var(--card); box-shadow:var(--ring);
+  border-radius:var(--radius); padding:16px; display:flex; flex-direction:column; gap:8px; min-height:152px }
+.rail-card .muted{ color:var(--muted); font-size:.9rem }
+.rail-card h3{ margin:.25rem 0 }
+.rail-card a{ font-weight:700 }
