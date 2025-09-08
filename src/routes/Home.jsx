@@ -5,7 +5,7 @@ import Subnav from "../components/nav/Subnav";
 import Hero from "../components/hero/Hero";
 import Especialidades from "../components/especialidades/Especialidades";
 import ComunicadosTable from "../components/comunicados/ComunicadosTable";
-import SectionHeader from "components/common/SectionHeader";
+import SectionHeader from "../components/common/SectionHeader";
 
 import A11yControls from '../components/a11y/A11yControls';
 import Footer from '../components/footer/Footer';
