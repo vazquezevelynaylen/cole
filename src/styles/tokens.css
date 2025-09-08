@@ -1,36 +1,22 @@
-:root{
-  /* Colores base */
-  --bg:#0f1115;
-  --surface:#141822;
-  --card:#171b26;
-  --fg:#eef0f3;
-  --muted:#a7b0bf;
+:root {
+  /* Colores institucionales */
+  --color-bg: #0a0a0a;        /* negro principal */
+  --color-fg: #fdfdfd;        /* texto blanco/gris claro */
+  --color-accent: #ffd60a;    /* amarillo institucional */
+  --color-muted: #9ca3af;     /* gris secundario */
 
-  /* Líneas y aros (no “bordes gordos”) */
-  --line: color-mix(in oklab, #ffffff 12%, transparent);
-  --ring: 0 0 0 1px color-mix(in oklab, #ffffff 16%, transparent);
+  /* Superficies y bordes */
+  --color-card: #111111;
+  --color-line: #2a2a2a;
 
-  /* Marca */
-  --accent:#d4b483;    /* dorado suave */
-  --accent-2:#ffc857;  /* acento para hover */
+  /* Sombras */
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.3);
 
-  /* Estado */
-  --ok:#16a34a;  --ok-bg:#0f2d1a;
-  --info:#58a6ff;--info-bg:#0d2238;
-  --warn:#ea580c;--warn-bg:#2a170b;
+  /* Bordes */
+  --radius: 12px;
+  --radius-lg: 18px;
 
-  /* Forma y sombra */
-  --radius:14px;
-  --radius-xl:22px;
-  --shadow-lg:0 16px 40px rgba(0,0,0,.28);
-}
-
-/* Variante clara (si tu SO la usa) */
-@media (prefers-color-scheme: light){
-  :root{
-    --bg:#f7f6f3; --surface:#ffffff; --card:#ffffff; --fg:#111827; --muted:#6b7280;
-    --line:#e6e7ea; --ring:0 0 0 1px rgba(17,24,39,.12);
-    --accent:#b08968; --accent-2:#8d6e63;
-    --ok-bg:#dcfce7; --info-bg:#dbeafe; --warn-bg:#fef3c7;
-  }
+  /* Tipografía */
+  --font-body: 'Roboto', system-ui, sans-serif;
 }
