@@ -1,4 +1,1 @@
-export function isoToday(): string {
-  const d = new Date();
-  return d.toISOString().slice(0,10);
-}
+export const todayISO = ()=> new Date().toISOString()slice(0,10)
