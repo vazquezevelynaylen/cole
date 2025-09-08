@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 // src/routes/Home.jsx
-import Subnav from "../components/nav/Subnav";
+import Subnav from "../../components/nav/Subnav";
 import Hero from "../components/hero/Hero";
 import Especialidades from "../components/especialidades/Especialidades";
 import ComunicadosTable from "../components/comunicados/ComunicadosTable";
