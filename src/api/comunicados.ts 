@@ -1,7 +1,0 @@
-import type { Comunicado } from '@features/comunicados/types';
-
-// Ejemplo para cambiar DATA por fetch real cuando exista backend
-export async function fetchComunicados(): Promise<Comunicado[]> {
-  // return fetch('/api/comunicados').then(r => r.json());
-  return Promise.resolve([]); // por ahora vacío
-}
