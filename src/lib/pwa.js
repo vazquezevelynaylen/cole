@@ -1,4 +1,4 @@
-export function registerSW() {
+export function registerSW(){
   if (!('serviceWorker' in navigator)) return
 
   // SW “inline” simple (cache first con revalidación)
