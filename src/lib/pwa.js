@@ -1,5 +1,5 @@
 export function registerPwa() {
-  if (!('serviceWorker' in navigator)) return;
+  if (!('serviceWorker' in navigator)) return
 
   // SW “inline” simple (cache first con revalidación)
   const swCode = `
