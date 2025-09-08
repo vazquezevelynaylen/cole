@@ -1,4 +1,4 @@
-import React form 'react';
+import React from 'react';
 
 export function fmtFecha(iso) {
   const [y, m, d] = iso.split('-');
