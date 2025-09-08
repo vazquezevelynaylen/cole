@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 // src/routes/Home.jsx
+import Header from "../components/header/Header";
 import Subnav from "../components/nav/Subnav";
 import Hero from "../components/hero/Hero";
 import Especialidades from "../components/especialidades/Especialidades";
