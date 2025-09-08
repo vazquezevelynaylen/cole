@@ -6,7 +6,7 @@ export function fmtFecha(iso) {
 }
 
 export function Badge({ tag, text }) {
-  if (tag === 'urgente') return `<span class="badge badge-warn">${texto || 'Importante'}</span>`
-  if (tag === 'importante') return `<span class="badge badge-ok">${texto || 'Vigente'}</span>`
-  return `<span class="badge badge-info">${texto || 'Nuevo'}</span>`
+  if (tag === 'urgente') return <span class="badge badge-warn">${texto || 'Importante'}</span>
+  if (tag === 'importante') return <span class="badge badge-ok">${texto || 'Vigente'}</span>
+  return <span class="badge badge-info">${texto || 'Nuevo'}</span>
 }
