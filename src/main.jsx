@@ -5,7 +5,7 @@ import App from './App'
 import '@styles/globals.css'
 
 const container = document.getElementById('root')
-if (!container) throw new Error('No se encontró el elemento #root')
+if (!rootEl) throw new Error('No se encontró el elemento #root')
 
 createRoot(rootEl).render(
   <StrictMode>
