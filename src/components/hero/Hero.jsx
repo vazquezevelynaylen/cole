@@ -1,16 +1,28 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = Hero;
-require("./hero.css");
-function Hero() {
-    return (<section className="hero" id="top" aria-label="Portada">
-      <div className="hero-inner">
-        <h2>Formación técnica para el futuro</h2>
-        <p>Especialidades en TICs y Multimedia con proyectos reales y vínculos con la comunidad.</p>
-        <div className="cta">
-          <a className="btn btn-primary" href="#especialidades">Conocer especialidades</a>
-          <a className="btn" href="#institucional">Visita 360°</a>
+import './hero.css';
+import { motion } from 'framer-motion';
+
+export default function Hero(){
+  return (
+    <section className="hero" id="top" aria-label="Portada">
+      <motion.div
+        initial={{opacity:0, y:20}}
+        animate={{opacity:1, y:0}}
+        transition={{duration:.6, ease:'easeOut'}}
+      >
+        <div className="hero-headline">
+          <h1>Formación técnica para el futuro</h1>
         </div>
+        <p>Especialidades en TICs y Multimedia con proyectos reales y vínculos con la comunidad.</p>
+        <div className="hero-cta">
+          <a className="btn" href="#especialidades">Conocer especialidades</a>
+          <a className="btn ghost" href="#institucional">Visita 360°</a>
+        </div>
+      </motion.div>
+
+      <div className="hero-chip" aria-label="accesos rápidos">
+        <a href="#novedades">Novedades</a>
+        <a href="#comunicados">Comunicados</a>
       </div>
-    </section>);
+    </section>
+  );
 }
