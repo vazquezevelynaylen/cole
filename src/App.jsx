@@ -1,24 +1,17 @@
-// src/App.tsx
-import { Routes, Route } from 'react-router-dom';
-import Home from '@routes/Home';
-import NotFound from '@routes/NotFound';
-import Header from '@components/header/Header';
-import Subnav from '@components/nav/Subnav';
-import Footer from '@components/footer/Footer';
-import A11yControls from '@components/a11y/A11yControls';
-import '@styles/utilities.css';
+import { Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import Home from './routes/Home'
+import EspecialidadesPage from './routes/Especialidades'
+import NotFound from './routes/NotFound'
 
-export default function App() {
+export default function App(){
   return (
-    <>
-      <Header />
-      <Subnav />
+    <HelmetProvider>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/especialidades" element={<EspecialidadesPage/>} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
-      <Footer />
-      <A11yControls />
-    </>
-  );
+    </HelmetProvider>
+  )
 }
