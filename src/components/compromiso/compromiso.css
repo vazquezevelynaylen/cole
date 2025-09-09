@@ -1,0 +1,46 @@
+.compromiso {
+  background: #0a0a0a;        /* negro institucional */
+  color: #fff;
+  padding: 80px 20px;
+}
+
+.compromiso__wrap {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.compromiso__logo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
+}
+
+.compromiso__text h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ffd300;     /* amarillo institucional */
+  margin-bottom: 12px;
+}
+
+.compromiso__text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f5f5f5;
+  max-width: 60ch;
+}
+
+@media (max-width: 900px) {
+  .compromiso__wrap {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .compromiso__text h2 {
+    margin-top: 20px;
+  }
+}

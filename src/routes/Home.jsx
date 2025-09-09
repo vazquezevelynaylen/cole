@@ -9,6 +9,7 @@ import A11yControls from '../components/a11y/A11yControls.jsx'
 import Footer from '../components/footer/Footer.jsx'
 import BackToTop from '../components/misc/BackToTop.jsx'
 import useReveal from "../hooks/useReveal.jsx"
+import Compromiso from '../components/compromiso/Compromiso.jsx'
 export default function Home() {
   // Estado para filtros (evita el crash de props faltantes)
   const [tag, setTag] = useState('all')
@@ -19,7 +20,7 @@ export default function Home() {
       <Subnav />
       <main id="contenido" tabIndex={-1}>
         <Hero />
-
+        <Compromiso />
         <Especialidades />
 
         <section id="comunicados" aria-labelledby="ttl-comunicados" style={{ padding: '40px 16px' }}>
