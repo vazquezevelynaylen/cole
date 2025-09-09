@@ -58,3 +58,41 @@
   justify-content: center;
   margin-top: .9rem;
 }
+/* ===== Botones generales ===== */
+.btn {
+  display: inline-block;
+  padding: 0.8em 1.2em;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+/* ===== Botón primario (amarillo institucional) ===== */
+.btn-primary {
+  background: #ffd60a;      /* Amarillo */
+  color: #0a0a0a;           /* Texto negro para contraste */
+  border-color: #ffd60a;
+}
+
+.btn-primary:hover {
+  background: #ffda33;      /* Amarillo más claro al hover */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+}
+
+/* ===== Botón secundario (borde amarillo, fondo transparente) ===== */
+.btn-secondary {
+  background: transparent;
+  color: #ffd60a;
+  border-color: #ffd60a;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 214, 10, 0.15);
+  color: #ffd60a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}

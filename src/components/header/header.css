@@ -11,9 +11,6 @@ header {
 
   /* Transparente para ver la imagen del hero */
   background: transparent;
-  border-bottom: 1px solid rgba(255,255,255,.1);
-  /* backdrop-filter necesita un fondo con alpha para verse;
-     lo activamos cuando el header se vuelve sólido */
   backdrop-filter: none;
 }
 
