@@ -1,31 +1,28 @@
-#comunicados{ margin:2rem 0 }
-#comunicados h2{ margin:0 0 .75rem; font-size:clamp(1.25rem, 1.5vw + 1rem, 1.6rem) }
+.comunicados-wrap {
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
 
-.comunicados-wrap{ background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:14px;
-  box-shadow:0 6px 18px rgba(0,0,0,.06); overflow:hidden }
-.com-head{ display:flex; align-items:center; justify-content:space-between; padding:.6rem 1rem .2rem }
-.com-subtitle{ font-size:1.05rem }
-.com-filtros{ display:flex; gap:.4rem; flex-wrap:wrap }
-.com-filtros button{ padding:.45rem .7rem; border-radius:999px; border:1px solid var(--line); background:var(--card); color:inherit; cursor:pointer; font-weight:700 }
-.com-filtros button.is-active{ outline:2px solid var(--accent) }
+.comunicados-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .95rem;
+}
 
-.comunicados-table{ width:100%; border-collapse:separate; border-spacing:0; font-size:.98rem }
-.comunicados-table thead th{ text-align:left; padding:.9rem 1rem; background: color-mix(in oklab, var(--fg) 6%, transparent); color:var(--fg); border-bottom:1px solid var(--line) }
-.comunicados-table tbody td{ padding:.85rem 1rem; border-bottom:1px solid var(--line); vertical-align:top }
-.comunicados-table tbody tr:last-child td{ border-bottom:none }
-.comunicados-table a{ color:inherit; text-decoration:underline; text-underline-offset:2px }
-.badge{ display:inline-block; font-weight:600; line-height:1; padding:.35rem .55rem; border-radius:999px; border:1px solid transparent; font-size:.85rem; white-space:nowrap }
-.badge-ok{ color:var(--ok); background:var(--ok-bg); border-color: color-mix(in oklab, var(--ok) 30%, transparent) }
-.badge-info{ color:var(--info); background:var(--info-bg); border-color: color-mix(in oklab, var(--info) 30%, transparent) }
-.badge-warn{ color:var(--warn); background:var(--warn-bg); border-color: color-mix(in oklab, var(--warn) 30%, transparent) }
-.comunicados-table tbody tr[data-tag="urgente"] td{ background: color-mix(in oklab, #ef4444 10%, transparent) }
-.comunicados-table tbody tr[data-tag="importante"] td{ background: color-mix(in oklab, var(--warn) 13%, transparent) }
-.comunicados-table tbody tr[data-tag="info"] td{ background: color-mix(in oklab, var(--info) 10%, transparent) }
+.comunicados-table th,
+.comunicados-table td {
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  padding: .8rem;
+}
 
-@media (max-width:760px){
-  .comunicados-table thead{ display:none }
-  .comunicados-table, .comunicados-table tbody, .comunicados-table tr, .comunicados-table td{ display:block; width:100% }
-  .comunicados-table tbody tr{ border-bottom:1px solid var(--line) }
-  .comunicados-table tbody td{ display:flex; gap:.5rem }
-  .comunicados-table tbody td::before{ content:attr(data-label); min-width:7.5rem; color:var(--muted); font-weight:600 }
+.comunicados-table th {
+  text-align: left;
+  color: #ffd60a;
+}
+
+.comunicados-table tr:hover {
+  background: rgba(255,214,10,.08);
 }
