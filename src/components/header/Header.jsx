@@ -1,12 +1,24 @@
+import { useEffect, useRef } from 'react'
 import './header.css'
 
 export default function Header() {
-  return (
-    <header>
-      {/* Marca a la izquierda */}
-      <h1 className="header__brand">E.T. 20 D.E. 20 "Carolina Muzilli"</h1>
+  const headerRef = useRef(null)
 
-      {/* Menú horizontal alineado a la derecha */}
+  // Opcional: volver sólido al scrollear
+  useEffect(() => {
+    const onScroll = () => {
+      const solid = window.scrollY > 12
+      headerRef.current?.classList.toggle('header--solid', solid)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <header ref={headerRef}>
+      <div className="header__brand">E.T. 20 D.E. 20</div>
+
       <nav className="nav" aria-label="Navegación principal">
         <ul className="menu">
           <li><a href="#top">Inicio</a></li>
