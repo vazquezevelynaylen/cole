@@ -1,23 +1,37 @@
-.hero{
+.hero {
+  position: relative;
   min-height: 100vh;
   display: grid;
   place-items: center;
   text-align: center;
-  color: #fff;
-
-  background-image: url(./img/colegio1.jpg'); /* usa public/img/colegio1.jpg */
+  background-image: url('/img/colegio1.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+  color: #fff;
 }
 
-.hero__overlay{
+.hero::before {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,.5); /* oscurece para que el texto se lea */
+  background: linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.25));
 }
-.hero__inner{
+
+.hero__inner {
   position: relative;
   z-index: 1;
+  max-width: 900px;
+  padding: 0 16px;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: .5rem;
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 1.2rem;
+  opacity: .95;
 }
