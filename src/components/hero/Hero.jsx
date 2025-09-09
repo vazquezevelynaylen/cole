@@ -1,4 +1,3 @@
-import heroImg from '../../assets/hero/colegio1.jpg'
 import './hero.css'
 
 export default function Hero() {
@@ -7,7 +6,7 @@ export default function Hero() {
       {/* Fondo con imagen importada */}
       <div
         className="hero__bg"
-        style={{ backgroundImage: `url(${heroImg})` }}
+        style={{ backgroundImage: `url(/img/colegio1.jpg)` }}
         aria-hidden="true"
       />
 
