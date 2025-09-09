@@ -1,28 +1,23 @@
-import './hero.css';
-import { motion } from 'framer-motion';
+import './hero.css'
 
-export default function Hero(){
+export default function Hero() {
   return (
     <section className="hero" id="top" aria-label="Portada">
-      <motion.div
-        initial={{opacity:0, y:20}}
-        animate={{opacity:1, y:0}}
-        transition={{duration:.6, ease:'easeOut'}}
-      >
-        <div className="hero-headline">
-          <h1>Formación técnica para el futuro</h1>
-        </div>
-        <p>Especialidades en TICs y Multimedia con proyectos reales y vínculos con la comunidad.</p>
-        <div className="hero-cta">
-          <a className="btn" href="#especialidades">Conocer especialidades</a>
-          <a className="btn ghost" href="#institucional">Visita 360°</a>
-        </div>
-      </motion.div>
+      {/* overlay para contraste */}
+      <div className="hero__overlay" aria-hidden="true"></div>
 
-      <div className="hero-chip" aria-label="accesos rápidos">
-        <a href="#novedades">Novedades</a>
-        <a href="#comunicados">Comunicados</a>
+      {/* contenido centrado */}
+      <div className="hero__inner">
+        <h1 className="hero__title">Formación técnica para el futuro</h1>
+        <p className="hero__subtitle">
+          Especialidades en TICs y Multimedia con proyectos reales y vínculos con la comunidad.
+        </p>
+
+        <div className="hero__cta">
+          <a className="btn btn--primary" href="#especialidades">Conocer especialidades</a>
+          <a className="btn btn--ghost" href="#institucional">Visita 360°</a>
+        </div>
       </div>
     </section>
-  );
+  )
 }
