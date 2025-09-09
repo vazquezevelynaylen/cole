@@ -12,17 +12,6 @@ import PlanCard from '@components/planes/PlanCard';
 import useReveal from '@hooks/useReveal';
 
 export default function Home() {
-  return (
-    <>
-      {/* …contenido… */}
-      <BackToTop />
-    </>
-  )
-}
-
-
-
-export default function Home() {
   // Estado para filtros (evita el crash de props faltantes)
   const [tag, setTag] = useState('all')
 
