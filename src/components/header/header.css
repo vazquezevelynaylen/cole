@@ -1,145 +1,121 @@
-/* ====== Tokens del header (negro + amarillo) ====== */
-:root{
-  --hdr-bg: rgba(0,0,0,.72);
-  --hdr-bg-solid:#0a0a0a;
-  --hdr-line: rgba(255,255,255,.12);
-  --fg: #f6f6f6;
-  --muted:#cfcfcf;
-  --accent:#ffd400; /* Amarillo ET20 */
-  --radius:12px;
-  --shadow:0 12px 28px rgba(0,0,0,.25);
+/* ===== Header (negro + amarillo institucional) ===== */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  background: #0a0a0a; /* negro sólido */
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: saturate(120%) blur(6px);
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  min-height: 64px;
 }
 
-/* ====== Contenedor header fijo ====== */
-header{
-  position:fixed; inset:0 0 auto 0; z-index:1000;
-  display:flex; align-items:center; justify-content:space-between;
-  padding: clamp(10px,1.4vw,14px) clamp(14px,2vw,20px);
-  min-height:64px;
-  color:var(--fg);
-  background:var(--hdr-bg);
-  backdrop-filter: blur(8px) saturate(130%);
-  border-bottom:1px solid var(--hdr-line);
-}
-header h1{
-  font-size: clamp(1rem,2.4vw,1.15rem);
-  font-weight:900; letter-spacing:.2px; white-space:nowrap;
-  color:var(--fg);
+header h1 {
+  font-size: 1.2rem;
+  color: #ffd60a; /* amarillo */
+  font-weight: 900;
+  white-space: nowrap;
 }
 
-/* Cuando quieras que el header quede sólido (p.ej. al scrollear)
-   agrega la clase .is-solid al <header> con JS opcional */
-header.is-solid{
-  background:var(--hdr-bg-solid);
-  box-shadow: var(--shadow);
+/* ===== Menú principal horizontal ===== */
+nav[aria-label="Navegación principal"] {
+  margin-left: auto;
 }
 
-/* ====== Menú principal (alineado a la derecha) ====== */
-nav[aria-label="Navegación principal"]{ margin-left:auto }
-.menu{
-  list-style:none; display:flex; align-items:center; gap: clamp(14px,2.2vw,22px);
-}
-.menu>li{ position:relative }
-.menu>li>a,
-.menu>li>button{
-  appearance:none; background:none; border:0; cursor:pointer;
-  color:var(--fg); font-weight:800; text-decoration:none;
-  padding:.5rem .25rem; line-height:1; border-radius:8px;
-  transition: color .15s ease, text-shadow .15s ease;
-}
-.menu>li>a:hover,
-.menu>li>button:hover{
-  color:var(--accent);
-  text-shadow:0 0 18px color-mix(in oklab, var(--accent) 60%, transparent);
-}
-.menu>li>a:focus-visible,
-.menu>li>button:focus-visible{
-  outline:2px solid var(--accent);
-  outline-offset:2px;
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-/* Indicador ▼ para items con submenú */
-.menu>li.has-submenu>button::after{
-  content:"▾"; margin-left:.35rem; font-size:.85em; opacity:.9;
+.menu > li {
+  position: relative;
 }
 
-/* ====== Submenús ====== */
-.submenu{
-  position:absolute; top:calc(100% + 10px); right:0; min-width:220px;
-  background: #111; color:var(--fg);
-  border:1px solid var(--hdr-line); border-radius: var(--radius);
-  box-shadow: var(--shadow); padding:.4rem; display:none;
-}
-.menu>li:hover>.submenu,
-.menu>li:focus-within>.submenu{ display:block }
-
-.submenu a{
-  display:block; text-decoration:none; color:inherit;
-  padding:.6rem .7rem; border-radius:8px; font-weight:800; white-space:nowrap;
-}
-.submenu a:hover{
-  background: color-mix(in oklab, var(--accent) 28%, transparent);
-  color:#111;
+.menu > li > a,
+.menu > li > button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: .4rem .2rem;
+  line-height: 1;
+  transition: color .2s ease;
 }
 
-/* ====== Toggle móvil (hamburguesa) ====== */
-.nav-toggle{
-  display:none; margin-left:auto;
-  width:42px; height:42px; border-radius:10px;
-  background:none; border:1px solid var(--hdr-line); color:var(--fg);
-  align-items:center; justify-content:center; cursor:pointer;
+.menu > li > a:hover,
+.menu > li > button:hover {
+  color: #ffd60a; /* hover amarillo */
 }
-.nav-toggle:hover{ border-color:var(--accent); color:var(--accent) }
-.nav-toggle svg{ width:24px; height:24px }
 
-/* ====== Drawer móvil ====== */
-@media (max-width: 900px){
-  .nav-toggle{ display:inline-flex }
-  /* backdrop */
-  .nav-backdrop{
-    position:fixed; inset:0; background:rgba(0,0,0,.5);
-    backdrop-filter: blur(2px); opacity:0; visibility:hidden; transition:.2s;
-    z-index:995;
+/* Indicador ▾ en items con submenú */
+.menu > li.has-submenu > button::after {
+  content: "▾";
+  margin-left: .3rem;
+  font-size: .85em;
+}
+
+/* ===== Submenús ===== */
+.submenu {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 200px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: .5rem;
+  box-shadow: 0 16px 32px rgba(0,0,0,.25);
+  padding: .4rem;
+  display: none;
+}
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: .48rem .7rem;
+  border-radius: .35rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background: rgba(255, 214, 10, .15);
+  color: #ffd60a;
+}
+
+.menu > li:focus-within > .submenu,
+.menu > li:hover > .submenu {
+  display: block;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  body.nav-open .nav-backdrop{ opacity:1; visibility:visible }
 
-  /* panel */
-  nav[aria-label="Navegación principal"]{
-    position:fixed; inset:0 0 0 auto; width:min(86vw,360px);
-    background:#0b0b0b; color:var(--fg);
-    border-left:1px solid var(--hdr-line);
-    transform:translateX(100%); transition:transform .28s ease;
-    z-index:1001; padding:12px;
+  .menu {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
   }
-  body.nav-open nav[aria-label="Navegación principal"]{ transform:translateX(0) }
 
-  .menu{ flex-direction:column; align-items:stretch; gap:4px }
-  .menu>li>a, .menu>li>button{
-    text-align:left; padding:14px 10px; border-radius:10px;
+  .submenu {
+    position: static;
+    min-width: unset;
+    box-shadow: none;
+    border: 1px solid rgba(255,255,255,.15);
+    margin-top: 4px;
   }
-  .menu>li.has-submenu>button::after{ content:"" } /* sin ▾ en móvil */
-  .submenu{
-    position:static; display:block; box-shadow:none; border:0; padding:0; margin-left:8px;
-  }
-  .submenu a{ padding:10px 10px; border-radius:8px }
-}
-
-/* ====== Borde inferior amarillo al hacer hover activo (desktop) ====== */
-@media (hover:hover){
-  .menu>li>a,
-  .menu>li>button{
-    position:relative;
-  }
-  .menu>li>a::after,
-  .menu>li>button::after{
-    content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px;
-    background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .18s ease;
-  }
-  .menu>li:hover>a::after,
-  .menu>li:hover>button::after{ transform:scaleX(1) }
-}
-
-/* ====== Reduce motion ====== */
-@media (prefers-reduced-motion: reduce){
-  *{ transition:none !important; animation:none !important }
 }
