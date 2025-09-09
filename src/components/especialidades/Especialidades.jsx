@@ -1,44 +1,27 @@
-import React from 'react';
-import './especialidades.css';
-
-export default function Especialidades(){
+export default function Especialidades() {
   return (
-    <div className="es-wrap">
-      <div className="es-grid">
-        {/* TIC */}
-        <article className="es-card">
-          <img
-            src="/img/aulacompu1.jpg"
-            alt="Laboratorio de TICs"
-            loading="lazy"
-          />
-          <div className="es-overlay" />
-          <div className="es-content">
-            <h3>TIC</h3>
-            <p>Programación, redes y sistemas. Proyectos integradores y prácticas en laboratorio.</p>
-            <div className="es-actions">
-              <a className="btn btn-primary" href="/docs/planes-tic.pdf" download>Ver planes</a>
-            </div>
+    <section className="especialidades" id="especialidades" aria-labelledby="ttl-especialidades">
+      <div className="wrap">
+        <h2 id="ttl-especialidades" className="visually-hidden">Especialidades</h2>
+
+        <article className="especialidad">
+          <img src="/img/aulacompu1.jpg" alt="Laboratorio de TICs" width="1200" height="800" loading="lazy" />
+          <h3>TIC</h3>
+          <p>Programación, redes y sistemas. Proyectos integradores y prácticas en laboratorio.</p>
+          <div className="plan">
+            <a className="btn btn--primary" href="/planes/plan-tic.pdf" download>Ver plan</a>
           </div>
         </article>
 
-        {/* Multimedia */}
-        <article className="es-card">
-          <img
-            src="/img/multi1.jpg"
-            alt="Área Multimedia"
-            loading="lazy"
-          />
-          <div className="es-overlay" />
-          <div className="es-content">
-            <h3>Multimedia</h3>
-            <p>Diseño, animación y edición. Producciones audiovisuales y comunicación digital.</p>
-            <div className="es-actions">
-              <a className="btn btn-primary" href="/docs/planes-multimedia.pdf" download>Ver planes</a>
-            </div>
+        <article className="especialidad">
+          <img src="/img/multi1.jpg" alt="Producciones de Multimedia" width="1200" height="800" loading="lazy" />
+          <h3>Multimedia</h3>
+          <p>Diseño, animación y edición. Producciones audiovisuales y comunicación digital.</p>
+          <div className="plan">
+            <a className="btn btn--primary" href="/planes/plan-multimedia.pdf" download>Ver plan</a>
           </div>
         </article>
       </div>
-    </div>
-  );
+    </section>
+  )
 }
