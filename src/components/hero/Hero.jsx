@@ -1,7 +1,6 @@
 export default function Hero() {
   return (
     <section className="hero" id="top" aria-label="Portada">
-      <div className="hero__overlay" aria-hidden="true" />
       <div className="hero__inner">
         <h2 className="hero__title">Formación técnica para el futuro</h2>
         <p className="hero__subtitle">
@@ -9,9 +8,9 @@ export default function Hero() {
         </p>
         <div className="hero__cta">
           <a className="btn btn--primary" href="#especialidades">Conocer especialidades</a>
-          <a className="btn" href="#institucional">Visita 360°</a>
+          <a className="btn btn--ghost" href="#institucional">Visita 360°</a>
         </div>
       </div>
     </section>
-  );
+  )
 }
