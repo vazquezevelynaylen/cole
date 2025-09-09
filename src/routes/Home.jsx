@@ -8,7 +8,6 @@ import Filtros from '../components/comunicados/Filtros.jsx'
 import A11yControls from '../components/a11y/A11yControls.jsx'
 import Footer from '../components/footer/Footer.jsx'
 import BackToTop from '../components/misc/BackToTop.jsx'
-import PlanCard from '@components/planes/PlanCard';
 import useReveal from "../hooks/useReveal.jsx"
 export default function Home() {
   // Estado para filtros (evita el crash de props faltantes)
