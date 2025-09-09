@@ -10,7 +10,6 @@ import Footer from '../components/footer/Footer.jsx'
 import BackToTop from '@components/ui/BackToTop';
 import PlanCard from '@components/planes/PlanCard';
 import useReveal from '@hooks/useReveal';
-import BackToTop from '../components/ui/BackToTop.jsx'
 
 export default function Home() {
   return (
