@@ -1,119 +1,119 @@
-/* ===== Hero a pantalla completa (full viewport) ===== */
+/* ===== Hero a pantalla completa, centrado y con imagen ===== */
 
 :root{
-  /* Cambia acá si quieres otra imagen */
-  --hero-image: url('/img/colegio1.jpg');
+  /* Colores ET20: negro + amarillo (ajusta si tienes el código exacto de marca) */
+  --et20-black: #0b0b0b;
+  --et20-yellow: #ffd100;
+  --text-on-dark: #f6f7f8;
 
-  /* Paleta ET20: negro + amarillo */
-  --et20-bg: #0b0b0c;
-  --et20-fg: #f6f7f9;
-  --et20-yellow: #ffd400; /* amarillo principal */
-  --et20-yellow-ink: #1a1a1a;
+  /* Botones */
+  --btn-radius: 999px;
 }
 
-/* Contenedor del hero */
 .hero{
   position: relative;
-  min-height: 100svh;               /* pantalla completa (soporta iOS) */
+  /* Ocupa toda la pantalla visible */
+  min-height: 100svh; /* soporta móviles con barra */
   width: 100%;
-  display: grid;
-  place-items: center;              /* centra vertical y horizontal */
-  text-align: center;
-  color: var(--et20-fg);
-
-  /* Imagen de fondo */
-  background-image: var(--hero-image);
+  /* Imagen desde /public/img (con Vite se sirve en /img/...) */
+  background-image: url('/img/colegio1.jpg');
   background-size: cover;
   background-position: center 45%;
   background-repeat: no-repeat;
 
-  /* Fallback de color detrás por si no carga la imagen */
-  background-color: var(--et20-bg);
+  /* Centrado perfecto */
+  display: grid;
+  place-items: center;
+
+  /* Evita que el header fijo tape el hero en algunos layouts */
+  margin-top: 0;
+  isolation: isolate; /* para superponer overlay correctamente */
 }
 
-/* Capa oscura para legibilidad del texto */
+/* Sombra/gradiente encima de la foto para que el texto siempre se lea */
 .hero__overlay{
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 40%, rgba(0,0,0,.15) 100%);
-  pointer-events: none;
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.55) 0%,
+      rgba(0,0,0,.35) 40%,
+      rgba(0,0,0,.25) 100%
+    );
+  z-index: -1; /* queda por detrás del contenido pero encima del bg */
 }
 
-/* Contenido centrado */
 .hero__inner{
-  position: relative;             /* sobre el overlay */
-  z-index: 1;
-  padding: clamp(12px, 2vw, 24px);
-  max-width: min(980px, 92vw);
+  width: min(100%, 1024px);
+  padding-inline: 16px;
+  text-align: center;
+  color: var(--text-on-dark);
+  text-shadow: 0 2px 10px rgba(0,0,0,.28);
+  /* un pequeño “lift” para quedar centrado visualmente bajo headers fijos */
+  transform: translateY(-2vh);
 }
 
-/* Título grande, balanceado */
 .hero__title{
-  margin: 0 0 .5rem;
   font-weight: 900;
-  line-height: 1.1;
-  text-wrap: balance;
-  font-size: clamp(2rem, 4.5vw, 3.25rem);
-  text-shadow: 0 2px 10px rgba(0,0,0,.25);
+  line-height: 1.08;
+  letter-spacing: .2px;
+  font-size: clamp(2rem, 5.2vw, 3.75rem);
+  margin: 0 0 .5rem;
 }
 
-/* Subtítulo */
 .hero__subtitle{
-  margin: 0 auto 1rem;
+  font-size: clamp(1rem, 1.2vw + .8rem, 1.35rem);
   opacity: .95;
-  text-wrap: pretty;
-  font-size: clamp(1rem, 1.2vw + .75rem, 1.25rem);
-  max-width: 68ch;
+  margin: 0 auto 1.1rem;
+  max-width: 70ch;
 }
 
-/* CTA buttons */
+/* CTA */
 .hero__cta{
-  display: inline-flex;
-  gap: .6rem;
+  display: flex;
   flex-wrap: wrap;
+  gap: .7rem;
   justify-content: center;
-  margin-top: .6rem;
+  margin-top: .4rem;
 }
 
-/* Botón base */
+/* Botones (compatibles con tu estilo global) */
 .btn{
   display: inline-block;
   padding: .85em 1.15em;
-  border-radius: 999px;
-  border: 2px solid transparent;
-  text-decoration: none;
+  border-radius: var(--btn-radius);
+  border: 1px solid color-mix(in oklab, var(--et20-yellow) 65%, transparent);
+  background: transparent;
+  color: #fff;
   font-weight: 800;
-  line-height: 1;
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease, color .12s ease, border-color .12s ease;
+  text-decoration: none;
+  transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
   will-change: transform;
+  backdrop-filter: saturate(120%) blur(2px);
+}
+.btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0,0,0,.18);
+  background: color-mix(in oklab, var(--et20-black) 25%, transparent);
 }
 
-/* Primario: amarillo ET20 */
 .btn--primary{
   background: var(--et20-yellow);
-  color: var(--et20-ink, #1a1a1a);
+  color: #111;
   border-color: var(--et20-yellow);
 }
 .btn--primary:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 12px 22px rgba(0,0,0,.18);
-}
-
-/* Secundario/ghost: contorno claro */
-.btn--ghost{
-  background: transparent;
-  color: #ffffff;
-  border-color: rgba(255,255,255,.75);
-}
-.btn--ghost:hover{
-  background: rgba(255,255,255,.06);
-  transform: translateY(-1px);
-  box-shadow: 0 10px 18px rgba(0,0,0,.15);
+  background: color-mix(in oklab, var(--et20-yellow) 88%, black 12%);
 }
 
 /* Responsivo fino */
 @media (max-width: 420px){
-  .hero__title{ font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .hero__title{ font-size: clamp(1.8rem, 9vw, 2.4rem); }
   .hero__subtitle{ font-size: 1rem; }
+}
+
+/* Respeta accesibilidad para usuarios con reduced-motion */
+@media (prefers-reduced-motion: reduce){
+  .btn{ transition: none; }
 }
