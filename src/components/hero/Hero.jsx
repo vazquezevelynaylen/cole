@@ -1,8 +1,7 @@
-import './hero.css';
+import heroImg from '../../assets/hero/colegio1.jpg'
+import './hero.css'
 
 export default function Hero() {
-  const heroImg = '/img/colegio1.jpg';
-
   return (
     <section className="hero" id="top" aria-label="Portada">
       {/* Fondo con imagen importada */}
@@ -16,8 +15,7 @@ export default function Hero() {
       <div className="hero__inner">
         <h2>Formación técnica para el futuro</h2>
         <p>
-          Especialidades en TICs y Multimedia con proyectos reales y vínculos
-          con la comunidad.
+          Especialidades en TICs y Multimedia con proyectos reales y vínculos con la comunidad.
         </p>
         <div className="cta">
           <a className="btn btn-primary" href="#especialidades">Conocer especialidades</a>
@@ -25,5 +23,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  );
+  )
 }
