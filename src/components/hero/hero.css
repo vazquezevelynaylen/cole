@@ -1,37 +1,34 @@
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 64px); /* descuenta el header */
   display: grid;
   place-items: center;
   text-align: center;
-  background-image: url('/img/colegio1.jpg');
+  color: #fff;
+  background-image: url('/img/colegio1.jpg'); /* imagen en public/img */
   background-size: cover;
   background-position: center;
-  color: #fff;
 }
 
 .hero::before {
   content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.25));
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.25));
 }
 
 .hero__inner {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  padding: 0 16px;
+  position: relative; z-index: 1;
+  max-width: 900px; padding: 0 16px;
 }
 
 .hero__title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 900;
-  margin-bottom: .5rem;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 900; line-height: 1.1; margin-bottom: .6rem;
 }
 
 .hero__subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  margin-bottom: 1.2rem;
-  opacity: .95;
+  margin-bottom: 1.2rem; opacity: .95;
 }
+
+.hero__cta { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
