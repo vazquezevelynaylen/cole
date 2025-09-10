@@ -6,8 +6,6 @@ import Especialidades from '../components/especialidades/Especialidades.jsx'
 import ComunicadosTable from '../components/comunicados/ComunicadosTable.jsx'
 import Filtros from '../components/comunicados/Filtros.jsx'
 import A11yControls from '../components/a11y/A11yControls.jsx'
-import Footer from '../components/footer/Footer.jsx'
-import BackToTop from '../components/misc/BackToTop.jsx'
 import useReveal from "../hooks/useReveal.jsx"
 import Compromiso from '../components/compromiso/Compromiso.jsx'
 export default function Home() {
