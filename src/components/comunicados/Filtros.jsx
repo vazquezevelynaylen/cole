@@ -7,7 +7,7 @@ export default function Filtros({ value, onChange }) {
   const Btn = ({ v, children }) => (
     <button
       data-filter={v}
-      className={value === v ? 'is-active' : ''}
+      className={`filter-btn ${value === v ? 'is-active' : ''}`}
       onClick={onClick(v)}
     >
       {children}
@@ -15,7 +15,7 @@ export default function Filtros({ value, onChange }) {
   )
 
   return (
-    <div className="com-filtros" role="group" aria-label="Filtrar comunicados">
+    <div className="com-filtros" role="group" aria-label="Filtrar comunicados" style={{display: 'flex', gap: '8px', marginBottom: '16px'}}>
       <Btn v="all">Todos</Btn>
       <Btn v="urgente">Urgentes</Btn>
       <Btn v="importante">Importantes</Btn>
