@@ -7,7 +7,7 @@ export default function Compromiso() {
         {/* Columna izquierda: logo */}
         <div className="compromiso__logo">
           <img
-            src="/img/logocompromiso.png"
+          src="/img/logocompromiso.jpg"
             alt="Logo ET20"
             width="240"
             height="240"
