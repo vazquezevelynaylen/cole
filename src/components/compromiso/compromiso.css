@@ -29,9 +29,9 @@
 
 .compromiso__text p {
   font-size: 1.1rem;
-  line-height: 2;
+  line-height: 1.6;
   color: #f5f5f5;
-  max-width: 60ch;
+  max-width: 80ch;
 }
 
 @media (max-width: 900px) {
