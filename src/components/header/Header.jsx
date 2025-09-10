@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <header ref={headerRef}>
-      <div className="header__brand">E.T. 20 D.E. 20</div>
+      <div className="header__brand">E.T. 20 D.E. 20 Carolina Muzzilli</div>
 
       <nav className="nav" aria-label="Navegación principal">
         <ul className="menu">
