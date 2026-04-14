@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "npm@9",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -22,7 +23,4 @@
     "eslint-plugin-react": "^7.37.5",
     "vite": "^5.4.0"
   }
-}
-{
-  "packageManager": "npm@9"
 }

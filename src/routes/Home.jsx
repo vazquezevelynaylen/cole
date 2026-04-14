@@ -8,6 +8,7 @@ import Filtros from '../components/comunicados/Filtros.jsx'
 import A11yControls from '../components/a11y/A11yControls.jsx'
 import useReveal from "../hooks/useReveal.jsx"
 import Compromiso from '../components/compromiso/Compromiso.jsx'
+import Footer from '../components/footer/Footer.jsx'
 export default function Home() {
   // Estado para filtros (evita el crash de props faltantes)
   const [tag, setTag] = useState('all')
