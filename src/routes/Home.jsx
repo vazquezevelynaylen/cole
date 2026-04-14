@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from '../components/header/Header.jsx'
 import Subnav from '../components/nav/Subnav.jsx'
 import Hero from '../components/hero/Hero.jsx'
+import HeroShowcase from '../components/hero/HeroShowcase.jsx'
 import Especialidades from '../components/especialidades/Especialidades.jsx'
 import ComunicadosTable from '../components/comunicados/ComunicadosTable.jsx'
 import Filtros from '../components/comunicados/Filtros.jsx'
@@ -9,8 +10,8 @@ import A11yControls from '../components/a11y/A11yControls.jsx'
 import useReveal from "../hooks/useReveal.jsx"
 import Compromiso from '../components/compromiso/Compromiso.jsx'
 import Footer from '../components/footer/Footer.jsx'
+
 export default function Home() {
-  // Estado para filtros (evita el crash de props faltantes)
   const [tag, setTag] = useState('all')
 
   return (
@@ -19,6 +20,10 @@ export default function Home() {
       <Subnav />
       <main id="contenido" tabIndex={-1}>
         <Hero />
+
+        {/* ✅ Sección animada nueva debajo del Hero */}
+        <HeroShowcase />
+
         <Compromiso />
         <Especialidades />
 
@@ -29,8 +34,6 @@ export default function Home() {
               <h3 className="com-subtitle">Todos los comunicados</h3>
               <Filtros value={tag} onChange={setTag} />
             </div>
-
-            {/* La tabla lee el estado `tag` */}
             <ComunicadosTable filter={tag} />
           </div>
         </section>
