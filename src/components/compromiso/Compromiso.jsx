@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react'
-import './compromiso.css'
+import './compromiso_new.css'
 
 export default function Compromiso() {
   const ref = useRef(null)
