@@ -1,0 +1,131 @@
+.testimonios {
+  background: #111;
+  padding: 100px 24px;
+}
+
+.testimonios__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Card del testimonio */
+.test-card {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 24px;
+  padding: 52px 52px 40px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 36px;
+  transition: opacity .28s ease, transform .28s ease;
+}
+
+.test-card--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.test-card--out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Comilla decorativa gigante */
+.test-card__quote {
+  position: absolute;
+  top: -10px;
+  left: 36px;
+  font-size: 9rem;
+  font-weight: 900;
+  color: rgba(255,214,10,.08);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  font-family: Georgia, serif;
+}
+
+.test-card__texto {
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+  font-weight: 400;
+  color: rgba(255,255,255,.85);
+  line-height: 1.75;
+  margin: 0 0 36px;
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+}
+
+.test-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.test-card__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  border: 2px solid var(--test-color, #ffd60a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .9rem;
+  font-weight: 900;
+  color: var(--test-color, #ffd60a);
+  flex-shrink: 0;
+}
+
+.test-card__nombre {
+  display: block;
+  font-size: .95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.test-card__cargo {
+  display: block;
+  font-size: .8rem;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 2px;
+}
+
+.test-card__anio {
+  display: block;
+  font-size: .72rem;
+  color: rgba(255,255,255,.25);
+  font-weight: 600;
+}
+
+/* Dots de navegación */
+.test-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.test-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,.18);
+  cursor: pointer;
+  transition: all .3s ease;
+  padding: 0;
+}
+
+.test-dot--active {
+  background: var(--dot-color, #ffd60a);
+  width: 28px;
+  border-radius: 999px;
+}
+
+@media (max-width: 600px) {
+  .test-card {
+    padding: 36px 28px 28px;
+  }
+}
