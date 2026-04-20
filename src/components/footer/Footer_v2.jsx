@@ -42,29 +42,7 @@ export default function Footer() {
             <li><a href="#comunicados">Comunicados</a></li>
           </ul>
         </div>
-
-        {/* Col 4 — Contacto + mini mapa */}
-        <div className="sf-col sf-col--contact">
-          <h4 className="sf-heading">Contacto</h4>
-          <ul className="sf-contact-list">
-            <li>
-              <span className="sf-contact-list__icon">📍</span>
-              <span>Av. Directorio 6462, Mataderos, CABA</span>
-            </li>
-            <li>
-              <span className="sf-contact-list__icon">📞</span>
-              <a href="tel:+541112345678">(011) 1234-5678</a>
-            </li>
-            <li>
-              <span className="sf-contact-list__icon">✉</span>
-              <a href="mailto:contacto@et20.edu.ar">contacto@et20.edu.ar</a>
-            </li>
-            <li>
-              <span className="sf-contact-list__icon">🕐</span>
-              <span>Lun–Vie · 8:00–16:00 hs</span>
-            </li>
-          </ul>
-
+          
     </footer>
   )
 }
