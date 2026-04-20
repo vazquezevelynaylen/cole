@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero" id="top" aria-label="Portada">
       <div
         className="hero__bg"
-        style={{ backgroundImage: 'url(/img/colegio1.jpg)' }}
+        style={{ backgroundImage: 'url(/img/tic1.jpg)' }}
         aria-hidden="true"
       />
  
