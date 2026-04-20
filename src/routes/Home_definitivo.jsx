@@ -1,6 +1,3 @@
-
-Copy
-
 import { useState } from 'react'
  
 /* Layout */
