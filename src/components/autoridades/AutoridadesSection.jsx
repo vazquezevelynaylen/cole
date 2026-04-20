@@ -14,7 +14,7 @@ export default function AutoridadesSection() {
   }, [])
 
   const autoridades = [
-    { nombre: 'Directora General', cargo: 'Gestión Educativa' },
+    { nombre: 'Director General', cargo: 'Gestión Educativa' },
     { nombre: 'Vicedirectora Académica', cargo: 'Currículo y Docencia' },
     { nombre: 'Jefe de Taller', cargo: 'Formación Técnica' }
   ]
@@ -23,17 +23,24 @@ export default function AutoridadesSection() {
     <section className="autoridades-section" aria-labelledby="ttl-autoridades" ref={ref}>
       <div className="autoridades-wrap">
         <h2 id="ttl-autoridades" className="autoridades-title">Autoridades</h2>
+        
         <div className="autoridades-grid">
           {autoridades.map((persona, idx) => (
             <div key={idx} className="autoridad-card">
-              <div className="autoridad-placeholder">
-                <span>Foto</span>
-              </div>
+
+              {/* 👇 ACA VA LA IMAGEN */}
+              <img
+                src="/img/director1.jpeg"
+                alt={persona.nombre}
+                className="autoridad-img"
+              />
+
               <h3>{persona.nombre}</h3>
               <p>{persona.cargo}</p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   )
