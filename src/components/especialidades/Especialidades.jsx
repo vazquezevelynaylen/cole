@@ -15,7 +15,7 @@ export default function Especialidades() {
         </article>
 
         <article className="especialidad">
-          <img src="/img/colegio1" alt="Producciones de Multimedia" width="1200" height="800" loading="lazy" />
+          <img src="/img/multi1" alt="Producciones de Multimedia" width="1200" height="800" loading="lazy" />
           <h3>Multimedia</h3>
           <p>Diseño, animación y edición. Producciones audiovisuales y comunicación digital.</p>
           <div className="plan">
