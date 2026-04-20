@@ -16,34 +16,13 @@ export default function Footer() {
           </p>
 
           <div className="sf-social">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="sf-social__link"
-            >
-              IG
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="sf-social__link"
-            >
-              FB
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="sf-social__link"
-            >
-              YT
-            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="sf-social__link">IG</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="sf-social__link">FB</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="sf-social__link">YT</a>
           </div>
         </div>
 
-        {/* Col 2 — Navegación */}
+        {/* Col 2 */}
         <div className="sf-col">
           <h4 className="sf-heading">Institución</h4>
           <ul className="sf-links">
@@ -54,7 +33,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Col 3 — Especialidades */}
+        {/* Col 3 */}
         <div className="sf-col">
           <h4 className="sf-heading">Especialidades</h4>
           <ul className="sf-links">
@@ -65,44 +44,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Col 4 — Contacto */}
-        <div className="sf-col sf-col--contact">
-          <h4 className="sf-heading">Contacto</h4>
-
-          <ul className="sf-contact-list">
-            <li>
-              <span className="sf-contact-list__icon">📍</span>
-              <span>Av. Directorio 6462, Mataderos, CABA</span>
-            </li>
-            <li>
-              <span className="sf-contact-list__icon">📞</span>
-              <a href="tel:+541112345678">(011) 1234-5678</a>
-            </li>
-            <li>
-              <span className="sf-contact-list__icon">✉</span>
-              <a href="mailto:contacto@et20.edu.ar">
-                contacto@et20.edu.ar
-              </a>
-            </li>
-            <li>
-              <span className="sf-contact-list__icon">🕐</span>
-              <span>Lun–Vie · 8:00–16:00 hs</span>
-            </li>
-          </ul>
-
-          {/* Mapa */}
-          <div className="sf-minimap">
-            <iframe
-              title="Mapa ET20"
-              src="https://www.google.com/maps?q=Av+Directorio+6462,+Buenos+Aires&output=embed"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
+      </div> {/* 🔥 ESTE TE FALTABA */}
 
       {/* Barra inferior */}
       <div className="site-footer__bottom">
@@ -115,6 +57,7 @@ export default function Footer() {
           <a href="/accesibilidad">Accesibilidad</a>
         </nav>
       </div>
+
     </footer>
   )
 }
