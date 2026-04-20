@@ -5,7 +5,7 @@ export default function Especialidades() {
         <h2 id="ttl-especialidades" style={{textAlign: 'center', marginBottom: '40px', color: '#0a0a0a'}}>Especialidades</h2>
 
         <article className="especialidad">
-          <img src="/img/aulacompu1.jpg" alt="Laboratorio de TICs" width="1200" height="800" loading="lazy" />
+          <img src="/img/colegio1.jpg" alt="Laboratorio de TICs" width="1200" height="800" loading="lazy" />
           <h3>TIC</h3>
           <p>Programación, redes y sistemas. Proyectos integradores y prácticas en laboratorio.</p>
           <div className="plan">
@@ -14,7 +14,7 @@ export default function Especialidades() {
         </article>
 
         <article className="especialidad">
-          <img src="/img/multi1.jpg" alt="Producciones de Multimedia" width="1200" height="800" loading="lazy" />
+          <img src="/img/colegio1" alt="Producciones de Multimedia" width="1200" height="800" loading="lazy" />
           <h3>Multimedia</h3>
           <p>Diseño, animación y edición. Producciones audiovisuales y comunicación digital.</p>
           <div className="plan">
