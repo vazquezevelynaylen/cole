@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './Header_v2.css'
- 
+
 const NAV_ITEMS = [
   { label: 'Inicio', href: '#top' },
   {
@@ -14,8 +14,8 @@ const NAV_ITEMS = [
   {
     label: 'Especialidades',
     sub: [
-      { label: 'TIC', href: '#especialidades' },
-      { label: 'Multimedia', href: '#especialidades' },
+      { label: 'TIC', href: '#tic' },            // ✅ CAMBIADO
+      { label: 'Multimedia', href: '#multimedia' }, // ✅ CAMBIADO
     ],
   },
   {
@@ -29,18 +29,18 @@ const NAV_ITEMS = [
   { label: 'Proyectos', href: '#proyectos' },
   { label: 'Egresados', href: '#testimonios' },
 ]
- 
+
 export default function Header() {
   const ref = useRef(null)
   const [solid, setSolid] = useState(false)
- 
+
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 20)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
- 
+
   return (
     <header
       ref={ref}
@@ -51,7 +51,7 @@ export default function Header() {
         E.T. 20 D.E. 20
         <span>Carolina Muzzilli</span>
       </a>
- 
+
       {/* Nav */}
       <nav aria-label="Navegación principal">
         <ul className="site-nav">
@@ -60,12 +60,12 @@ export default function Header() {
               <li key={item.label} className="site-nav__item">
                 <button className="site-nav__btn" aria-haspopup="true">
                   {item.label}
-                  <span className="site-nav__chevron" aria-hidden="true">▾</span>
+                  <span className="site-nav__chevron">▾</span>
                 </button>
-                <ul className="site-nav__sub" role="menu">
+                <ul className="site-nav__sub">
                   {item.sub.map((s) => (
                     <li key={s.label}>
-                      <a href={s.href} role="menuitem">{s.label}</a>
+                      <a href={s.href}>{s.label}</a>
                     </li>
                   ))}
                 </ul>
@@ -76,19 +76,16 @@ export default function Header() {
               </li>
             )
           )}
- 
-          {/* CTA */}
+
           <li>
             <a href="#ubicacion" className="site-nav__cta">Contacto</a>
           </li>
         </ul>
       </nav>
- 
-      {/* Hamburger mobile */}
-      <button className="site-header__hamburger" aria-label="Abrir menú">
+
+      <button className="site-header__hamburger">
         <span /><span /><span />
       </button>
     </header>
   )
 }
- 
