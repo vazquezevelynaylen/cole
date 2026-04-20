@@ -42,7 +42,15 @@ export default function Footer() {
             <li><a href="#comunicados">Comunicados</a></li>
           </ul>
         </div>
-          
+
+      {/* Barra inferior */}
+      <div className="site-footer__bottom">
+        <span>© {year} E.T. 20 D.E. 20 "Carolina Muzzilli" — Todos los derechos reservados</span>
+        <nav className="sf-legal" aria-label="Legal">
+          <a href="/privacidad">Privacidad</a>
+          <a href="/accesibilidad">Accesibilidad</a>
+        </nav>
+      </div>
     </footer>
   )
 }
