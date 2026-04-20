@@ -1,21 +1,32 @@
+/* ══════════════════════════════════════════
+   UBICACIÓN — versión ajustada
+   ══════════════════════════════════════════ */
+
 .ubicacion {
   background: #0a0a0a;
   padding: 0;
   overflow: hidden;
 }
 
+/* 🔧 CONTENEDOR GENERAL
+   - Define layout en 2 columnas
+   - Bajamos altura total */
 .ubicacion__inner {
   display: grid;
-  grid-template-columns: 1fr 420px;
-  min-height: 520px;
+  grid-template-columns: 1fr 400px; /* ⬅ antes 420px (más ancho el panel derecho) */
+  min-height: 460px; /* ⬅ antes 520px (más bajo ahora) */
 }
 
-/* Mapa */
+/* ═════════════ MAPA ═════════════ */
+
 .ubicacion__mapa {
   position: relative;
   overflow: hidden;
 }
 
+/* 🔧 MAPA
+   - ocupa todo el espacio disponible
+   - filtros para estilo oscuro */
 .ubicacion__mapa iframe {
   position: absolute;
   inset: 0;
@@ -25,24 +36,28 @@
   transition: filter .4s ease;
 }
 
+/* 🔧 HOVER (se aclara un poco) */
 .ubicacion__mapa:hover iframe {
   filter: grayscale(.3) contrast(1.05) brightness(.75);
 }
 
-/* Overlay gradiente lateral */
+/* 🔧 OVERLAY LATERAL
+   - genera fade hacia el panel derecho */
 .ubicacion__mapa-overlay {
   position: absolute;
-  top: 0; right: 0;
-  width: 120px;
+  top: 0;
+  right: 0;
+  width: 100px; /* ⬅ antes 120px (más sutil) */
   height: 100%;
   background: linear-gradient(to left, #0a0a0a 0%, transparent 100%);
   pointer-events: none;
 }
 
-/* Panel info */
+/* ═════════════ PANEL DERECHO ═════════════ */
+
 .ubicacion__info {
   background: #0a0a0a;
-  padding: 64px 48px;
+  padding: 48px 40px; /* ⬅ antes 64px 48px (menos alto y menos ancho) */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,47 +65,52 @@
   border-left: 1px solid rgba(255,255,255,.06);
 }
 
+/* 🔧 TÍTULO */
 .ubicacion__info h2 {
-  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.6rem, 2.2vw, 2rem); /* ⬅ ligeramente más chico */
   font-weight: 900;
   color: #fff;
-  margin: 8px 0 32px;
+  margin: 6px 0 24px; /* ⬅ menos espacio abajo */
 }
 
-/* Datos */
+/* ═════════════ DATOS ═════════════ */
+
 .ubicacion__datos {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin-bottom: 40px;
+  gap: 20px; /* ⬅ antes 24px (más compacto) */
+  margin-bottom: 32px; /* ⬅ menos espacio antes del botón */
 }
 
 .ubicacion__datos li {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 12px;
 }
 
+/* 🔧 ICONOS */
 .ubic-dato__icon {
-  font-size: 1.1rem;
+  font-size: 1rem;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
+/* 🔧 LABELS (Dirección, Tel, etc.) */
 .ubicacion__datos strong {
   display: block;
-  font-size: .8rem;
+  font-size: .75rem;
   font-weight: 700;
   color: rgba(255,255,255,.35);
   text-transform: uppercase;
   letter-spacing: .08em;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
+/* 🔧 TEXTO */
 .ubicacion__datos span,
 .ubicacion__datos a {
-  font-size: .95rem;
+  font-size: .9rem;
   color: rgba(255,255,255,.75);
   text-decoration: none;
   line-height: 1.4;
@@ -101,7 +121,8 @@
   color: #ffd60a;
 }
 
-/* CTA virtual tour */
+/* ═════════════ BOTÓN ═════════════ */
+
 .ubic-cta {
   display: inline-flex;
   align-items: center;
@@ -109,8 +130,8 @@
   background: #ffd60a;
   color: #0a0a0a;
   font-weight: 800;
-  font-size: .9rem;
-  padding: .9em 1.4em;
+  font-size: .85rem; /* ⬅ más chico */
+  padding: .8em 1.3em; /* ⬅ más compacto */
   border-radius: 999px;
   text-decoration: none;
   width: fit-content;
@@ -124,7 +145,7 @@
 }
 
 .ubic-cta__arrow {
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: transform .2s ease;
 }
 
@@ -132,23 +153,29 @@
   transform: translateX(4px);
 }
 
-/* Responsive */
+/* ═════════════ RESPONSIVE ═════════════ */
+
 @media (max-width: 960px) {
+
   .ubicacion__inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* ⬅ pasa a una columna */
   }
+
   .ubicacion__mapa {
-    min-height: 320px;
+    min-height: 280px; /* ⬅ antes 320px (más bajo en mobile) */
     position: relative;
   }
+
   .ubicacion__mapa iframe {
     position: absolute;
   }
+
   .ubicacion__mapa-overlay {
     display: none;
   }
+
   .ubicacion__info {
-    padding: 48px 24px;
+    padding: 40px 20px; /* ⬅ más compacto */
     border-left: none;
     border-top: 1px solid rgba(255,255,255,.06);
   }
