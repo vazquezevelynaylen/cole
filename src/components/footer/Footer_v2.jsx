@@ -6,6 +6,7 @@ export default function Footer() {
   return (
     <footer className="site-footer" id="contacto">
       <div className="site-footer__main">
+
         {/* Col 1 — Brand */}
         <div className="sf-col sf-col--brand">
           <p className="sf-brand">E.T. 20 D.E. 20</p>
@@ -13,11 +14,32 @@ export default function Footer() {
           <p className="sf-tagline">
             Formando técnicos con excelencia, valores y visión de futuro.
           </p>
-          {/* Redes sociales */}
+
           <div className="sf-social">
-            <a href="#" aria-label="Instagram" className="sf-social__link">IG</a>
-            <a href="#" aria-label="Facebook"  className="sf-social__link">FB</a>
-            <a href="#" aria-label="YouTube"   className="sf-social__link">YT</a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sf-social__link"
+            >
+              IG
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sf-social__link"
+            >
+              FB
+            </a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sf-social__link"
+            >
+              YT
+            </a>
           </div>
         </div>
 
@@ -43,9 +65,51 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Col 4 — Contacto */}
+        <div className="sf-col sf-col--contact">
+          <h4 className="sf-heading">Contacto</h4>
+
+          <ul className="sf-contact-list">
+            <li>
+              <span className="sf-contact-list__icon">📍</span>
+              <span>Av. Directorio 6462, Mataderos, CABA</span>
+            </li>
+            <li>
+              <span className="sf-contact-list__icon">📞</span>
+              <a href="tel:+541112345678">(011) 1234-5678</a>
+            </li>
+            <li>
+              <span className="sf-contact-list__icon">✉</span>
+              <a href="mailto:contacto@et20.edu.ar">
+                contacto@et20.edu.ar
+              </a>
+            </li>
+            <li>
+              <span className="sf-contact-list__icon">🕐</span>
+              <span>Lun–Vie · 8:00–16:00 hs</span>
+            </li>
+          </ul>
+
+          {/* Mapa */}
+          <div className="sf-minimap">
+            <iframe
+              title="Mapa ET20"
+              src="https://www.google.com/maps?q=Av+Directorio+6462,+Buenos+Aires&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Barra inferior */}
       <div className="site-footer__bottom">
-        <span>© {year} E.T. 20 D.E. 20 "Carolina Muzzilli" — Todos los derechos reservados</span>
+        <span>
+          © {year} E.T. 20 D.E. 20 "Carolina Muzzilli" — Todos los derechos reservados
+        </span>
+
         <nav className="sf-legal" aria-label="Legal">
           <a href="/privacidad">Privacidad</a>
           <a href="/accesibilidad">Accesibilidad</a>
