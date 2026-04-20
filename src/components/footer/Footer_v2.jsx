@@ -43,44 +43,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Col 4 — Contacto + mini mapa */}
-        <div className="sf-col sf-col--contact">
-          <h4 className="sf-heading">Contacto</h4>
-          <ul className="sf-contact-list">
-            <li>
-              <span className="sf-contact-list__icon">📍</span>
-              <span>Av. Directorio 6462, Mataderos, CABA</span>
-            </li>
-            <li>
-              <span className="sf-contact-list__icon">📞</span>
-              <a href="tel:+541112345678">(011) 1234-5678</a>
-            </li>
-            <li>
-              <span className="sf-contact-list__icon">✉</span>
-              <a href="mailto:contacto@et20.edu.ar">contacto@et20.edu.ar</a>
-            </li>
-            <li>
-              <span className="sf-contact-list__icon">🕐</span>
-              <span>Lun–Vie · 8:00–16:00 hs</span>
-            </li>
-          </ul>
-
-          {/* Mini mapa */}
-          <div className="sf-minimap">
-            <iframe
-              title="Mapa ET20"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.2!2d-58.5004!3d-34.6618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.+Directorio+6462%2C+Mataderos%2C+CABA!5e0!3m2!1ses!2sar!4v1691000000000"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Barra inferior */}
       <div className="site-footer__bottom">
         <span>© {year} E.T. 20 D.E. 20 "Carolina Muzzilli" — Todos los derechos reservados</span>
