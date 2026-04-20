@@ -10,7 +10,7 @@ export default function Hero() {
       />
  
       <div className="hero__inner">
-        <p className="hero__eyebrow">Mataderos · CABA · Desde 1975</p>
+        <p className="hero__eyebrow">Mataderos · CABA · Desde 2019</p>
  
         <h1 className="hero__title">
           Formación<br />
