@@ -1,67 +1,173 @@
+/* ══════════════════════════════════════════
+   GLOBALS v2 — ET20  (inspirado en Baufest)
+   ══════════════════════════════════════════ */
+
 *,
 *::before,
 *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body { height: 100%; scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
   font-family: 'Roboto', system-ui, sans-serif;
+  background: #0a0a0a;
+  color: #f0f0f0;
   line-height: 1.6;
-  background: #0a0a0a;       /* negro */
-  color: #f5f5f5;
+  -webkit-font-smoothing: antialiased;
 }
 
 img { max-width: 100%; display: block; }
+a   { color: inherit; }
 
-.visually-hidden {
-  position: absolute; width:1px; height:1px; margin:-1px; border:0; padding:0;
-  clip: rect(0 0 0 0); overflow: hidden;
+/* ── Utilidades de sección ── */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
-a { color: inherit; }
+@media (max-width: 768px) {
+  .section-inner { padding: 0 24px; }
+}
 
-.btn {
+/* ── Patrón eyebrow / header de sección (estilo Baufest) ── */
+.sec-header {
+  margin-bottom: 60px;
+}
+
+.sec-header--center {
+  text-align: center;
+}
+
+.sec-header--center .sec-eyebrow::before { display: none; }
+
+.sec-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #ffd60a;
+  margin-bottom: 14px;
+}
+
+.sec-eyebrow::before {
+  content: '';
   display: inline-block;
-  padding: .85em 1.15em;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  border: 2px solid transparent;
-  transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
-  cursor: pointer;
+  width: 28px;
+  height: 1px;
+  background: #ffd60a;
+  flex-shrink: 0;
 }
 
-.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.25); }
+.sec-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 16px;
+}
 
-.btn:focus-visible { outline: 3px solid #ffd60a; outline-offset: 3px; }
+.sec-subtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,.45);
+  max-width: 52ch;
+  line-height: 1.65;
+}
 
-.btn--primary { background:#ffd60a; color:#0a0a0a; border-color:#ffd60a; }
-.btn--ghost   { background:transparent; color:#fff; border-color:rgba(255,255,255,.4); }
-.btn--ghost:hover { background: rgba(255,255,255,.08); }
+.sec-header--center .sec-subtitle {
+  margin: 0 auto;
+}
 
+/* ── Botones globales ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: .85em 1.6em;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background .2s, transform .15s, box-shadow .15s;
+}
+
+.btn-primary {
+  background: #ffd60a;
+  color: #0a0a0a;
+}
+
+.btn-primary:hover {
+  background: #ffe033;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,214,10,.22);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+.btn-ghost:hover {
+  border-color: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.05);
+}
+
+/* ── Reveal on scroll ── */
 .reveal {
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity .35s, transform .35s;
+  transform: translateY(20px);
+  transition: opacity .55s ease, transform .55s ease;
 }
+
 .reveal--in {
   opacity: 1;
   transform: none;
 }
 
+/* ── Visually hidden ── */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px;
+  border: 0; padding: 0; clip: rect(0 0 0 0); overflow: hidden;
+}
+
+/* ── Colores semánticos reusables ── */
+.badge {
+  display: inline-block;
+  padding: .25rem .65rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.badge-warn  { background: #ef4444; color: #fff; }
+.badge-ok    { background: #10b981; color: #fff; }
+.badge-info  { background: #3b82f6; color: #fff; }
+
+/* ── Back to top ── */
 .backtop {
   position: fixed;
-  right: 16px;
-  bottom: 16px;
-  border: 1px solid rgba(255, 214, 10, 0.4);
-  background: #0a0a0a;
+  right: 20px;
+  bottom: 20px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,.1);
   color: #ffd60a;
   border-radius: 999px;
-  padding: 0.6rem 0.8rem;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-  z-index: 1000;
+  padding: .55rem .75rem;
+  font-size: .75rem;
   cursor: pointer;
+  z-index: 1000;
+  transition: background .2s, transform .15s;
 }
-.backtop:hover {
-  filter: brightness(1.1);
-}
+
+.backtop:hover { background: #1a1a1a; transform: translateY(-2px); }
