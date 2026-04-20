@@ -58,7 +58,7 @@ export default function Compromiso() {
         <div className="compromiso__media">
           <div className="compromiso__img-wrap">
             <img
-              src="/img/logocompromiso.JPG"
+              src="/img/logocompromiso.png"
               alt="Logo ET20 — Compromiso institucional"
               width="420"
               height="420"
