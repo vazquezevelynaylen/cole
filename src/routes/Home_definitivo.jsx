@@ -4,21 +4,21 @@ Copy
 import { useState } from 'react'
  
 /* Layout */
-import Header          from '../components/header/Header.jsx'
-import Footer          from '../components/footer/Footer.jsx'
+import Header          from '../components/header/Header_v2.jsx'
+import Footer          from '../components/footer/Footer_v2.jsx'
 import A11yControls    from '../components/a11y/A11yControls.jsx'
  
 /* Secciones en orden */
-import Hero             from '../components/hero/Hero.jsx'
-import HeroShowcase     from '../components/hero/HeroShowcase.jsx'
+import Hero             from '../components/hero/Hero_v2.jsx'
+import HeroShowcase     from '../components/hero/HeroShowcase_v2.jsx'
 import Compromiso       from '../components/compromiso/Compromiso.jsx'
 import StatsSection     from '../components/stats/StatsSection.jsx'
 import Especialidades   from '../components/especialidades/Especialidades.jsx'
 import AutoridadesSection   from '../components/autoridades/AutoridadesSection.jsx'
 import GaleriaProyectos     from '../components/proyectos/GaleriaProyectos.jsx'
-import CalendarioSection    from '../components/calendario/CalendarioSection.jsx'
-import TestimoniosSection   from '../components/testimonios/TestimoniosSection.jsx'
-import UbicacionSection     from '../components/ubicacion/UbicacionSection.jsx'
+import CalendarioSection    from '../components/Calendario/CalendarioSection.jsx'
+import TestimoniosSection   from '../components/Testimonios/TestimoniosSection.jsx'
+import UbicacionSection     from '../components/Ubicacion/UbicacionSection.jsx'
  
 /* Comunicados */
 import ComunicadosTable from '../components/comunicados/ComunicadosTable.jsx'

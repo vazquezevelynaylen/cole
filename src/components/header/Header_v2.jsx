@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import './header_v2.css'
+import './Header_v2.css'
  
 const NAV_ITEMS = [
   { label: 'Inicio', href: '#top' },

@@ -1,4 +1,4 @@
-import './footer_v2.css'
+import './Footer_v2.css'
 
 export default function Footer() {
   const year = new Date().getFullYear()
