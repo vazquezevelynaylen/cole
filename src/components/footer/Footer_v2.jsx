@@ -1,91 +1,120 @@
-import { useEffect, useRef, useState } from 'react'
-import './Header_v2.css'
+import './Footer_v2.css'
 
-const NAV_ITEMS = [
-  { label: 'Inicio', href: '#top' },
-  {
-    label: 'Institucional',
-    sub: [
-      { label: 'Presentación', href: '#institucional' },
-      { label: 'Autoridades', href: '#institucional' },
-      { label: 'Compromisos', href: '#compromiso' },
-    ],
-  },
-  {
-    label: 'Especialidades',
-    sub: [
-      { label: 'TIC', href: '#tic' },            // ✅ CAMBIADO
-      { label: 'Multimedia', href: '#multimedia' }, // ✅ CAMBIADO
-    ],
-  },
-  {
-    label: 'Académico',
-    sub: [
-      { label: 'Calendario', href: '#academico' },
-      { label: 'Comunicados', href: '#comunicados' },
-      { label: 'Exámenes', href: '#comunicados' },
-    ],
-  },
-  { label: 'Proyectos', href: '#proyectos' },
-  { label: 'Egresados', href: '#testimonios' },
-]
-
-export default function Header() {
-  const ref = useRef(null)
-  const [solid, setSolid] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setSolid(window.scrollY > 20)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+export default function Footer() {
+  const year = new Date().getFullYear()
 
   return (
-    <header
-      ref={ref}
-      className={`site-header ${solid ? 'site-header--solid' : 'site-header--transparent'}`}
-    >
-      {/* Brand */}
-      <a href="#top" className="site-header__brand">
-        E.T. 20 D.E. 20
-        <span>Carolina Muzzilli</span>
-      </a>
+    <footer className="site-footer" id="contacto">
+      <div className="site-footer__main">
 
-      {/* Nav */}
-      <nav aria-label="Navegación principal">
-        <ul className="site-nav">
-          {NAV_ITEMS.map((item) =>
-            item.sub ? (
-              <li key={item.label} className="site-nav__item">
-                <button className="site-nav__btn" aria-haspopup="true">
-                  {item.label}
-                  <span className="site-nav__chevron">▾</span>
-                </button>
-                <ul className="site-nav__sub">
-                  {item.sub.map((s) => (
-                    <li key={s.label}>
-                      <a href={s.href}>{s.label}</a>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ) : (
-              <li key={item.label} className="site-nav__item">
-                <a href={item.href} className="site-nav__link">{item.label}</a>
-              </li>
-            )
-          )}
+        {/* Col 1 — Brand */}
+        <div className="sf-col sf-col--brand">
+          <p className="sf-brand">E.T. 20 D.E. 20</p>
+          <p className="sf-brand-sub">"Carolina Muzzilli"</p>
+          <p className="sf-tagline">
+            Formando técnicos con excelencia, valores y visión de futuro.
+          </p>
 
-          <li>
-            <a href="#ubicacion" className="site-nav__cta">Contacto</a>
-          </li>
-        </ul>
-      </nav>
+          <div className="sf-social">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sf-social__link"
+            >
+              IG
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sf-social__link"
+            >
+              FB
+            </a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sf-social__link"
+            >
+              YT
+            </a>
+          </div>
+        </div>
 
-      <button className="site-header__hamburger">
-        <span /><span /><span />
-      </button>
-    </header>
+        {/* Col 2 — Navegación */}
+        <div className="sf-col">
+          <h4 className="sf-heading">Institución</h4>
+          <ul className="sf-links">
+            <li><a href="#institucional">Presentación</a></li>
+            <li><a href="#institucional">Autoridades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#testimonios">Egresados</a></li>
+          </ul>
+        </div>
+
+        {/* Col 3 — Especialidades */}
+        <div className="sf-col">
+          <h4 className="sf-heading">Especialidades</h4>
+          <ul className="sf-links">
+            <li><a href="#especialidades">TIC</a></li>
+            <li><a href="#especialidades">Multimedia</a></li>
+            <li><a href="#academico">Calendario académico</a></li>
+            <li><a href="#comunicados">Comunicados</a></li>
+          </ul>
+        </div>
+
+        {/* Col 4 — Contacto */}
+        <div className="sf-col sf-col--contact">
+          <h4 className="sf-heading">Contacto</h4>
+
+          <ul className="sf-contact-list">
+            <li>
+              <span className="sf-contact-list__icon">📍</span>
+              <span>Av. Directorio 6462, Mataderos, CABA</span>
+            </li>
+            <li>
+              <span className="sf-contact-list__icon">📞</span>
+              <a href="tel:+541112345678">(011) 1234-5678</a>
+            </li>
+            <li>
+              <span className="sf-contact-list__icon">✉</span>
+              <a href="mailto:contacto@et20.edu.ar">
+                contacto@et20.edu.ar
+              </a>
+            </li>
+            <li>
+              <span className="sf-contact-list__icon">🕐</span>
+              <span>Lun–Vie · 8:00–16:00 hs</span>
+            </li>
+          </ul>
+
+          {/* Mapa */}
+          <div className="sf-minimap">
+            <iframe
+              title="Mapa ET20"
+              src="https://www.google.com/maps?q=Av+Directorio+6462,+Buenos+Aires&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Barra inferior */}
+      <div className="site-footer__bottom">
+        <span>
+          © {year} E.T. 20 D.E. 20 "Carolina Muzzilli" — Todos los derechos reservados
+        </span>
+
+        <nav className="sf-legal" aria-label="Legal">
+          <a href="/privacidad">Privacidad</a>
+          <a href="/accesibilidad">Accesibilidad</a>
+        </nav>
+      </div>
+    </footer>
   )
 }
