@@ -9,8 +9,6 @@ import A11yControls    from '../components/a11y/A11yControls.jsx'
 import Hero             from '../components/hero/Hero_v2.jsx'
 import HeroShowcase     from '../components/hero/HeroShowcase_v2.jsx'
 import Compromiso       from '../components/compromiso/Compromiso.jsx'
-import StatsSection     from '../components/stats/StatsSection.jsx'
-import Especialidades   from '../components/especialidades/Especialidades.jsx'
 import AutoridadesSection   from '../components/autoridades/AutoridadesSection.jsx'
 import GaleriaProyectos     from '../components/proyectos/GaleriaProyectos.jsx'
 import CalendarioSection    from '../components/Calendario/CalendarioSection.jsx'
@@ -42,25 +40,19 @@ export default function Home() {
         {/* ─── 3. COMPROMISO ──────────────────────── */}
         <Compromiso />
  
-        {/* ─── 4. STATS ────────────────────────────── */}
-        <StatsSection />
- 
-        {/* ─── 5. ESPECIALIDADES ───────────────────── */}
-        <Especialidades />
- 
-        {/* ─── 6. AUTORIDADES ──────────────────────── */}
+        {/* ─── 4. AUTORIDADES ──────────────────────── */}
         <AutoridadesSection />
  
-        {/* ─── 7. PROYECTOS (galería masonry) ─────── */}
+        {/* ─── 5. PROYECTOS (galería masonry) ─────── */}
         <GaleriaProyectos />
  
-        {/* ─── 8. CALENDARIO ───────────────────────── */}
+        {/* ─── 6. CALENDARIO ───────────────────────── */}
         <CalendarioSection />
  
-        {/* ─── 9. TESTIMONIOS ──────────────────────── */}
+        {/* ─── 7. TESTIMONIOS ──────────────────────── */}
         <TestimoniosSection />
  
-        {/* ─── 10. COMUNICADOS ─────────────────────── */}
+        {/* ─── 8. COMUNICADOS ─────────────────────── */}
         <section
           id="comunicados"
           aria-labelledby="ttl-comunicados"
@@ -83,7 +75,7 @@ export default function Home() {
           </div>
         </section>
  
-        {/* ─── 11. UBICACIÓN ───────────────────────── */}
+        {/* ─── 9. UBICACIÓN ───────────────────────── */}
         <UbicacionSection />
  
       </main>

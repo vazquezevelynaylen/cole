@@ -7,7 +7,7 @@ const PANELS = [
     tag: 'TIC',
     title: 'Tecnologías de la Información',
     sub: 'Programación · Redes · Sistemas',
-    img: '/img/aulacompu1.jpg',
+    img: '/img/tic1.jpg',
     href: '#especialidades',
     accent: '#ffd60a',
   },
