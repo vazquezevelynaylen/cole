@@ -18,13 +18,10 @@
      1fr = columnas normales
      1.5fr = más ancho (contacto) */
   grid-template-columns: 1.4fr 1fr 1fr 1.5fr;
-
   gap: 48px; /* 📏 espacio ENTRE columnas */
-
   max-width: 1200px; /* 📐 ancho máximo del footer */
   margin: 0 auto; /* 📍 centra el bloque en la pantalla */
-
-  padding: 100px 40px 80px; 
+  padding: 100px 30px 80px; 
   /* 📏 altura interna:
      100px arriba = mucho aire
      80px abajo = separación con barra inferior
