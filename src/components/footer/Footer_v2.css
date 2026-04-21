@@ -16,7 +16,9 @@
   gap: 48px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 64px 40px 48px;
+  padding: 100px 40px 80px;
+  justify-items: center;
+  text-align: center;
 }
 
 /* ── Col Brand ── */
@@ -26,7 +28,7 @@
   letter-spacing: .06em;
   text-transform: uppercase;
   color: #fff;
-  margin: 0 0 2px;
+  margin: 0 auto 2px;
 }
 
 .sf-brand-sub {
@@ -49,6 +51,7 @@
 .sf-social {
   display: flex;
   gap: 8px;
+  justify-content: center;
 }
 
 .sf-social__link {
@@ -120,11 +123,12 @@
 /* ── Contacto ── */
 .sf-contact-list {
   list-style: none;
-  margin: 0 0 24px;
+  margin: 0 auto 24px;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  align-items: center;
 }
 
 .sf-contact-list li {
@@ -153,11 +157,13 @@
 /* ── Mini mapa ── */
 .sf-minimap {
   width: 100%;
+  max-width: 300px;
   height: 140px;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.08);
   background: #111;
+  margin: 0 auto;
 }
 
 .sf-minimap iframe {
@@ -175,12 +181,13 @@
 /* ── Barra inferior ── */
 .site-footer__bottom {
   border-top: 1px solid rgba(255,255,255,.05);
-  padding: 20px 40px;
+  padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   gap: 16px;
   font-size: .76rem;
   color: rgba(255,255,255,.25);
@@ -189,6 +196,8 @@
 .sf-legal {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .sf-legal a {

@@ -10,7 +10,6 @@ import Hero             from '../components/hero/Hero_v2.jsx'
 import HeroShowcase     from '../components/hero/HeroShowcase_v2.jsx'
 import Compromiso       from '../components/compromiso/Compromiso.jsx'
 import StatsSection     from '../components/stats/StatsSection.jsx'
-import Especialidades   from '../components/especialidades/Especialidades.jsx'
 import AutoridadesSection   from '../components/autoridades/AutoridadesSection.jsx'
 import GaleriaProyectos     from '../components/proyectos/GaleriaProyectos.jsx'
 import CalendarioSection    from '../components/Calendario/CalendarioSection.jsx'
@@ -45,22 +44,19 @@ export default function Home() {
         {/* ─── 4. ESTADÍSTICAS ────────────────────── */}
         <StatsSection />
 
-        {/* ─── 5. ESPECIALIDADES ──────────────────── */}
-        <Especialidades />
-
-        {/* ─── 6. AUTORIDADES ──────────────────────── */}
+        {/* ─── 5. AUTORIDADES ──────────────────────── */}
         <AutoridadesSection />
  
-        {/* ─── 7. PROYECTOS (galería masonry) ─────── */}
+        {/* ─── 6. PROYECTOS (galería masonry) ─────── */}
         <GaleriaProyectos />
 
-        {/* ─── 8. CALENDARIO ───────────────────────── */}
+        {/* ─── 7. CALENDARIO ───────────────────────── */}
         <CalendarioSection />
 
-        {/* ─── 9. TESTIMONIOS ──────────────────────── */}
+        {/* ─── 8. TESTIMONIOS ──────────────────────── */}
         <TestimoniosSection />
 
-        {/* ─── 10. COMUNICADOS ─────────────────────── */}
+        {/* ─── 9. COMUNICADOS ─────────────────────── */}
         <section
           id="comunicados"
           aria-labelledby="ttl-comunicados"
@@ -83,7 +79,7 @@ export default function Home() {
           </div>
         </section>
  
-        {/* ─── 11. UBICACIÓN ───────────────────────── */}
+        {/* ─── 10. UBICACIÓN ───────────────────────── */}
         <UbicacionSection />
  
       </main>
