@@ -15,10 +15,9 @@ export default function StatsSection() {
   }, [])
 
   const stats = [
-    { num: '50+', label: 'Años de trayectoria' },
-    { num: '2500+', label: 'Egresados anualmente' },
-    { num: '15', label: 'Especialidades' },
-    { num: '98%', label: 'Empleabilidad' }
+    { num: '220', label: 'Egresados anualmente' },
+    { num: '2', label: 'Especialidades' },
+    { num: 'xxx', label: 'Empleabilidad' }
   ]
 
   return (
