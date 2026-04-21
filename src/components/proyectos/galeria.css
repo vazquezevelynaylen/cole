@@ -18,18 +18,24 @@
   font-weight: 600;
   text-align: center;
   margin-bottom: 60px;
-  color: #000;
+  color: #fff; /* 🔧 antes negro → no se veía bien sobre fondo oscuro */
 }
 
+/* 🔽 GRID MÁS COMPACTO */
 .galeria-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 0.9fr); /* 🔧 más angostas */
+  gap: 20px; /* 🔧 menos espacio */
+  justify-content: center; /* 🔧 centra el bloque */
 }
 
 .galeria-item {
   background: #fff;
   border-radius: 8px;
+
+  max-width: 320px; /* 🔧 limita ancho */
+  margin: 0 auto;   /* 🔧 centra cada card */
+
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -42,6 +48,7 @@
   transform: translateY(0);
 }
 
+/* delays animación */
 .galeria-item:nth-child(1) { transition-delay: 0.1s; }
 .galeria-item:nth-child(2) { transition-delay: 0.15s; }
 .galeria-item:nth-child(3) { transition-delay: 0.2s; }
@@ -54,9 +61,10 @@
   transform: translateY(-4px);
 }
 
+/* 🔽 IMAGEN MÁS BAJA */
 .galeria-img-wrap {
   width: 100%;
-  padding-top: 100%;
+  padding-top: 80%; /* 🔧 antes 100% → menos alto */
   position: relative;
   background: #e0e0e0;
   overflow: hidden;
@@ -75,22 +83,24 @@
   color: #999;
 }
 
+/* 🔽 CONTENIDO MÁS COMPACTO */
 .galeria-info {
-  padding: 20px;
+  padding: 16px; /* 🔧 antes 20px */
 }
 
 .galeria-info h3 {
-  font-size: 1.1rem;
+  font-size: 1rem; /* 🔧 un poco más chico */
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #000;
 }
 
 .galeria-info p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #666;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .galeria-section {
     padding: 60px 16px;
@@ -102,7 +112,7 @@
   }
 
   .galeria-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 🔧 más chicas también en mobile */
+    gap: 14px;
   }
 }
