@@ -1,10 +1,11 @@
 .galeria-section {
   padding: 80px 24px;
-    background: linear-gradient(
+  background: linear-gradient(
     135deg,
-    #0b1f3a 0%,     /* azul base */
-    #0f2c55 40%,    /* azul más profundo */
-    #0a0a0a 100% 
+    #0b1f3a 0%,
+    #0f2c55 40%,
+    #0a0a0a 100%
+  );
 }
 
 .galeria-wrap {
