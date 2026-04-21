@@ -14,8 +14,7 @@
   color: #fff;
 
   /* ⚠️ ERROR CORREGIDO */
-  padding: 100px 20px; /* antes tenías "20x" */
-
+  padding: 100px 19px; /* antes tenías "20x" */
   position: relative;
   overflow: hidden;
 }
