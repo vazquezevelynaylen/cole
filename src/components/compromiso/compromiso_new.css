@@ -3,9 +3,19 @@
    =================================================== */
 
 .compromiso {
-  background: #0b1f3a; 
+  /* 🔵 GRADIENTE MODERNO */
+  background: linear-gradient(
+    135deg,
+    #0b1f3a 0%,     /* azul base */
+    #0f2c55 40%,    /* azul más profundo */
+    #0a0a0a 100%    /* se funde con negro de la web */
+  );
+
   color: #fff;
-  padding: 100px 20x;
+
+  /* ⚠️ ERROR CORREGIDO */
+  padding: 100px 20px; /* antes tenías "20x" */
+
   position: relative;
   overflow: hidden;
 }
