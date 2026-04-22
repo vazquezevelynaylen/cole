@@ -18,23 +18,23 @@
   font-weight: 600;
   text-align: center;
   margin-bottom: 60px;
-  color: #fff; /* 🔧 antes negro → no se veía bien sobre fondo oscuro */
+  color: #fff;
 }
 
-/* 🔽 GRID MÁS COMPACTO */
+/* 🔽 GRID MÁS GRANDE */
 .galeria-grid {
   display: grid;
-  grid-template-columns: repeat(3, 0.9fr); /* 🔧 más angostas */
-  gap: 20px; /* 🔧 menos espacio */
-  justify-content: center; /* 🔧 centra el bloque */
+  grid-template-columns: repeat(3, 1.2fr); /* 🔥 antes 0.9fr → ahora más grandes */
+  gap: 40px; /* 🔥 antes 30px */
+  justify-content: center;
 }
 
 .galeria-item {
   background: #fff;
   border-radius: 8px;
 
-  max-width: 320px; /* 🔧 limita ancho */
-  margin: 0 auto;   /* 🔧 centra cada card */
+  max-width: 520px; /* 🔥 antes 400px */
+  margin: 0 auto;
 
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -61,10 +61,10 @@
   transform: translateY(-4px);
 }
 
-/* 🔽 IMAGEN MÁS BAJA */
+/* 🔽 IMAGEN CUADRADA */
 .galeria-img-wrap {
   width: 100%;
-  padding-top: 80%; /* 🔧 antes 100% → menos alto */
+  padding-top: 100%; /* 🔥 antes 80% → ahora cuadrado perfecto */
   position: relative;
   background: #e0e0e0;
   overflow: hidden;
@@ -83,13 +83,13 @@
   color: #999;
 }
 
-/* 🔽 CONTENIDO MÁS COMPACTO */
+/* 🔽 CONTENIDO */
 .galeria-info {
-  padding: 16px; /* 🔧 antes 20px */
+  padding: 16px;
 }
 
 .galeria-info h3 {
-  font-size: 1rem; /* 🔧 un poco más chico */
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 6px;
   color: #000;
@@ -112,7 +112,7 @@
   }
 
   .galeria-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 🔧 más chicas también en mobile */
-    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 🔥 antes 180px */
+    gap: 20px;
   }
 }
