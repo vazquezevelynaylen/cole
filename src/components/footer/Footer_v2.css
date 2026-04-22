@@ -3,181 +3,150 @@
    ══════════════════════════════════════════ */
 
 .site-footer {
-  background: #0a0a0a;
-  border-top: 1px solid rgba(255,255,255,.06);
+  background: #0a0a0a; /* 🔲 fondo general (negro base de toda la web) */
+  border-top: 1px solid rgba(255,255,255,.06); /* 📏 línea superior separadora */
   color: rgba(255,255,255,.65);
-  font-size: .88rem;
+  font-size: .88rem; /* 📏 tamaño base del texto */
 }
 
 /* ── Zona principal: columnas ── */
 .site-footer__main {
   display: grid;
+
+  /* 📐 ANCHURA DE COLUMNAS
+     1.4fr = más ancho (marca)
+     1fr = columnas normales
+     1.5fr = más ancho (contacto) */
   grid-template-columns: 1.4fr 1fr 1fr 1.5fr;
-  gap: 48px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 30px 80px;
-  justify-items: center;
-  text-align: center;
+  gap: 48px; /* 📏 espacio ENTRE columnas */
+  max-width: 1200px; /* 📐 ancho máximo del footer */
+  margin: 0 auto; /* 📍 centra el bloque en la pantalla */
+  padding: 100px 30px 80px; 
+  /* 📏 altura interna:
+     100px arriba = mucho aire
+     80px abajo = separación con barra inferior
+     40px laterales = margen izquierdo/derecho */
+
+  justify-items: center; /* 📍 centra contenido horizontal en cada columna */
+  text-align: center; /* 📍 centra textos */
 }
 
 /* ── Col Brand ── */
 .sf-brand {
-  font-size: 1.1rem;
+  font-size: 1.1rem; /* 📏 tamaño título marca */
   font-weight: 900;
   letter-spacing: .06em;
   text-transform: uppercase;
   color: #fff;
-  margin: 0 auto 2px;
+  margin: 0 auto 2px; /* 📏 espacio abajo muy chico */
 }
 
 .sf-brand-sub {
   font-size: .8rem;
   color: #ffd60a;
-  margin: 0 0 16px;
+  margin: 0 0 16px; /* 📏 separa del texto de abajo */
 }
 
 .sf-tagline {
   font-size: .83rem;
   line-height: 1.6;
-  max-width: 28ch;
-  margin: 0 0 24px;
+  max-width: 28ch; /* 📐 limita ancho del texto (no se estira) */
+  margin: 0 0 24px; /* 📏 separación con redes */
 }
 
 /* Redes */
 .sf-social {
   display: flex;
-  gap: 8px;
-  justify-content: center;
+  gap: 8px; /* 📏 separación entre iconos */
+  justify-content: center; /* 📍 centrados */
 }
 
-/* ✅ CORREGIDO: estilos completos para los links sociales */
 .sf-social__link {
-  width: 34px;
+  width: 34px;  /* 📐 tamaño cuadrado */
   height: 34px;
   border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .7rem;
-  font-weight: 900;
-  letter-spacing: .05em;
-  background: rgba(255,255,255,.07);
-  color: rgba(255,255,255,.65);
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,.1);
-  transition: background .2s, color .2s, border-color .2s;
-}
-
-.sf-social__link:hover {
-  background: #ffd60a;
-  color: #0a0a0a;
-  border-color: #ffd60a;
 }
 
 /* ── Headings ── */
 .sf-heading {
   font-size: .68rem;
   letter-spacing: .18em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.35);
-  font-weight: 700;
-  margin: 0 0 20px;
+  margin: 0 0 20px; /* 📏 espacio con lista */
 }
 
 /* ── Links ── */
 .sf-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 10px; /* 📏 separación vertical entre links */
 }
 
 .sf-links a {
   font-size: .85rem;
-  color: rgba(255,255,255,.55);
-  text-decoration: none;
-  transition: color .2s;
-}
-
-.sf-links a:hover {
-  color: #ffd60a;
 }
 
 /* ── Contacto ── */
 .sf-contact-list {
-  list-style: none;
-  margin: 0 auto 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
+  margin: 0 auto 24px; /* 📍 centrado + espacio abajo */
+  gap: 12px; /* 📏 separación entre items */
+  align-items: center; /* 📍 centra cada línea */
 }
 
 .sf-contact-list li {
-  display: flex;
-  gap: 10px;
+  gap: 10px; /* 📏 espacio icono-texto */
   line-height: 1.45;
 }
 
 /* ── Mini mapa ── */
 .sf-minimap {
-  max-width: 300px;
-  height: 140px;
-  margin: 0 auto;
+  max-width: 300px; /* 📐 ancho máximo del mapa */
+  height: 140px;    /* 📏 altura fija */
+  margin: 0 auto;   /* 📍 centrado */
 }
 
 /* ── Barra inferior ── */
 .site-footer__bottom {
   border-top: 1px solid rgba(255,255,255,.05);
-  padding: 40px;
-  max-width: 1200px;
+
+  padding: 40px; /* 📏 altura interna de la barra */
+
+  max-width: 1200px; /* 📐 mismo ancho que arriba */
   margin: 0 auto;
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* 📍 contenido en columna */
+  align-items: center;    /* 📍 centrado horizontal */
   justify-content: center;
-  gap: 16px;
+
+  gap: 16px; /* 📏 espacio entre texto y links */
 }
 
 /* Links legales */
 .sf-legal {
-  display: flex;
-  gap: 20px;
-}
-
-.sf-legal a {
-  font-size: .8rem;
-  color: rgba(255,255,255,.3);
-  text-decoration: none;
-  transition: color .2s;
-}
-
-.sf-legal a:hover {
-  color: rgba(255,255,255,.65);
+  gap: 20px; /* 📏 separación entre links */
 }
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
+
   .site-footer__main {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* 📐 pasa de 4 a 2 columnas */
     gap: 36px;
-    padding: 48px 24px 36px;
+    padding: 48px 24px 36px; /* 📏 menos alto en tablet */
   }
 
   .sf-col--brand {
-    grid-column: span 2;
+    grid-column: span 2; /* 📍 ocupa todo el ancho */
   }
 }
 
 @media (max-width: 600px) {
+
   .site-footer__main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 📐 1 sola columna */
   }
 
   .site-footer__bottom {
-    align-items: flex-start;
-    padding: 20px 24px;
+    align-items: flex-start; /* 📍 texto alineado a la izquierda */
+    padding: 20px 24px; /* 📏 más compacto */
     gap: 10px;
   }
 }
