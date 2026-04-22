@@ -3,8 +3,8 @@ import Home from './routes/Home_definitivo.jsx'
 import NotFound from './routes/NotFound.jsx'
 
 /* 🔽 IMPORTÁS LAS NUEVAS PÁGINAS */
-import TicPage from './pages/TicPage.jsx'
-import MultimediaPage from './pages/MultimediaPage.jsx'
+import TicPage from './Pages/TicPage.jsx'
+import MultimediaPage from './Pages/MultimediaPage.jsx'
 
 export default function App() {
   return (
