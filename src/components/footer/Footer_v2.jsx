@@ -16,9 +16,34 @@ export default function Footer() {
           </p>
 
           <div className="sf-social">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="sf-social__link">IG</a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="sf-social__link">FB</a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="sf-social__link">YT</a>
+            {/* ✅ CORREGIDO: agregados aria-label descriptivos y texto accesible */}
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sf-social__link"
+              aria-label="Instagram de ET20"
+            >
+              IG
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sf-social__link"
+              aria-label="Facebook de ET20"
+            >
+              FB
+            </a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sf-social__link"
+              aria-label="YouTube de ET20"
+            >
+              YT
+            </a>
           </div>
         </div>
 
@@ -44,7 +69,7 @@ export default function Footer() {
           </ul>
         </div>
 
-      </div> {/* 🔥 ESTE TE FALTABA */}
+      </div>
 
       {/* Barra inferior */}
       <div className="site-footer__bottom">
@@ -57,7 +82,6 @@ export default function Footer() {
           <a href="/accesibilidad">Accesibilidad</a>
         </nav>
       </div>
-
     </footer>
   )
 }
