@@ -1,0 +1,20 @@
+// vite.config.js
+import react from "file:///home/project/node_modules/@vitejs/plugin-react/dist/index.js";
+import { resolve } from "path";
+var __vite_injected_original_dirname = "/home/project";
+var vite_config_default = {
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@components": resolve(__vite_injected_original_dirname, "src/components"),
+      "@features": resolve(__vite_injected_original_dirname, "src/features"),
+      "@styles": resolve(__vite_injected_original_dirname, "src/styles")
+    }
+  },
+  server: { port: 5173 },
+  preview: { port: 5173 }
+};
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcuanMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCIvaG9tZS9wcm9qZWN0XCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ZpbGVuYW1lID0gXCIvaG9tZS9wcm9qZWN0L3ZpdGUuY29uZmlnLmpzXCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ltcG9ydF9tZXRhX3VybCA9IFwiZmlsZTovLy9ob21lL3Byb2plY3Qvdml0ZS5jb25maWcuanNcIjtpbXBvcnQgcmVhY3QgZnJvbSAnQHZpdGVqcy9wbHVnaW4tcmVhY3QnXG5pbXBvcnQgeyByZXNvbHZlIH0gZnJvbSAncGF0aCdcblxuZXhwb3J0IGRlZmF1bHQge1xuICBwbHVnaW5zOiBbcmVhY3QoKV0sXG4gIHJlc29sdmU6IHtcbiAgICBhbGlhczoge1xuICAgICAgJ0Bjb21wb25lbnRzJzogcmVzb2x2ZShfX2Rpcm5hbWUsICdzcmMvY29tcG9uZW50cycpLFxuICAgICAgJ0BmZWF0dXJlcyc6IHJlc29sdmUoX19kaXJuYW1lLCAnc3JjL2ZlYXR1cmVzJyksXG4gICAgICAnQHN0eWxlcyc6IHJlc29sdmUoX19kaXJuYW1lLCAnc3JjL3N0eWxlcycpXG4gICAgfVxuICB9LFxuICBzZXJ2ZXI6IHsgcG9ydDogNTE3MyB9LFxuICBwcmV2aWV3OiB7IHBvcnQ6IDUxNzMgfVxufVxuIl0sCiAgIm1hcHBpbmdzIjogIjtBQUF5TixPQUFPLFdBQVc7QUFDM08sU0FBUyxlQUFlO0FBRHhCLElBQU0sbUNBQW1DO0FBR3pDLElBQU8sc0JBQVE7QUFBQSxFQUNiLFNBQVMsQ0FBQyxNQUFNLENBQUM7QUFBQSxFQUNqQixTQUFTO0FBQUEsSUFDUCxPQUFPO0FBQUEsTUFDTCxlQUFlLFFBQVEsa0NBQVcsZ0JBQWdCO0FBQUEsTUFDbEQsYUFBYSxRQUFRLGtDQUFXLGNBQWM7QUFBQSxNQUM5QyxXQUFXLFFBQVEsa0NBQVcsWUFBWTtBQUFBLElBQzVDO0FBQUEsRUFDRjtBQUFBLEVBQ0EsUUFBUSxFQUFFLE1BQU0sS0FBSztBQUFBLEVBQ3JCLFNBQVMsRUFBRSxNQUFNLEtBQUs7QUFDeEI7IiwKICAibmFtZXMiOiBbXQp9Cg==
