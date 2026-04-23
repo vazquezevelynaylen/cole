@@ -1,7 +1,7 @@
-import './modal.css'
+import './Modal.css'
 
-export default function Modal({ open, title = 'Aviso', onClose, children }){
-  if(!open) return null
+export default function Modal({ open, title = 'Aviso', onClose, children }) {
+  if (!open) return null
   return (
     <div className="modal-root" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div className="modal-backdrop" onClick={onClose} />

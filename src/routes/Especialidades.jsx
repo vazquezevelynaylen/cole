@@ -1,16 +1,15 @@
-import React from 'react';
-import '../components/especialidades/especialidades.css';
+import '../components/especialidades/especialidades.css'
 
-export default function Especialidades(){
+export default function Especialidades() {
   return (
     <div className="es-wrap">
       <div className="es-grid">
         <article className="es-card">
-          <img src="../../public/img/colegio1.jpg" alt="Laboratorio de TICs" loading="lazy" />
+          <img src="/img/colegio1.jpg" alt="Laboratorio de TICs" loading="lazy" />
           <div className="es-overlay" />
           <div className="es-content">
             <h3>TIC</h3>
-            <p>Programación, redes y. Proyectos integradores y prácticas en laboratorio.</p>
+            <p>Programación, redes y sistemas. Proyectos integradores y prácticas en laboratorio.</p>
             <div className="es-actions">
               <a className="btn btn-primary" href="/docs/planes-tic.pdf" download>Ver planes</a>
             </div>
@@ -30,5 +29,5 @@ export default function Especialidades(){
         </article>
       </div>
     </div>
-  );
+  )
 }
