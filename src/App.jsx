@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Home from './routes/Home_definitivo.jsx'
-import NotFound from './routes/NotFound.jsx'
+import Home from './routes/Home_definitivo'
+import NotFound from './routes/NotFound'
 
-import TicPage from './pages/TicPage.jsx'
-import MultimediaPage from './pages/MultimediaPage.jsx'
+import TicPage from './pages/TicPage'
+import MultimediaPage from './pages/MultimediaPage'
 
 export default function App() {
   return (
