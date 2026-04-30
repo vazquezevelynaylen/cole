@@ -19,12 +19,24 @@ export default function GaleriaProyectos() {
   }, [])
 
   const proyectos = [
-    { id: 1, titulo: 'Proyecto 1', categoria: 'Tecnología' },
-    { id: 2, titulo: 'Proyecto 2', categoria: 'Innovación' },
-    { id: 3, titulo: 'Proyecto 3', categoria: 'Técnica' },
-    { id: 4, titulo: 'Proyecto 4', categoria: 'Desarrollo' },
-    { id: 5, titulo: 'Proyecto 5', categoria: 'Diseño' },
-    { id: 6, titulo: 'Proyecto 6', categoria: 'Investigación' }
+    {
+      id: 1,
+      titulo: 'Proyecto 1',
+      categoria: 'Tecnología',
+      img: 'https://via.placeholder.com/400x300'
+    },
+    {
+      id: 2,
+      titulo: 'Proyecto 2',
+      categoria: 'Innovación',
+      img: 'https://via.placeholder.com/400x300'
+    },
+    {
+      id: 3,
+      titulo: 'Proyecto 3',
+      categoria: 'Técnica',
+      img: 'https://via.placeholder.com/400x300'
+    }
   ]
 
   return (
@@ -32,13 +44,14 @@ export default function GaleriaProyectos() {
       <div className="galeria-wrap">
         <h2 className="galeria-title">Galería de Proyectos</h2>
 
-        {/*  AHORA ES SCROLL HORIZONTAL */}
         <div className="galeria-scroll">
-
           {proyectos.map((proyecto) => (
             <div key={proyecto.id} className="galeria-card">
 
-              <div className="galeria-img"></div>
+              <div
+                className="galeria-img"
+                style={{ backgroundImage: `url(${proyecto.img})` }}
+              />
 
               <div className="galeria-info">
                 <h3>{proyecto.titulo}</h3>
@@ -47,7 +60,6 @@ export default function GaleriaProyectos() {
 
             </div>
           ))}
-
         </div>
       </div>
     </section>
