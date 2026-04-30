@@ -1,16 +1,53 @@
 /* ===================================================
-   Calendario — ET20 (LIMPIO & PRO)
+   Calendario — ET20 (UNIFICADO PRO)
    =================================================== */
 
 .calendario {
-  background: #0a0a0a; /* negro sólido */
+  /* 🔥 MISMO FONDO QUE COMUNICADOS */
+  background: 
+    linear-gradient(
+      135deg,
+      #0a0a0a 0%,
+      #0b1f3a 60%,
+      #0a0a0a 100%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255,214,10,0.05),
+      transparent 60%
+    );
+
   padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🔝 línea superior */
+.calendario::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
+  box-shadow: 0 0 10px rgba(255,214,10,.4);
+}
+
+/* 🔻 línea inferior */
+.calendario::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
+  opacity: 0.7;
 }
 
 /* CONTENEDOR */
 .calendario__inner {
   max-width: 860px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* GRID */
@@ -25,7 +62,7 @@
   gap: 6px;
 }
 
-/* Línea timeline (simple y elegante) */
+/* Línea timeline */
 .cal-items::before {
   content: '';
   position: absolute;
@@ -48,7 +85,6 @@
   transform: translateX(-12px);
 }
 
-/* Animación suave */
 .ev-item--visible {
   opacity: 1;
   transform: translateX(0);
@@ -83,7 +119,7 @@
 
 /* BODY */
 .ev-item__body {
-  background: #111;
+  background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,.06);
   border-left: 3px solid var(--ev-color, #ffd60a);
   border-radius: 0 10px 10px 0;
@@ -92,7 +128,6 @@
   transition: box-shadow .2s ease, transform .2s ease;
 }
 
-/* Hover sutil */
 .ev-item:hover .ev-item__body {
   transform: translateX(3px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
@@ -121,7 +156,7 @@
   line-height: 1.5;
 }
 
-/* 📱 MOBILE */
+/* MOBILE */
 @media (max-width: 600px) {
   .ev-item {
     grid-template-columns: 52px 16px 1fr;
