@@ -1,166 +1,150 @@
 /* ===================================================
-   Comunicados — ET20 (FINAL PRO 2026)
+   Comunicados — Feed Moderno (FINAL PRO 2026)
    =================================================== */
 
-.comunicados-wrap {
-  background:
-    linear-gradient(
-      135deg,
-      #0a0a0a 0%,
-      #0b1f3a 60%,
-      #0a0a0a 100%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(255,214,10,0.04),
-      transparent 60%
-    );
-
-  color: #fff;
-  border-radius: 16px;
-  padding: 32px;
-
-  border: 1px solid rgba(255,255,255,.05);
-  box-shadow: 0 20px 50px rgba(0,0,0,.45);
-
+/* SECCIÓN */
+.com-section {
+  padding: 120px 20px;
+  background: linear-gradient(
+    135deg,
+    #0a0a0a 0%,
+    #0b1f3a 60%,
+    #0a0a0a 100%
+  );
   position: relative;
   overflow: hidden;
 }
 
-/* 🔝 línea superior (más sutil) */
-.comunicados-wrap::before {
-  content: '';
+/* glow sutil */
+.com-section::before {
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
-  opacity: 0.7;
+  inset: 0;
+  background: radial-gradient(
+    circle at 80% 20%,
+    rgba(255,214,10,0.05),
+    transparent 60%
+  );
+  pointer-events: none;
 }
 
-/* 🔻 línea inferior (más limpia) */
-.comunicados-wrap::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
-  opacity: 0.25;
+/* CONTENEDOR */
+.com-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
-/* HEADER */
-.com-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 28px;
-}
-
-.com-subtitle {
-  margin: 0;
-  color: #ffd60a;
-  font-size: 1.4rem;
-  font-weight: 800;
-}
-
-/* FILTROS */
-.com-filtros {
-  display: flex;
-  gap: 10px;
-}
-
-.filter-btn {
-  padding: 8px 16px;
-  border: 1px solid rgba(255,255,255,.1);
-  background: rgba(255,255,255,.03);
+/* TITULO (FUERA DEL BLOQUE) */
+.com-title {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-bottom: 60px;
   color: #fff;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  font-size: 0.8rem;
 }
 
-.filter-btn:hover {
-  border-color: #ffd60a;
-  color: #ffd60a;
-}
-
-.filter-btn.is-active {
-  background: #ffd60a;
-  color: #0a0a0a;
-  border-color: #ffd60a;
-}
-
-/* TABLA */
-.comunicados-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 12px;
-  font-size: .95rem;
-}
-
-/* ocultar header */
-.comunicados-table thead {
-  display: none;
-}
-
-/* FILAS */
-.comunicados-table tr {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,.05);
-  border-radius: 12px;
-
+/* =========================
+   GRID
+========================= */
+.com-grid {
   display: grid;
-  grid-template-columns: 110px 1fr 1.5fr 100px 100px;
-  align-items: center;
-  padding: 16px 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: .6s ease;
+}
+
+.com--visible .com-grid {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   CARD
+========================= */
+.com-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 20px;
 
   transition: all .25s ease;
 }
 
-.comunicados-table tr:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255,255,255,.1);
-  box-shadow: 0 12px 30px rgba(0,0,0,.4);
+/* hover */
+.com-card:hover {
+  transform: translateY(-6px);
+  border-color: #ffd60a;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
 }
 
-/* CELDAS */
-.comunicados-table td {
-  border: none;
-  padding: 4px 6px;
+/* =========================
+   TOP
+========================= */
+.com-card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* BADGE TEXTO */
+.com-badge {
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: #ffd60a;
 }
 
 /* FECHA */
-.comunicados-table td:first-child {
-  font-weight: 700;
-  color: #ffd60a;
-  font-size: .85rem;
+.com-date {
+  font-size: .75rem;
+  color: rgba(255,255,255,.5);
 }
 
-/* TITULO */
-.comunicados-table td:nth-child(2) {
+/* =========================
+   CONTENIDO
+========================= */
+.com-card-title {
+  font-size: 1.1rem;
   font-weight: 700;
+  margin-bottom: 10px;
   color: #fff;
 }
 
-/* DETALLE */
-.comunicados-table td:nth-child(3) {
-  color: rgba(255,255,255,.65);
+.com-card-desc {
   font-size: .9rem;
+  color: rgba(255,255,255,.65);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+.com-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* LINK */
-.comunicados-table a {
+.com-link {
+  font-size: .85rem;
   color: #ffd60a;
   text-decoration: none;
   font-weight: 600;
-  font-size: .85rem;
 }
 
-.comunicados-table a:hover {
+.com-link:hover {
   text-decoration: underline;
 }
 
-/* BADGES (UNIFICADOS) */
+/* =========================
+   BADGES (REUTILIZA LOS TUYOS)
+========================= */
 .badge {
   display: inline-block;
   padding: 4px 10px;
@@ -172,34 +156,24 @@
   color: #ffd60a;
 }
 
-/* RESPONSIVE */
-@media (max-width: 800px) {
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
 
-  .comunicados-wrap {
-    padding: 24px 16px;
+  .com-section {
+    padding: 90px 16px;
   }
 
-  .com-head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
+  .com-title {
+    margin-bottom: 40px;
   }
 
-  .comunicados-table tr {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 16px;
+  .com-grid {
+    gap: 18px;
   }
 
-  .comunicados-table td {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-  }
-
-  .comunicados-table td::before {
-    content: attr(data-label);
-    color: rgba(255,255,255,.5);
-    font-size: 0.75rem;
+  .com-card {
+    padding: 18px;
   }
 }
