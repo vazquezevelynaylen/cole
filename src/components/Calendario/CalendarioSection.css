@@ -1,57 +1,16 @@
 /* ===================================================
-   Calendario — ET20 (VERSIÓN PRO)
+   Calendario — ET20 (LIMPIO & PRO)
    =================================================== */
 
 .calendario {
-  position: relative;
-  overflow: hidden;
-
-  background: linear-gradient(
-    135deg,
-    #0b1f3a 0%,
-    #0f2c55 40%,
-    #0a0a0a 100%
-  );
-
-  padding: 120px 20px;
+  background: #0a0a0a; /* negro sólido */
+  padding: 100px 20px;
 }
 
-/* ✨ fondo decorativo */
-.calendario::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(255,214,10,.05), transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(255,214,10,.04), transparent 50%);
-  pointer-events: none;
-}
-
-/* 🔝 línea superior */
-.calendario::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
-  box-shadow: 0 0 12px rgba(255,214,10,0.5);
-}
-
-/* 🔻 línea inferior */
-.calendario__inner::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
-  box-shadow: 0 0 10px rgba(255,214,10,0.4);
-}
-
+/* CONTENEDOR */
 .calendario__inner {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 /* GRID */
@@ -59,29 +18,22 @@
   position: relative;
 }
 
-/* ITEMS */
 .cal-items {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
-/* Línea timeline mejorada */
+/* Línea timeline (simple y elegante) */
 .cal-items::before {
   content: '';
   position: absolute;
   left: 72px;
-  top: 0; bottom: 0;
-  width: 2px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(255,255,255,.15),
-    rgba(255,255,255,.15),
-    transparent
-  );
-  box-shadow: 0 0 8px rgba(255,255,255,0.1);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255,255,255,0.12);
 }
 
 /* ITEM */
@@ -89,19 +41,18 @@
   display: grid;
   grid-template-columns: 64px 20px 1fr;
   align-items: center;
-  gap: 0 18px;
-  padding: 24px 0;
-  position: relative;
+  gap: 0 16px;
+  padding: 22px 0;
 
   opacity: 0;
-  transform: translateX(-20px);
+  transform: translateX(-12px);
 }
 
-/* entrada animada */
+/* Animación suave */
 .ev-item--visible {
   opacity: 1;
   transform: translateX(0);
-  transition: opacity .5s ease, transform .5s ease;
+  transition: opacity .4s ease, transform .4s ease;
 }
 
 /* FECHA */
@@ -110,70 +61,51 @@
 }
 
 .ev-item__dia {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: var(--ev-color, #ffd60a);
 }
 
 .ev-item__mes {
   font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .15em;
-  color: rgba(255,255,255,.35);
+  letter-spacing: .12em;
+  color: rgba(255,255,255,.4);
 }
 
 /* DOT */
 .ev-item__dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--ev-color, #ffd60a);
-
   border: 2px solid #0a0a0a;
-
-  box-shadow:
-    0 0 0 2px var(--ev-color),
-    0 0 10px var(--ev-color);
-
-  transition: transform .25s ease;
 }
 
-.ev-item:hover .ev-item__dot {
-  transform: scale(1.6);
-}
-
-/* CARD EVENTO */
+/* BODY */
 .ev-item__body {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-
-  border: 1px solid rgba(255,255,255,.08);
+  background: #111;
+  border: 1px solid rgba(255,255,255,.06);
   border-left: 3px solid var(--ev-color, #ffd60a);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 18px;
 
-  border-radius: 0 14px 14px 0;
-  padding: 18px 22px;
-
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease;
+  transition: box-shadow .2s ease, transform .2s ease;
 }
 
-/* hover PRO */
+/* Hover sutil */
 .ev-item:hover .ev-item__body {
-  transform: translateX(4px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-  border-color: rgba(255,255,255,.15);
+  transform: translateX(3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
 
 /* TEXTO */
 .ev-item__tipo {
-  font-size: .7rem;
+  font-size: .68rem;
   font-weight: 700;
-  letter-spacing: .12em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--ev-color, #ffd60a);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .ev-item__titulo {
@@ -186,26 +118,21 @@
 .ev-item__desc {
   font-size: .85rem;
   color: rgba(255,255,255,.6);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* 📱 MOBILE */
 @media (max-width: 600px) {
-
   .ev-item {
     grid-template-columns: 52px 16px 1fr;
     gap: 0 12px;
   }
 
   .ev-item__dia {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .cal-items::before {
     left: 58px;
-  }
-
-  .ev-item__body {
-    padding: 16px;
   }
 }
