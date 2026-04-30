@@ -3,8 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './routes/Home_definitivo'
 import NotFound from './routes/NotFound'
 
-import TicPage from './pages/TicPage'
-import MultimediaPage from './pages/MultimediaPage'
+import TicPage from './Pages/TicPage'
+import MultimediaPage from './Pages/MultimediaPage'
 
 export default function App() {
   return (
