@@ -1,68 +1,65 @@
+/* ===================================================
+   Compromiso — ET20 (PRO 2026 UNIFICADO)
+   =================================================== */
+
 .compromiso {
   background: linear-gradient(
     135deg,
-    #0b1f3a 0%,
-    #0f2c55 40%,
+    #0a0a0a 0%,
+    #0b1f3a 55%,
     #0a0a0a 100%
   );
+
   color: #fff;
-  padding: 100px 19px;
+  padding: 120px 20px; /* más aire */
   position: relative;
   overflow: hidden;
 }
 
-/* 🔝 Línea superior */
-.compromiso__line {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    #ffd60a 30%,
-    #ffd60a 70%,
-    transparent 100%
-  );
-}
-
-/* 🔻 Línea inferior */
+/* 🔝 Línea superior (más sutil) */
+.compromiso__line,
 .compromiso__line--bottom {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
+  left: 0; right: 0;
+  height: 2px;
   background: linear-gradient(
     90deg,
-    transparent 0%,
-    #ffd60a 30%,
-    #ffd60a 70%,
-    transparent 100%
+    transparent,
+    #ffd60a,
+    transparent
   );
+  opacity: 0.7;
 }
 
-/* Fondo sutil */
+.compromiso__line { top: 0; }
+.compromiso__line--bottom { bottom: 0; opacity: 0.5; }
+
+/* ✨ Fondo radial más limpio */
 .compromiso::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 80% 20%, rgba(255,214,10,.04) 0%, transparent 50%),
-    radial-gradient(circle at 10% 80%, rgba(255,214,10,.03) 0%, transparent 40%);
+    radial-gradient(circle at 80% 20%, rgba(255,214,10,.05), transparent 55%),
+    radial-gradient(circle at 10% 80%, rgba(255,214,10,.03), transparent 45%);
   pointer-events: none;
 }
 
+/* CONTENIDO */
 .compromiso__wrap {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
   align-items: center;
+
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity .7s ease, transform .7s ease;
+  transform: translateY(40px);
+  transition: opacity .8s ease, transform .8s ease;
 }
 
 .compromiso--visible .compromiso__wrap {
@@ -70,59 +67,116 @@
   transform: translateY(0);
 }
 
+/* EYEBROW */
 .compromiso__eyebrow {
-  font-size: .75rem;
+  font-size: .7rem;
   font-weight: 700;
-  letter-spacing: .18em;
+  letter-spacing: .2em;
   text-transform: uppercase;
   color: #ffd60a;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
+/* TITULO */
 .compromiso__text h2 {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 900;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  line-height: 1.2;
 }
 
 .compromiso__text h2 em {
   color: #ffd60a;
+  font-style: normal;
 }
 
+/* TEXTO */
 .compromiso__text p {
-  color: rgba(255,255,255,.7);
-  margin-bottom: 40px;
+  color: rgba(255,255,255,.65);
+  margin-bottom: 42px;
+  line-height: 1.6;
+  max-width: 520px;
 }
 
+/* PILARES */
 .compromiso__pilares {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
 }
 
 .compromiso__pilares li {
   display: flex;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 14px;
 }
 
+/* ICONO */
 .pilares__icon {
   color: #ffd60a;
+  font-size: 1.1rem;
+  margin-top: 3px;
 }
 
+/* TEXTO PILAR */
+.compromiso__pilares strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.compromiso__pilares span {
+  color: rgba(255,255,255,.6);
+  font-size: .9rem;
+}
+
+/* MEDIA */
 .compromiso__media {
   display: flex;
   justify-content: center;
 }
 
-.compromiso__img-wrap img {
-  border-radius: 20px;
+/* IMAGEN PRO */
+.compromiso__img-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-/* Responsive */
+/* overlay suave */
+.compromiso__img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.5),
+    transparent
+  );
+}
+
+.compromiso__img-wrap img {
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  transition: transform .5s ease;
+}
+
+/* hover moderno */
+.compromiso__img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+/* RESPONSIVE */
 @media (max-width: 960px) {
   .compromiso__wrap {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 50px;
+  }
+
+  .compromiso {
+    padding: 90px 16px;
   }
 }
