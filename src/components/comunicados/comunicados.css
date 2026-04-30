@@ -1,14 +1,51 @@
 /* ===================================================
-   Comunicados — ET20 (MODERNO PRO)
+   Comunicados — ET20 (UNIFICADO PRO)
    =================================================== */
 
 .comunicados-wrap {
-  background: #0f0f0f;
+  /* 🔥 FONDO UNIFICADO (igual que calendario) */
+  background: 
+    linear-gradient(
+      135deg,
+      #0a0a0a 0%,
+      #0b1f3a 60%,
+      #0a0a0a 100%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255,214,10,0.05),
+      transparent 60%
+    );
+
   color: #fff;
   border-radius: 16px;
   padding: 24px;
+
   box-shadow: 0 20px 50px rgba(0,0,0,.45);
   border: 1px solid rgba(255,255,255,.06);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🔝 línea superior */
+.comunicados-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
+  box-shadow: 0 0 10px rgba(255,214,10,.4);
+}
+
+/* 🔻 línea inferior */
+.comunicados-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
+  opacity: 0.7;
 }
 
 /* HEADER */
@@ -24,7 +61,6 @@
   color: #ffd60a;
   font-size: 1.3rem;
   font-weight: 800;
-  letter-spacing: .5px;
 }
 
 /* FILTROS */
@@ -36,9 +72,9 @@
 .filter-btn {
   padding: 8px 16px;
   border: 1px solid rgba(255,255,255,.15);
-  background: rgba(255,255,255,.02);
+  background: rgba(255,255,255,.03);
   color: #fff;
-  border-radius: 999px; /* 👈 más moderno */
+  border-radius: 999px;
   cursor: pointer;
   transition: all 0.25s ease;
   font-size: 0.85rem;
@@ -53,36 +89,34 @@
   background: #ffd60a;
   color: #0a0a0a;
   border-color: #ffd60a;
-  box-shadow: 0 0 10px rgba(255,214,10,.4);
 }
 
-/* TABLA → se convierte en lista moderna */
+/* TABLA */
 .comunicados-table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 10px; /* 👈 separación entre filas */
+  border-spacing: 0 10px;
   font-size: .95rem;
 }
 
-/* HEADER oculto visualmente (pero accesible) */
 .comunicados-table thead {
   display: none;
 }
 
-/* FILA COMO CARD */
+/* FILAS */
 .comunicados-table tr {
-  background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,.06);
   border-radius: 12px;
+
   display: grid;
   grid-template-columns: 120px 1fr 1.5fr 120px 120px;
   align-items: center;
   padding: 14px 18px;
+
   transition: all .25s ease;
 }
 
-/* HOVER */
 .comunicados-table tr:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(0,0,0,.4);
@@ -104,13 +138,11 @@
 /* TITULO */
 .comunicados-table td:nth-child(2) {
   font-weight: 700;
-  font-size: 1rem;
 }
 
 /* DETALLE */
 .comunicados-table td:nth-child(3) {
   color: rgba(255,255,255,.7);
-  font-size: 0.9rem;
 }
 
 /* LINK */
@@ -150,7 +182,6 @@
 
 /* RESPONSIVE */
 @media (max-width: 800px) {
-
   .comunicados-table tr {
     grid-template-columns: 1fr;
     gap: 6px;
@@ -163,7 +194,6 @@
     font-size: 0.85rem;
   }
 
-  /* labels en mobile */
   .comunicados-table td::before {
     content: attr(data-label);
     color: rgba(255,255,255,.5);
