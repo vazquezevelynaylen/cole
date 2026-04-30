@@ -1,5 +1,5 @@
 /* ===================================================
-   Compromiso — ET20 (PRO 2026 UNIFICADO)
+   Compromiso — ET20 (FINAL PRO 2026)
    =================================================== */
 
 .compromiso {
@@ -11,41 +11,55 @@
   );
 
   color: #fff;
-  padding: 120px 20px; /* más aire */
+  padding: 120px 20px;
   position: relative;
   overflow: hidden;
 }
 
-/* 🔝 Línea superior (más sutil) */
-.compromiso__line,
-.compromiso__line--bottom {
+/* 🔝 Línea superior */
+.compromiso__line {
   position: absolute;
-  left: 0; right: 0;
+  top: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #ffd60a,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
   opacity: 0.7;
 }
 
-.compromiso__line { top: 0; }
-.compromiso__line--bottom { bottom: 0; opacity: 0.5; }
+/* 🔻 Línea inferior (más sutil) */
+.compromiso__line--bottom {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
+  opacity: 0.25;
+}
 
-/* ✨ Fondo radial más limpio */
+/* ✨ Fondo sutil */
 .compromiso::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 80% 20%, rgba(255,214,10,.05), transparent 55%),
-    radial-gradient(circle at 10% 80%, rgba(255,214,10,.03), transparent 45%);
+    radial-gradient(circle at 80% 20%, rgba(255,214,10,.035), transparent 60%),
+    radial-gradient(circle at 10% 80%, rgba(255,214,10,.025), transparent 50%);
   pointer-events: none;
 }
 
-/* CONTENIDO */
+/* ✨ Grid técnico MUY sutil */
+.compromiso::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  );
+  background-size: 40px 40px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* CONTENEDOR */
 .compromiso__wrap {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -79,15 +93,21 @@
 
 /* TITULO */
 .compromiso__text h2 {
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-size: clamp(2.2rem, 3vw, 3rem);
   font-weight: 900;
+  letter-spacing: -0.02em;
   margin-bottom: 22px;
   line-height: 1.2;
 }
 
+/* Highlight elegante */
 .compromiso__text h2 em {
   color: #ffd60a;
   font-style: normal;
+  background: linear-gradient(
+    transparent 65%,
+    rgba(255,214,10,0.25) 65%
+  );
 }
 
 /* TEXTO */
@@ -103,13 +123,32 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 26px;
 }
 
+/* ITEM */
 .compromiso__pilares li {
   display: flex;
   align-items: flex-start;
   gap: 14px;
+  position: relative;
+  transition: transform .2s ease;
+}
+
+.compromiso__pilares li:hover {
+  transform: translateX(4px);
+}
+
+/* micro detalle */
+.compromiso__pilares li::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  background: #ffd60a;
+  border-radius: 50%;
 }
 
 /* ICONO */
@@ -134,16 +173,20 @@
 .compromiso__media {
   display: flex;
   justify-content: center;
+  transform: translateY(20px); /* leve asimetría pro */
 }
 
-/* IMAGEN PRO */
+/* IMAGEN */
 .compromiso__img-wrap {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
-/* overlay suave */
+/* overlay */
 .compromiso__img-wrap::after {
   content: "";
   position: absolute;
@@ -156,27 +199,30 @@
 }
 
 .compromiso__img-wrap img {
-  border-radius: 16px;
   width: 100%;
   height: auto;
   object-fit: cover;
-
   transition: transform .5s ease;
 }
 
-/* hover moderno */
+/* hover */
 .compromiso__img-wrap:hover img {
   transform: scale(1.04);
 }
 
 /* RESPONSIVE */
 @media (max-width: 960px) {
+
+  .compromiso {
+    padding: 90px 16px;
+  }
+
   .compromiso__wrap {
     grid-template-columns: 1fr;
     gap: 50px;
   }
 
-  .compromiso {
-    padding: 90px 16px;
+  .compromiso__media {
+    transform: none;
   }
 }
