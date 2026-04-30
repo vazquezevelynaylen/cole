@@ -1,26 +1,27 @@
 /* ===================================================
-   Testimonios — ET20 (VERSIÓN PRO)
+   Testimonios — ET20 (NIVEL DIOS)
    =================================================== */
 
 .testimonios {
   position: relative;
+  overflow: hidden;
+
   background: linear-gradient(
     135deg,
     #0b1f3a 0%,
     #0f2c55 40%,
     #0a0a0a 100%
   );
-  overflow: hidden;
 }
 
-/* ✨ Fondo decorativo */
+/* ✨ Fondo decorativo premium */
 .testimonios::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 80% 20%, rgba(255,214,10,.05), transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(255,214,10,.04), transparent 50%);
+    radial-gradient(circle at 80% 20%, rgba(255,214,10,.06), transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(255,214,10,.05), transparent 50%);
   pointer-events: none;
 }
 
@@ -30,37 +31,25 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #ffd60a,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
+  box-shadow: 0 0 12px rgba(255,214,10,0.5);
 }
 
-/* 🔻 Línea inferior (extra con pseudo doble) */
-.testimonios::marker {
-  display: none;
-}
-
+/* 🔻 Línea inferior */
 .testimonios__inner::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #ffd60a,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
+  box-shadow: 0 0 12px rgba(255,214,10,0.4);
 }
 
 /* CONTENEDOR */
 .testimonios__inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 120px 20px;
+  padding: 140px 20px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -70,139 +59,180 @@
 .section-eyebrow-header .eyebrow {
   color: #ffd60a;
   font-size: 0.75rem;
-  letter-spacing: .2em;
+  letter-spacing: .22em;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 .section-eyebrow-header h2 {
-  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
   font-weight: 900;
-  margin: 12px 0;
+  margin: 14px 0;
+  letter-spacing: -0.5px;
 }
 
 .section-eyebrow-header p {
-  color: rgba(255,255,255,.65);
-  margin-bottom: 50px;
+  color: rgba(255,255,255,.75);
+  margin-bottom: 55px;
+  font-size: 1rem;
 }
 
-/* CARD (glass + glow) */
+/* CARD PRINCIPAL */
 .test-card {
   position: relative;
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(10px);
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(14px);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 22px;
-  padding: 45px 35px;
-  transition: all .35s ease;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+
+  border-radius: 24px;
+  padding: 55px 45px;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+
+  transition:
+    transform .4s ease,
+    opacity .4s ease,
+    box-shadow .4s ease;
 }
 
-/* Glow hover */
+/* ✨ Efecto foco */
+.test-card--in {
+  transform: scale(1.03);
+}
+
 .test-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 35px 80px rgba(0,0,0,0.6);
 }
 
 /* Animación */
 .test-card--out {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(25px);
 }
 
 .test-card--in {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1.03);
 }
 
-/* COMILLA */
+/* COMILLA DECORATIVA */
 .test-card__quote {
   position: absolute;
   top: 10px;
-  left: 20px;
-  font-size: 80px;
-  opacity: 0.05;
+  left: 25px;
+  font-size: 90px;
+  opacity: 0.06;
   color: #ffd60a;
+  transform: scale(1.2);
 }
 
 /* TEXTO */
 .test-card__texto {
-  font-size: 1.08rem;
-  line-height: 1.8;
-  margin-bottom: 35px;
-  color: rgba(255,255,255,.85);
+  font-size: 1.1rem;
+  line-height: 1.85;
+  margin-bottom: 40px;
+  color: rgba(255,255,255,.92);
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* FOOTER */
 .test-card__footer {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   justify-content: center;
 }
 
 /* AVATAR */
 .test-card__avatar {
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background: var(--test-color);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-weight: 800;
   color: #000;
-  box-shadow: 0 0 15px var(--test-color);
+
+  box-shadow:
+    0 0 15px var(--test-color),
+    0 0 30px rgba(255,255,255,0.1);
 }
 
 /* INFO */
 .test-card__nombre {
   display: block;
   font-weight: 700;
+  font-size: 1rem;
 }
 
-.test-card__cargo,
+.test-card__cargo {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,.7);
+}
+
 .test-card__anio {
   display: block;
-  font-size: 0.82rem;
-  color: rgba(255,255,255,.6);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.5);
 }
 
 /* DOTS */
 .test-dots {
-  margin-top: 30px;
+  margin-top: 35px;
   display: flex;
   justify-content: center;
   gap: 12px;
 }
 
 .test-dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #444;
   border: none;
   cursor: pointer;
+
+  opacity: 0.5;
+
   transition: all .25s ease;
 }
 
 .test-dot:hover {
+  opacity: 0.8;
   transform: scale(1.2);
 }
 
 .test-dot--active {
   background: var(--dot-color);
-  transform: scale(1.4);
-  box-shadow: 0 0 10px var(--dot-color);
+  opacity: 1;
+  transform: scale(1.5);
+
+  box-shadow:
+    0 0 10px var(--dot-color),
+    0 0 20px rgba(255,255,255,0.15);
 }
 
-/* 📱 Responsive */
+/* 📱 RESPONSIVE */
 @media (max-width: 600px) {
+
+  .testimonios__inner {
+    padding: 110px 18px;
+  }
+
   .test-card {
-    padding: 35px 20px;
+    padding: 40px 25px;
   }
 
   .test-card__texto {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
   }
 }
