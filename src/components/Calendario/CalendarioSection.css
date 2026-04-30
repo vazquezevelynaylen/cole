@@ -1,10 +1,9 @@
 /* ===================================================
-   Calendario — ET20 (UNIFICADO PRO)
+   Calendario — ET20 (PRO 2026)
    =================================================== */
 
 .calendario {
-  /* 🔥 MISMO FONDO QUE COMUNICADOS */
-  background: 
+  background:
     linear-gradient(
       135deg,
       #0a0a0a 0%,
@@ -13,23 +12,23 @@
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(255,214,10,0.05),
+      rgba(255,214,10,0.06),
       transparent 60%
     );
 
-  padding: 100px 20px;
+  padding: 120px 20px; /* + aire */
   position: relative;
   overflow: hidden;
 }
 
-/* 🔝 línea superior */
+/* 🔝 línea superior más sutil */
 .calendario::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(90deg, transparent, #ffd60a, transparent);
-  box-shadow: 0 0 10px rgba(255,214,10,.4);
+  opacity: 0.7;
 }
 
 /* 🔻 línea inferior */
@@ -37,9 +36,9 @@
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(90deg, transparent, #ffd60a, transparent);
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 /* CONTENEDOR */
@@ -59,7 +58,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px; /* más aire entre eventos */
 }
 
 /* Línea timeline */
@@ -70,7 +69,7 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.08);
 }
 
 /* ITEM */
@@ -78,17 +77,18 @@
   display: grid;
   grid-template-columns: 64px 20px 1fr;
   align-items: center;
-  gap: 0 16px;
+  gap: 0 18px;
   padding: 22px 0;
 
   opacity: 0;
-  transform: translateX(-12px);
+  transform: translateX(-16px);
 }
 
+/* animación */
 .ev-item--visible {
   opacity: 1;
   transform: translateX(0);
-  transition: opacity .4s ease, transform .4s ease;
+  transition: opacity .5s ease, transform .5s ease;
 }
 
 /* FECHA */
@@ -97,14 +97,14 @@
 }
 
 .ev-item__dia {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 900;
-  color: var(--ev-color, #ffd60a);
+  color: var(--primary, #ffd000);
 }
 
 .ev-item__mes {
   font-size: .7rem;
-  letter-spacing: .12em;
+  letter-spacing: .14em;
   color: rgba(255,255,255,.4);
 }
 
@@ -113,38 +113,42 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--ev-color, #ffd60a);
+  background: var(--primary, #ffd000);
   border: 2px solid #0a0a0a;
+  box-shadow: 0 0 8px rgba(255,214,10,.4); /* glow sutil */
 }
 
 /* BODY */
 .ev-item__body {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,.06);
-  border-left: 3px solid var(--ev-color, #ffd60a);
-  border-radius: 0 10px 10px 0;
-  padding: 16px 18px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,.05);
+  border-left: 3px solid var(--primary, #ffd000);
+  border-radius: 12px;
+  padding: 18px 20px;
 
-  transition: box-shadow .2s ease, transform .2s ease;
+  backdrop-filter: blur(6px); /* toque moderno */
+  transition: all .25s ease;
 }
 
+/* hover pro */
 .ev-item:hover .ev-item__body {
-  transform: translateX(3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transform: translateX(4px);
+  border-left-color: #ffd60a;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 /* TEXTO */
 .ev-item__tipo {
-  font-size: .68rem;
+  font-size: .65rem;
   font-weight: 700;
-  letter-spacing: .1em;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--ev-color, #ffd60a);
-  margin-bottom: 4px;
+  color: var(--primary, #ffd000);
+  margin-bottom: 6px;
 }
 
 .ev-item__titulo {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 6px;
@@ -152,22 +156,36 @@
 
 .ev-item__desc {
   font-size: .85rem;
-  color: rgba(255,255,255,.6);
-  line-height: 1.5;
+  color: rgba(255,255,255,.65);
+  line-height: 1.6;
+}
+
+/* ✨ efecto suave al pasar el mouse */
+.ev-item:hover .ev-item__titulo {
+  color: #ffd60a;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
+
+  .calendario {
+    padding: 90px 16px;
+  }
+
   .ev-item {
     grid-template-columns: 52px 16px 1fr;
     gap: 0 12px;
   }
 
   .ev-item__dia {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .cal-items::before {
     left: 58px;
+  }
+
+  .ev-item__body {
+    padding: 14px 16px;
   }
 }
