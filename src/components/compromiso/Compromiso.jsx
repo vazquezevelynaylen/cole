@@ -22,7 +22,7 @@ export default function Compromiso() {
   return (
     <section className="compromiso" aria-labelledby="ttl-compromiso" ref={ref}>
       
-      {/* Línea decorativa superior */}
+      {/* 🔝 Línea superior */}
       <div className="compromiso__line" aria-hidden="true" />
 
       <div className="compromiso__wrap">
@@ -80,11 +80,14 @@ export default function Compromiso() {
             />
           </div>
 
-          {/* Decoración geométrica */}
           <div className="compromiso__geo" aria-hidden="true" />
         </div>
 
       </div>
+
+      {/* 🔻 Línea inferior */}
+      <div className="compromiso__line--bottom" aria-hidden="true" />
+
     </section>
   )
 }
