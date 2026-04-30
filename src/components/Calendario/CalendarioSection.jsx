@@ -12,9 +12,9 @@ const EVENTOS = [
 
 const TIPO_STYLES = {
   institucional: { color: '#ffd60a', label: 'Institucional' },
-  academico:     { color: '#38bdf8', label: 'Académico' },
-  examen:        { color: '#fb7185', label: 'Examen' },
-  vacaciones:    { color: '#34d399', label: 'Vacaciones' },
+  academico: { color: '#38bdf8', label: 'Académico' },
+  examen: { color: '#fb7185', label: 'Examen' },
+  vacaciones: { color: '#34d399', label: 'Vacaciones' },
 }
 
 export default function CalendarioSection() {
@@ -38,14 +38,16 @@ export default function CalendarioSection() {
   return (
     <section className="calendario" id="academico" aria-labelledby="ttl-cal" ref={ref}>
       <div className="calendario__inner">
-        {/* Header inline — sin depender de clases globales que podrían no existir */}
-        <header className="cal-header">
-          <span className="cal-eyebrow">Organízate</span>
+        <header className="section-eyebrow-header">
+          <span className="eyebrow">Organízate</span>
           <h2 id="ttl-cal">Calendario académico</h2>
           <p>Fechas importantes del ciclo lectivo 2025.</p>
         </header>
 
         <div className="cal-grid">
+          {/* Línea vertical */}
+          <div className="cal-timeline" aria-hidden="true" />
+
           <div className="cal-items">
             {EVENTOS.map((ev, i) => {
               const t = TIPO_STYLES[ev.tipo] || TIPO_STYLES.academico
@@ -55,11 +57,16 @@ export default function CalendarioSection() {
                   key={i}
                   style={{ '--ev-color': t.color }}
                 >
+                  {/* Fecha */}
                   <div className="ev-item__fecha">
                     <span className="ev-item__dia">{ev.fecha.dia}</span>
                     <span className="ev-item__mes">{ev.fecha.mes}</span>
                   </div>
+
+                  {/* Dot en la línea */}
                   <div className="ev-item__dot" aria-hidden="true" />
+
+                  {/* Contenido */}
                   <div className="ev-item__body">
                     <div className="ev-item__tipo">{t.label}</div>
                     <h3 className="ev-item__titulo">{ev.titulo}</h3>
