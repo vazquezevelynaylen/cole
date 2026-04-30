@@ -21,20 +21,20 @@ export default function GaleriaProyectos() {
   const proyectos = [
     {
       id: 1,
-      titulo: 'Proyecto 1',
-      categoria: 'Tecnología',
+      titulo: 'Proyecto Web',
+      categoria: 'Desarrollo institucional moderno',
       img: 'https://via.placeholder.com/400x300'
     },
     {
       id: 2,
-      titulo: 'Proyecto 2',
-      categoria: 'Innovación',
+      titulo: 'Sistema Técnico',
+      categoria: 'Aplicación de gestión interna',
       img: 'https://via.placeholder.com/400x300'
     },
     {
       id: 3,
-      titulo: 'Proyecto 3',
-      categoria: 'Técnica',
+      titulo: 'Innovación Digital',
+      categoria: 'Propuesta tecnológica educativa',
       img: 'https://via.placeholder.com/400x300'
     }
   ]
@@ -48,14 +48,22 @@ export default function GaleriaProyectos() {
           {proyectos.map((proyecto) => (
             <div key={proyecto.id} className="galeria-card">
 
-              <div
-                className="galeria-img"
-                style={{ backgroundImage: `url(${proyecto.img})` }}
-              />
+              <div className="galeria-card-inner">
 
-              <div className="galeria-info">
-                <h3>{proyecto.titulo}</h3>
-                <p>{proyecto.categoria}</p>
+                {/* FRONT */}
+                <div
+                  className="galeria-front"
+                  style={{ backgroundImage: `url(${proyecto.img})` }}
+                >
+                  <h3>{proyecto.titulo}</h3>
+                </div>
+
+                {/* BACK */}
+                <div className="galeria-back">
+                  <h3>{proyecto.titulo}</h3>
+                  <p>{proyecto.categoria}</p>
+                </div>
+
               </div>
 
             </div>
