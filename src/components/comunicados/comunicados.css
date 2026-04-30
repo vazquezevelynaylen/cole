@@ -1,62 +1,51 @@
+/* ===================================================
+   Comunicados — ET20 (MODERNO PRO)
+   =================================================== */
+
 .comunicados-wrap {
-  background: #111;
+  background: #0f0f0f;
   color: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+  border: 1px solid rgba(255,255,255,.06);
 }
 
-.comunicados-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: .95rem;
-}
-
-.comunicados-table th,
-.comunicados-table td {
-  border-bottom: 1px solid rgba(255,255,255,.15);
-  padding: .8rem;
-}
-
-.comunicados-table th {
-  text-align: left;
-  color: #ffd60a;
-}
-
-.comunicados-table tr:hover {
-  background: rgba(255,214,10,.08);
-}
-
+/* HEADER */
 .com-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .com-subtitle {
   margin: 0;
   color: #ffd60a;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: .5px;
 }
 
+/* FILTROS */
 .com-filtros {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .filter-btn {
   padding: 8px 16px;
-  border: 1px solid rgba(255,255,255,.2);
-  background: transparent;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.02);
   color: #fff;
-  border-radius: 6px;
+  border-radius: 999px; /* 👈 más moderno */
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  font-size: 0.85rem;
 }
 
 .filter-btn:hover {
-  background: rgba(255,214,10,.1);
+  background: rgba(255,214,10,.12);
   border-color: #ffd60a;
 }
 
@@ -64,27 +53,120 @@
   background: #ffd60a;
   color: #0a0a0a;
   border-color: #ffd60a;
+  box-shadow: 0 0 10px rgba(255,214,10,.4);
 }
 
-.badge {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
+/* TABLA → se convierte en lista moderna */
+.comunicados-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* 👈 separación entre filas */
+  font-size: .95rem;
+}
+
+/* HEADER oculto visualmente (pero accesible) */
+.comunicados-table thead {
+  display: none;
+}
+
+/* FILA COMO CARD */
+.comunicados-table tr {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 120px 1fr 1.5fr 120px 120px;
+  align-items: center;
+  padding: 14px 18px;
+  transition: all .25s ease;
+}
+
+/* HOVER */
+.comunicados-table tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  border-color: rgba(255,255,255,.12);
+}
+
+/* CELDAS */
+.comunicados-table td {
+  border: none;
+  padding: 4px 6px;
+}
+
+/* FECHA */
+.comunicados-table td:first-child {
+  font-weight: 700;
+  color: #ffd60a;
+}
+
+/* TITULO */
+.comunicados-table td:nth-child(2) {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* DETALLE */
+.comunicados-table td:nth-child(3) {
+  color: rgba(255,255,255,.7);
+  font-size: 0.9rem;
+}
+
+/* LINK */
+.comunicados-table a {
+  color: #38bdf8;
+  text-decoration: none;
   font-weight: 600;
 }
 
+.comunicados-table a:hover {
+  text-decoration: underline;
+}
+
+/* BADGES */
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
 .badge-warn {
-  background: #ef4444;
-  color: white;
+  background: rgba(239,68,68,.15);
+  color: #ef4444;
 }
 
 .badge-ok {
-  background: #10b981;
-  color: white;
+  background: rgba(16,185,129,.15);
+  color: #10b981;
 }
 
 .badge-info {
-  background: #3b82f6;
-  color: white;
+  background: rgba(59,130,246,.15);
+  color: #3b82f6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+
+  .comunicados-table tr {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px;
+  }
+
+  .comunicados-table td {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+  }
+
+  /* labels en mobile */
+  .comunicados-table td::before {
+    content: attr(data-label);
+    color: rgba(255,255,255,.5);
+    font-size: 0.75rem;
+  }
 }
