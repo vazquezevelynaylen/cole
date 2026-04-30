@@ -1,38 +1,75 @@
-/* ══════════════════════════════════════════
-   TESTIMONIOS — versión con azul eléctrico
-   ══════════════════════════════════════════ */
+/* ===================================================
+   Testimonios — ET20
+   =================================================== */
 
 .testimonios {
-  /* 🔵 CAMBIO PRINCIPAL */
-  background: #0b1f3a; 
-  /* ↑ azul eléctrico oscuro (NO brillante, mantiene estilo tech) */
-
-  padding: 100px 24px;
+  position: relative; /* IMPORTANTE para las líneas */
 }
 
+/* 🔝 Línea superior */
+.testimonios::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #ffd60a 30%,
+    #ffd60a 70%,
+    transparent 100%
+  );
+}
+
+/* 🔻 Línea inferior */
+.testimonios::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #ffd60a 30%,
+    #ffd60a 70%,
+    transparent 100%
+  );
+}
+
+/* CONTENEDOR */
 .testimonios__inner {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 100px 20px;
+  text-align: center;
 }
 
-/* Card del testimonio */
+/* HEADER */
+.section-eyebrow-header .eyebrow {
+  color: #ffd60a;
+  font-size: 0.8rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section-eyebrow-header h2 {
+  font-size: 2.2rem;
+  margin: 10px 0;
+}
+
+.section-eyebrow-header p {
+  color: rgba(255,255,255,.6);
+  margin-bottom: 40px;
+}
+
+/* CARD */
 .test-card {
-  /* 🔵 AJUSTE PARA CONTRASTE */
-  background: #0a0a0a; 
-  /* ↑ se mantiene negro para que el azul no moleste la lectura */
-
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 24px;
-  padding: 52px 52px 40px;
   position: relative;
-  overflow: hidden;
-  margin-bottom: 36px;
-  transition: opacity .28s ease, transform .28s ease;
-}
-
-.test-card--in {
-  opacity: 1;
-  transform: translateY(0);
+  background: #111;
+  border-radius: 20px;
+  padding: 40px 30px;
+  transition: all .3s ease;
 }
 
 .test-card--out {
@@ -40,109 +77,79 @@
   transform: translateY(10px);
 }
 
-/* Comilla decorativa gigante */
+.test-card--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* COMILLA */
 .test-card__quote {
   position: absolute;
-  top: -10px;
-  left: 36px;
-  font-size: 9rem;
-  font-weight: 900;
-
-  /* 🔵 CAMBIO SUTIL */
-  color: rgba(56,189,248,.08); 
-  /* ↑ antes amarillo → ahora azul suave para coherencia */
-
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-  font-family: Georgia, serif;
+  top: 10px;
+  left: 20px;
+  font-size: 60px;
+  opacity: 0.1;
 }
 
+/* TEXTO */
 .test-card__texto {
-  font-size: clamp(1rem, 1.6vw, 1.18rem);
-  font-weight: 400;
-  color: rgba(255,255,255,.85);
-  line-height: 1.75;
-  margin: 0 0 36px;
-  position: relative;
-  z-index: 1;
-  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
 }
 
+/* FOOTER */
 .test-card__footer {
   display: flex;
   align-items: center;
-  gap: 16px;
-  position: relative;
-  z-index: 1;
+  gap: 14px;
+  justify-content: center;
 }
 
+/* AVATAR */
 .test-card__avatar {
-  width: 52px;
-  height: 52px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  background: rgba(255,255,255,.06);
-
-  /* 🔵 COLOR DINÁMICO (ya lo tenías bien) */
-  border: 2px solid var(--test-color, #ffd60a);
-  color: var(--test-color, #ffd60a);
-
+  background: var(--test-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: .9rem;
-  font-weight: 900;
-  flex-shrink: 0;
+  font-weight: 700;
+  color: #000;
 }
 
+/* INFO */
 .test-card__nombre {
   display: block;
-  font-size: .95rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 2px;
 }
 
-.test-card__cargo {
-  display: block;
-  font-size: .8rem;
-  color: rgba(255,255,255,.45);
-  margin-bottom: 2px;
-}
-
+.test-card__cargo,
 .test-card__anio {
   display: block;
-  font-size: .72rem;
-  color: rgba(255,255,255,.25);
-  font-weight: 600;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.6);
 }
 
-/* Dots de navegación */
+/* DOTS */
 .test-dots {
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
 .test-dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
+  background: #444;
   border: none;
-  background: rgba(255,255,255,.18);
   cursor: pointer;
-  transition: all .3s ease;
-  padding: 0;
+  transition: all .2s ease;
 }
 
 .test-dot--active {
-  background: var(--dot-color, #ffd60a);
-  width: 28px;
-  border-radius: 999px;
-}
-
-@media (max-width: 600px) {
-  .test-card {
-    padding: 36px 28px 28px;
-  }
+  background: var(--dot-color);
+  transform: scale(1.3);
 }
