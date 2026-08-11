@@ -1,25 +1,26 @@
 import React from 'react'
-import '../components/especialidades/especialidades.css'
+import './especialidades.css'
 
 export default function Especialidades() {
   return (
     <section className="especialidades" id="especialidades">
 
-      {/* INTRODUCCIÓN */}
-      <div className="especialidades-intro">
+      {/* BLOQUE INTRODUCTORIO */}
+      <div className="es-intro">
 
-        <div className="intro-image">
+        <div className="es-intro-image">
           <img
-            src="/img/escuela-interior.jpg"
-            alt="Interior de la Escuela Técnica 20"
+            src="/img/multi1.jpg"
+            alt="Escuela Técnica N.º 20"
           />
         </div>
 
-        <div className="intro-text">
-          <span className="intro-small">ESCUELA TÉCNICA N.º 20</span>
+        <div className="es-intro-content">
+          <span className="es-label">ESCUELA TÉCNICA N.º 20</span>
 
           <h2>
-            Mucho más<br />
+            Mucho más
+            <br />
             que una <span>escuela.</span>
           </h2>
 
@@ -29,8 +30,9 @@ export default function Especialidades() {
             técnica actual, innovadora y humana.
           </p>
 
-          <a href="#historia" className="intro-button">
-            Conocé nuestra historia →
+          <a href="#historia" className="es-button">
+            Conocé nuestra historia
+            <span>→</span>
           </a>
         </div>
 
@@ -38,48 +40,53 @@ export default function Especialidades() {
 
 
       {/* ESTADÍSTICAS */}
-      <div className="estadisticas">
+      <div className="es-stats">
 
-        <div className="estadistica">
+        <div className="es-stat">
           <strong>+60</strong>
-          <span>Años<br />de trayectoria</span>
+          <span>AÑOS<br />de trayectoria</span>
         </div>
 
-        <div className="estadistica">
+        <div className="es-stat">
           <strong>+500</strong>
-          <span>Estudiantes<br />formando el futuro</span>
+          <span>ESTUDIANTES<br />formando el futuro</span>
         </div>
 
-        <div className="estadistica">
-          <strong>3</strong>
-          <span>Especialidades<br />técnicas</span>
+        <div className="es-stat">
+          <strong>2</strong>
+          <span>ESPECIALIDADES<br />técnicas</span>
         </div>
 
-        <div className="estadistica">
+        <div className="es-stat">
           <strong>∞</strong>
-          <span>Proyectos<br />por crear</span>
+          <span>PROYECTOS<br />por crear</span>
         </div>
 
       </div>
 
 
-      {/* ESPECIALIDADES */}
-      <div className="especialidades-header">
+      {/* TÍTULO ESPECIALIDADES */}
+      <div className="es-section-heading">
         <div>
           <span>FORMACIÓN TÉCNICA</span>
           <h2>Especialidades técnicas</h2>
         </div>
 
         <a href="#especialidades">
-          Ver todas →
+          Ver todas <span>→</span>
         </a>
       </div>
 
 
-      <div className="especialidades-grid">
+      {/* TARJETAS DE ESPECIALIDADES */}
+      <div className="es-specialties">
 
-        <article className="especialidad-card tic">
-          <div className="especialidad-icon">⌘</div>
+        {/* TIC */}
+        <article className="es-specialty es-tic">
+
+          <div className="es-specialty-icon">
+            &lt;/&gt;
+          </div>
 
           <h3>TIC</h3>
 
@@ -87,25 +94,19 @@ export default function Especialidades() {
             Programación, redes y tecnologías de la información.
           </p>
 
-          <a href="/tic">Ver especialidad →</a>
+          <a href="/tic" className="es-specialty-link">
+            <span>→</span>
+          </a>
+
         </article>
 
 
-        <article className="especialidad-card electronica">
-          <div className="especialidad-icon">◉</div>
+        {/* MULTIMEDIA */}
+        <article className="es-specialty es-multimedia">
 
-          <h3>Electrónica</h3>
-
-          <p>
-            Diseño y automatización de sistemas electrónicos.
-          </p>
-
-          <a href="/electronica">Ver especialidad →</a>
-        </article>
-
-
-        <article className="especialidad-card multimedia">
-          <div className="especialidad-icon">✦</div>
+          <div className="es-specialty-icon">
+            ◇
+          </div>
 
           <h3>Multimedia</h3>
 
@@ -113,48 +114,63 @@ export default function Especialidades() {
             Comunicación visual y producción digital.
           </p>
 
-          <a href="/multimedia">Ver especialidad →</a>
+          <a href="/multimedia" className="es-specialty-link">
+            <span>→</span>
+          </a>
+
         </article>
 
       </div>
 
 
       {/* PROYECTOS */}
-      <div className="proyectos-header">
+      <div className="es-section-heading es-project-heading">
         <div>
           <span>APRENDER HACIENDO</span>
           <h2>Proyectos que cobran vida</h2>
         </div>
 
         <a href="#proyectos">
-          Ver proyectos →
+          Ver proyectos <span>→</span>
         </a>
       </div>
 
 
-      <div className="proyectos-grid">
+      <div className="es-projects">
 
-        <article className="proyecto">
-          <img src="/img/proyecto-robot.jpg" alt="Proyecto de robótica" />
-        </article>
+        <div className="es-project">
+          <img
+            src="/img/proyecto1.jpg"
+            alt="Proyecto de la escuela"
+          />
+        </div>
 
-        <article className="proyecto">
-          <img src="/img/proyecto-programacion.jpg" alt="Proyecto de programación" />
-        </article>
+        <div className="es-project">
+          <img
+            src="/img/proyecto2.jpg"
+            alt="Proyecto de programación"
+          />
+        </div>
 
-        <article className="proyecto">
-          <img src="/img/proyecto-multimedia.jpg" alt="Proyecto multimedia" />
-        </article>
+        <div className="es-project">
+          <img
+            src="/img/proyecto3.jpg"
+            alt="Proyecto multimedia"
+          />
+        </div>
 
-        <article className="proyecto">
-          <img src="/img/proyecto-electronica.jpg" alt="Proyecto de electrónica" />
-        </article>
+        <div className="es-project">
+          <img
+            src="/img/proyecto4.jpg"
+            alt="Proyecto tecnológico"
+          />
+        </div>
 
       </div>
 
 
-      {/* CTA */}
-      <div className="especialidades-cta">
+      {/* CTA FINAL */}
+      <div className="es-cta">
 
         <div>
           <h2>¿Querés ser parte de la ET20?</h2>
@@ -164,7 +180,8 @@ export default function Especialidades() {
         </div>
 
         <a href="#contacto">
-          Contactanos →
+          Contactanos
+          <span>→</span>
         </a>
 
       </div>
