@@ -1,68 +1,301 @@
 .especialidades {
-  background: #0a0a0a;
-  color: #f0f0f0;
-  padding: 100px 24px;
+  background: #f7f8fc;
+  color: #101828;
+  padding: 80px 24px;
 }
 
-.especialidades-title {
-  text-align: center;
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  font-weight: 900;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -.01em;
-  margin-bottom: 50px;
-  grid-column: 1 / -1;
-}
-
-.especialidades .wrap {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+.especialidades-intro {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 55px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
 }
 
-.especialidad {
-  border-radius: 16px;
+.intro-image {
+  height: 390px;
+  border-radius: 28px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 
-.especialidad:hover {
-  transform: translateY(-6px);
-  border-color: #ffd60a;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-}
-
-.especialidad img {
+.intro-image img {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
 }
 
-.especialidad h3 {
-  margin: 20px 20px 8px;
+.intro-text {
+  padding: 20px;
+}
+
+.intro-small {
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: #667085;
+}
+
+.intro-text h2 {
+  margin: 12px 0 20px;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: .95;
+  font-weight: 900;
+}
+
+.intro-text h2 span {
+  color: #ffbd00;
+}
+
+.intro-text p {
+  max-width: 480px;
+  color: #667085;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.intro-button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #ffbd00;
+  color: #111;
+  text-decoration: none;
+  font-weight: 800;
+  transition: .25s;
+}
+
+.intro-button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ESTADÍSTICAS */
+
+.estadisticas {
+  max-width: 1200px;
+  margin: 0 auto 65px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: 0 8px 30px rgba(0,0,0,.05);
+}
+
+.estadistica {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  border-right: 1px solid #eaecf0;
+}
+
+.estadistica:last-child {
+  border-right: none;
+}
+
+.estadistica strong {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.estadistica span {
+  font-size: .7rem;
+  line-height: 1.3;
+  color: #667085;
+}
+
+
+/* TÍTULOS */
+
+.especialidades-header,
+.proyectos-header {
+  max-width: 1200px;
+  margin: 0 auto 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.especialidades-header span,
+.proyectos-header span {
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  color: #667085;
+}
+
+.especialidades-header h2,
+.proyectos-header h2 {
+  margin: 5px 0 0;
   font-size: 1.5rem;
   font-weight: 900;
-  color: #ffd60a;
-  text-transform: uppercase;
 }
 
-.especialidad p {
-  margin: 0 20px 20px;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.6;
+.especialidades-header a,
+.proyectos-header a {
+  color: #667085;
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.especialidad .plan {
+
+/* ESPECIALIDADES */
+
+.especialidades-grid {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.especialidad-card {
+  min-height: 170px;
+  padding: 25px;
+  border-radius: 18px;
+  transition: .3s;
+}
+
+.especialidad-card:hover {
+  transform: translateY(-5px);
+}
+
+.especialidad-card.tic {
+  background: #dce7ff;
+}
+
+.especialidad-card.electronica {
+  background: #e5e2ff;
+}
+
+.especialidad-card.multimedia {
+  background: #fff0c9;
+}
+
+.especialidad-icon {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.especialidad-card h3 {
+  margin: 0 0 5px;
+  font-size: 1.15rem;
+}
+
+.especialidad-card p {
+  margin: 0 0 18px;
+  color: #667085;
+  font-size: .8rem;
+  line-height: 1.4;
+}
+
+.especialidad-card a {
+  font-size: .75rem;
+  color: #344054;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+
+/* PROYECTOS */
+
+.proyectos-grid {
+  max-width: 1200px;
+  margin: 0 auto 55px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.proyecto {
+  height: 155px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.proyecto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s;
+}
+
+.proyecto:hover img {
+  transform: scale(1.05);
+}
+
+
+/* CTA */
+
+.especialidades-cta {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 35px;
+  border-radius: 18px;
+  background: linear-gradient(110deg, #172554, #1e3a8a);
+  color: white;
   display: flex;
-  justify-content: flex-end;
-  padding: 0 20px 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.especialidad .plan .btn {
-  padding: .6em 1.2em;
+.especialidades-cta h2 {
+  margin: 0 0 5px;
+  font-size: 1.3rem;
+}
+
+.especialidades-cta p {
+  margin: 0;
+  color: rgba(255,255,255,.7);
+  font-size: .8rem;
+}
+
+.especialidades-cta a {
+  background: #ffbd00;
+  color: #111;
+  padding: 12px 20px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: 800;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+  .especialidades-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-image {
+    height: 280px;
+  }
+
+  .estadisticas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .estadistica:nth-child(2) {
+    border-right: none;
+  }
+
+  .especialidades-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proyectos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .especialidades-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 }
