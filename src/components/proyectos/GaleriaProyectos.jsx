@@ -23,26 +23,26 @@ export default function GaleriaProyectos() {
       id: 1,
       titulo: 'Proyecto Web',
       categoria: 'Desarrollo institucional moderno',
-      img: 'https://via.placeholder.com/400x300'
+      img: 'https://images.pexels.com/photos/7988742/pexels-photo-7988742.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
     },
     {
       id: 2,
       titulo: 'Sistema Técnico',
       categoria: 'Aplicación de gestión interna',
-      img: 'https://via.placeholder.com/400x300'
+      img: 'https://images.pexels.com/photos/6804069/pexels-photo-6804069.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
     },
     {
       id: 3,
       titulo: 'Innovación Digital',
       categoria: 'Propuesta tecnológica educativa',
-      img: 'https://via.placeholder.com/400x300'
+      img: 'https://images.pexels.com/photos/6804071/pexels-photo-6804071.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
     }
   ]
 
   return (
-    <section className="galeria-section" ref={ref}>
+    <section className="galeria-section" id="proyectos" aria-labelledby="ttl-proyectos" ref={ref}>
       <div className="galeria-wrap">
-        <h2 className="galeria-title">Galería de Proyectos</h2>
+        <h2 className="galeria-title" id="ttl-proyectos">Galería de Proyectos</h2>
 
         <div className="galeria-scroll">
           {proyectos.map((proyecto) => (

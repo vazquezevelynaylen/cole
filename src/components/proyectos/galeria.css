@@ -10,6 +10,7 @@
     #0b1f3a 60%,
     #0a0a0a 100%
   );
+  scroll-margin-top: 68px;
 }
 
 /* CONTENEDOR */
@@ -23,6 +24,9 @@
   font-size: clamp(2rem, 3vw, 2.6rem);
   margin-bottom: 50px;
   color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
 }
 
 /* SCROLL */
@@ -31,6 +35,9 @@
   justify-content: center;
   gap: 24px;
   overflow-x: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .6s ease .15s, transform .6s ease .15s;
 }
 
 /* =========================
@@ -132,4 +139,10 @@
   .galeria-card:hover .galeria-card-inner {
     transform: none;
   }
+}
+
+.galeria-section.galeria--visible .galeria-title,
+.galeria-section.galeria--visible .galeria-scroll {
+  opacity: 1;
+  transform: translateY(0);
 }
