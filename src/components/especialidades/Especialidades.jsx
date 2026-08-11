@@ -53,7 +53,7 @@ export default function Especialidades() {
         </div>
 
         <div className="es-stat">
-          <strong>2</strong>
+          <strong>3</strong>
           <span>ESPECIALIDADES<br />técnicas</span>
         </div>
 
@@ -95,6 +95,26 @@ export default function Especialidades() {
           </p>
 
           <a href="/tic" className="es-specialty-link">
+            <span>→</span>
+          </a>
+
+        </article>
+
+
+        {/* ELECTRÓNICA */}
+        <article className="es-specialty es-electronica">
+
+          <div className="es-specialty-icon">
+            ⚡
+          </div>
+
+          <h3>Electrónica</h3>
+
+          <p>
+            Diseño y mantenimiento de sistemas electrónicos.
+          </p>
+
+          <a href="/electronica" className="es-specialty-link">
             <span>→</span>
           </a>
 
