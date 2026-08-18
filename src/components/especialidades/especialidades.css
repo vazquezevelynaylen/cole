@@ -16,7 +16,7 @@
    BLOQUE "MUCHO MÁS QUE UNA ESCUELA"
 ===================================================== */
 
-.es-about {
+.es-intro {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto 28px;
@@ -26,15 +26,16 @@
   align-items: stretch;
   background: #fff;
   overflow: hidden;
+  border-radius: 22px;
 }
 
-.es-about-image {
+.es-intro-image {
   min-height: 330px;
   overflow: hidden;
   border-radius: 0 0 22px 0;
 }
 
-.es-about-image img {
+.es-intro-image img {
   width: 100%;
   height: 100%;
   display: block;
@@ -42,7 +43,7 @@
   object-position: center;
 }
 
-.es-about-content {
+.es-intro-content {
   padding: 38px 42px;
   display: flex;
   flex-direction: column;
@@ -50,7 +51,7 @@
   background: #fff;
 }
 
-.es-about-label {
+.es-label {
   display: block;
   margin-bottom: 8px;
   color: #667085;
@@ -59,7 +60,7 @@
   letter-spacing: .12em;
 }
 
-.es-about-content h2 {
+.es-intro-content h2 {
   position: relative;
   margin: 0 0 16px;
   padding-left: 0;
@@ -71,7 +72,7 @@
   letter-spacing: -.045em;
 }
 
-.es-about-content h2::before {
+.es-intro-content h2::before {
   content: '';
   display: block;
   width: 34px;
@@ -80,11 +81,11 @@
   background: #e21b23;
 }
 
-.es-about-content h2 span {
+.es-intro-content h2 span {
   color: #f0b900;
 }
 
-.es-about-content p {
+.es-intro-content p {
   max-width: 410px;
   margin: 0 0 19px;
   color: #667085;
@@ -92,7 +93,7 @@
   line-height: 1.55;
 }
 
-.es-about-button {
+.es-button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -108,12 +109,12 @@
   transition: .2s ease;
 }
 
-.es-about-button:hover {
+.es-button:hover {
   border-color: #f0b900;
   transform: translateY(-2px);
 }
 
-.es-about-button span {
+.es-button span {
   color: #f0b900;
   font-size: 13px;
 }
@@ -204,7 +205,7 @@
 }
 
 /* =====================================================
-   ESPECIALIDADES — SOLO TIC + MULTIMEDIA
+   ESPECIALIDADES — TIC + ELECTRÓNICA + MULTIMEDIA
 ===================================================== */
 
 .es-specialties {
@@ -235,6 +236,10 @@
   background: #dce7ff;
 }
 
+.es-electronica {
+  background: #e8eaf6;
+}
+
 .es-multimedia {
   background: #fff0c9;
 }
@@ -252,6 +257,10 @@
 
 .es-tic .es-specialty-icon {
   color: #3157b7;
+}
+
+.es-electronica .es-specialty-icon {
+  color: #5e35b1;
 }
 
 .es-multimedia .es-specialty-icon {
@@ -294,6 +303,41 @@
 .es-specialty-link:hover {
   background: #fff;
   transform: translateX(2px);
+}
+
+/* =====================================================
+   PROYECTOS
+===================================================== */
+
+.es-projects {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 34px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.es-project {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.es-project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+
+.es-project:hover img {
+  transform: scale(1.05);
+}
+
+.es-project-heading {
+  margin-top: 20px;
 }
 
 /* =====================================================
@@ -349,16 +393,16 @@
 ===================================================== */
 
 @media (max-width: 850px) {
-  .es-about {
+  .es-intro {
     grid-template-columns: 1fr;
   }
 
-  .es-about-image {
+  .es-intro-image {
     min-height: 270px;
     border-radius: 0;
   }
 
-  .es-about-content {
+  .es-intro-content {
     padding: 30px;
   }
 
@@ -374,6 +418,10 @@
   .es-stat:nth-child(2) {
     border-bottom: 1px solid #eaecf0;
   }
+
+  .es-projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
@@ -381,11 +429,11 @@
     padding: 0 14px 45px;
   }
 
-  .es-about-content {
+  .es-intro-content {
     padding: 25px 20px;
   }
 
-  .es-about-content h2 {
+  .es-intro-content h2 {
     font-size: 38px;
   }
 
@@ -401,5 +449,9 @@
   .es-cta a {
     width: 100%;
     justify-content: center;
+  }
+
+  .es-projects {
+    grid-template-columns: 1fr;
   }
 }
