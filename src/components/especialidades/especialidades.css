@@ -1,185 +1,175 @@
-/* =========================================
-   SECCIÓN ESPECIALIDADES
-========================================= */
+/* =====================================================
+   ESPECIALIDADES — BLOQUE INSTITUCIONAL
+   Basado en la referencia visual enviada
+===================================================== */
 
 .especialidades {
   width: 100%;
-  background: #f7f8fc;
-  color: #172033;
-  padding: 80px 24px;
   box-sizing: border-box;
+  padding: 0 24px 70px;
+  background: #f8f8f6;
+  color: #172033;
+  font-family: Inter, Arial, sans-serif;
 }
 
+/* =====================================================
+   BLOQUE "MUCHO MÁS QUE UNA ESCUELA"
+===================================================== */
 
-/* =========================================
-   INTRO
-========================================= */
-
-.es-intro {
+.es-about {
   width: 100%;
   max-width: 1180px;
-  margin: 0 auto 45px;
-
+  margin: 0 auto 28px;
+  min-height: 330px;
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 42px;
-  align-items: center;
-}
-
-.es-intro-image {
-  width: 100%;
-  height: 365px;
-
+  grid-template-columns: 1.08fr .92fr;
+  align-items: stretch;
+  background: #fff;
   overflow: hidden;
-  border-radius: 24px;
-
-  background: #e8ebf2;
 }
 
-.es-intro-image img {
+.es-about-image {
+  min-height: 330px;
+  overflow: hidden;
+  border-radius: 0 0 22px 0;
+}
+
+.es-about-image img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
-  display: block;
+  object-position: center;
 }
 
-.es-intro-content {
-  padding: 10px 15px;
+.es-about-content {
+  padding: 38px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
 }
 
-.es-label {
+.es-about-label {
   display: block;
-
-  font-size: 11px;
+  margin-bottom: 8px;
+  color: #667085;
+  font-size: 8px;
   font-weight: 800;
   letter-spacing: .12em;
-
-  color: #667085;
-
-  margin-bottom: 12px;
 }
 
-.es-intro-content h2 {
-  margin: 0 0 18px;
-
-  font-size: clamp(38px, 4.5vw, 62px);
-  line-height: .96;
-  letter-spacing: -.04em;
-
-  font-weight: 900;
+.es-about-content h2 {
+  position: relative;
+  margin: 0 0 16px;
+  padding-left: 0;
   color: #172033;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 800;
+  line-height: .94;
+  letter-spacing: -.045em;
 }
 
-.es-intro-content h2 span {
-  color: #f5b900;
+.es-about-content h2::before {
+  content: '';
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin-bottom: 10px;
+  background: #e21b23;
 }
 
-.es-intro-content p {
-  max-width: 470px;
+.es-about-content h2 span {
+  color: #f0b900;
+}
 
-  margin: 0 0 25px;
-
+.es-about-content p {
+  max-width: 410px;
+  margin: 0 0 19px;
   color: #667085;
-
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: 10px;
+  line-height: 1.55;
 }
 
-.es-button {
+.es-about-button {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-
-  padding: 12px 17px;
-
-  border-radius: 9px;
-
-  background: #f5c000;
+  gap: 10px;
+  width: fit-content;
+  padding: 9px 13px;
+  border: 1px solid #d0d5dd;
+  border-radius: 7px;
   color: #172033;
-
+  background: #fff;
   text-decoration: none;
-
-  font-size: 12px;
+  font-size: 9px;
   font-weight: 800;
-
-  transition: .25s ease;
+  transition: .2s ease;
 }
 
-.es-button span {
-  font-size: 16px;
-}
-
-.es-button:hover {
+.es-about-button:hover {
+  border-color: #f0b900;
   transform: translateY(-2px);
-  background: #eab500;
 }
 
+.es-about-button span {
+  color: #f0b900;
+  font-size: 13px;
+}
 
-/* =========================================
+/* =====================================================
    ESTADÍSTICAS
-========================================= */
+===================================================== */
 
 .es-stats {
   width: 100%;
   max-width: 1180px;
-
-  margin: 0 auto 55px;
-
-  background: #ffffff;
-
-  border-radius: 17px;
-
-  padding: 20px 10px;
-
+  margin: 0 auto 30px;
+  padding: 13px 8px;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
-  box-shadow: 0 8px 28px rgba(16, 24, 40, .06);
+  background: #fff;
+  border: 1px solid #eef0f3;
+  border-radius: 12px;
 }
 
 .es-stat {
-  min-height: 55px;
-
+  min-height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  gap: 11px;
-
+  gap: 8px;
   border-right: 1px solid #eaecf0;
 }
 
 .es-stat:last-child {
-  border-right: none;
+  border-right: 0;
 }
 
 .es-stat strong {
-  font-size: 25px;
-  font-weight: 900;
-
   color: #172033;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -.03em;
 }
 
 .es-stat span {
-  font-size: 9px;
-  line-height: 1.35;
-
   color: #667085;
-
+  font-size: 7px;
+  line-height: 1.25;
   font-weight: 700;
 }
 
-
-/* =========================================
+/* =====================================================
    ENCABEZADOS
-========================================= */
+===================================================== */
 
 .es-section-heading {
   width: 100%;
   max-width: 1180px;
-
-  margin: 0 auto 18px;
-
+  margin: 0 auto 12px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -187,339 +177,189 @@
 
 .es-section-heading > div > span {
   display: block;
-
+  margin-bottom: 3px;
   color: #98a2b3;
-
-  font-size: 9px;
+  font-size: 7px;
   font-weight: 800;
-
-  letter-spacing: .12em;
-
-  margin-bottom: 5px;
+  letter-spacing: .1em;
 }
 
 .es-section-heading h2 {
   margin: 0;
-
-  font-size: 21px;
-  font-weight: 900;
-
   color: #172033;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -.02em;
 }
 
 .es-section-heading > a {
   color: #667085;
-
   text-decoration: none;
-
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 800;
 }
 
 .es-section-heading > a span {
-  color: #f5b900;
-  margin-left: 4px;
+  color: #f0b900;
 }
 
-
-/* =========================================
-   ESPECIALIDADES + RECORRIDO 360 (3 tarjetas)
-========================================= */
+/* =====================================================
+   ESPECIALIDADES — SOLO TIC + MULTIMEDIA
+===================================================== */
 
 .es-specialties {
   width: 100%;
   max-width: 1180px;
-
-  margin: 0 auto 55px;
-
+  margin: 0 auto 34px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
 .es-specialty {
   position: relative;
-
-  min-height: 170px;
-
-  padding: 23px;
-
-  border-radius: 17px;
-
+  min-height: 135px;
+  box-sizing: border-box;
+  padding: 17px 18px 38px;
   overflow: hidden;
-
-  transition: transform .25s ease,
-              box-shadow .25s ease;
+  border-radius: 12px;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .es-specialty:hover {
-  transform: translateY(-4px);
-
-  box-shadow: 0 12px 30px rgba(16, 24, 40, .08);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(16, 24, 40, .08);
 }
-
-
-/* TIC */
 
 .es-tic {
   background: #dce7ff;
+}
+
+.es-multimedia {
+  background: #fff0c9;
+}
+
+.es-specialty-icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 9px;
+  font-size: 13px;
+  font-weight: 900;
 }
 
 .es-tic .es-specialty-icon {
   color: #3157b7;
 }
 
-
-/* MULTIMEDIA */
-
-.es-multimedia {
-  background: #fff0c9;
-}
-
 .es-multimedia .es-specialty-icon {
   color: #e6a900;
 }
 
-
-/* RECORRIDO 360 */
-
-.es-360 {
-  background: #e4d9ff;
-}
-
-.es-360 .es-specialty-icon {
-  color: #6c3ce0;
-}
-
-
-/* ICONO */
-
-.es-specialty-icon {
-  width: 30px;
-  height: 30px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 15px;
-
-  font-size: 17px;
-  font-weight: 900;
-}
-
-
-/* TÍTULO */
-
 .es-specialty h3 {
-  margin: 0 0 5px;
-
-  font-size: 17px;
-  font-weight: 900;
-
+  margin: 0 0 4px;
   color: #172033;
+  font-size: 14px;
+  font-weight: 900;
 }
-
-
-/* DESCRIPCIÓN */
 
 .es-specialty p {
-  max-width: 250px;
-
+  max-width: 290px;
   margin: 0;
-
   color: #667085;
-
-  font-size: 11px;
+  font-size: 8px;
   line-height: 1.45;
 }
 
-
-/* FLECHA */
-
 .es-specialty-link {
   position: absolute;
-
-  left: 23px;
-  bottom: 19px;
-
-  width: 24px;
-  height: 24px;
-
+  left: 18px;
+  bottom: 12px;
+  width: 19px;
+  height: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border: 1px solid rgba(23, 32, 51, .12);
-
+  border: 1px solid rgba(23, 32, 51, .13);
   border-radius: 50%;
-
   color: #172033;
-
-  text-decoration: none;
-
   background: rgba(255,255,255,.35);
-
-  transition: .25s ease;
+  text-decoration: none;
+  font-size: 10px;
+  transition: .2s ease;
 }
 
 .es-specialty-link:hover {
-  background: #ffffff;
-  transform: translateX(3px);
+  background: #fff;
+  transform: translateX(2px);
 }
 
-
-/* =========================================
-   PROYECTOS
-========================================= */
-
-.es-project-heading {
-  margin-bottom: 18px;
-}
-
-.es-projects {
-  width: 100%;
-  max-width: 1180px;
-
-  margin: 0 auto 55px;
-
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 12px;
-}
-
-.es-project {
-  width: 100%;
-  height: 145px;
-
-  border-radius: 13px;
-
-  overflow: hidden;
-
-  background: #0a0a0a;
-}
-
-.es-project img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-  transition: transform .4s ease;
-}
-
-.es-project:hover img {
-  transform: scale(1.06);
-}
-
-
-/* =========================================
+/* =====================================================
    CTA
-========================================= */
+===================================================== */
 
 .es-cta {
   width: 100%;
   max-width: 1180px;
-
   margin: 0 auto;
-
-  padding: 25px 30px;
-
-  border-radius: 17px;
-
-  background:
-    linear-gradient(
-      110deg,
-      #172554,
-      #1e3a8a
-    );
-
-  color: #ffffff;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
+  padding: 19px 24px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #172554, #1e3a8a);
+  color: #fff;
 }
 
 .es-cta h2 {
-  margin: 0 0 5px;
-
-  font-size: 19px;
+  margin: 0 0 3px;
+  font-size: 14px;
   font-weight: 900;
 }
 
 .es-cta p {
   margin: 0;
-
   color: rgba(255,255,255,.7);
-
-  font-size: 10px;
+  font-size: 8px;
 }
 
 .es-cta a {
   display: inline-flex;
-
   align-items: center;
-
-  gap: 12px;
-
-  padding: 11px 17px;
-
-  border-radius: 8px;
-
+  gap: 9px;
+  padding: 9px 13px;
+  border-radius: 7px;
   background: #f5c000;
-
   color: #172033;
-
   text-decoration: none;
-
-  font-size: 10px;
-
+  font-size: 8px;
   font-weight: 900;
-
-  transition: .25s ease;
-}
-
-.es-cta a:hover {
-  transform: translateY(-2px);
 }
 
 .es-cta a span {
-  font-size: 15px;
+  font-size: 12px;
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
 @media (max-width: 850px) {
-
-  .especialidades {
-    padding: 60px 18px;
-  }
-
-  .es-intro {
+  .es-about {
     grid-template-columns: 1fr;
-
-    gap: 25px;
   }
 
-  .es-intro-image {
-    height: 300px;
+  .es-about-image {
+    min-height: 270px;
+    border-radius: 0;
   }
 
-  .es-intro-content {
-    padding: 0;
+  .es-about-content {
+    padding: 30px;
   }
 
   .es-stats {
@@ -527,85 +367,35 @@
   }
 
   .es-stat:nth-child(2) {
-    border-right: none;
+    border-right: 0;
   }
 
   .es-stat:nth-child(1),
   .es-stat:nth-child(2) {
     border-bottom: 1px solid #eaecf0;
   }
+}
+
+@media (max-width: 600px) {
+  .especialidades {
+    padding: 0 14px 45px;
+  }
+
+  .es-about-content {
+    padding: 25px 20px;
+  }
+
+  .es-about-content h2 {
+    font-size: 38px;
+  }
 
   .es-specialties {
     grid-template-columns: 1fr;
   }
 
-  .es-projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-/* =========================================
-   CELULAR
-========================================= */
-
-@media (max-width: 550px) {
-
-  .especialidades {
-    padding: 45px 15px;
-  }
-
-  .es-intro-image {
-    height: 230px;
-    border-radius: 18px;
-  }
-
-  .es-intro-content h2 {
-    font-size: 40px;
-  }
-
-  .es-stats {
-    padding: 10px;
-  }
-
-  .es-stat {
-    min-height: 65px;
-    gap: 7px;
-  }
-
-  .es-stat strong {
-    font-size: 21px;
-  }
-
-  .es-stat span {
-    font-size: 8px;
-  }
-
-  .es-section-heading h2 {
-    font-size: 18px;
-  }
-
-  .es-specialty {
-    min-height: 160px;
-  }
-
-  .es-projects {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .es-project {
-    height: 110px;
-  }
-
   .es-cta {
-    padding: 22px;
-
     flex-direction: column;
-
     align-items: flex-start;
-
-    gap: 18px;
   }
 
   .es-cta a {
