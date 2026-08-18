@@ -7,8 +7,8 @@ import A11yControls    from '../components/a11y/A11yControls.jsx'
  
 /* Secciones en orden */
 import Hero             from '../components/hero/Hero_v2.jsx'
-import HeroShowcase     from '../components/hero/HeroShowcase_v2.jsx'
 import Compromiso       from '../components/compromiso/Compromiso.jsx'
+import HeroShowcase     from '../components/hero/HeroShowcase_v2.jsx'
 import StatsSection     from '../components/stats/StatsSection.jsx'
 import AutoridadesSection   from '../components/autoridades/AutoridadesSection.jsx'
 import GaleriaProyectos     from '../components/proyectos/GaleriaProyectos.jsx'
