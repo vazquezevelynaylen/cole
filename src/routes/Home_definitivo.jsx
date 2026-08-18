@@ -1,62 +1,66 @@
 import { useState } from 'react'
- 
+
 /* Layout */
 import Header          from '../components/header/Header_v2.jsx'
 import Footer          from '../components/footer/Footer_v2.jsx'
 import A11yControls    from '../components/a11y/A11yControls.jsx'
- 
+
 /* Secciones en orden */
-import Hero             from '../components/hero/Hero_v2.jsx'
-import Compromiso       from '../components/compromiso/Compromiso.jsx'
-import HeroShowcase     from '../components/hero/HeroShowcase_v2.jsx'
-import StatsSection     from '../components/stats/StatsSection.jsx'
-import AutoridadesSection   from '../components/autoridades/AutoridadesSection.jsx'
-import GaleriaProyectos     from '../components/proyectos/GaleriaProyectos.jsx'
-import CalendarioSection    from '../components/Calendario/CalendarioSection.jsx'
-import TestimoniosSection   from '../components/Testimonios/TestimoniosSection.jsx'
-import UbicacionSection     from '../components/Ubicacion/UbicacionSection.jsx'
- 
+import Hero                from '../components/hero/Hero_v2.jsx'
+import Compromiso          from '../components/compromiso/Compromiso.jsx'
+import Especialidades      from '../components/especialidades/Especialidades.jsx'
+import HeroShowcase        from '../components/hero/HeroShowcase_v2.jsx'
+import StatsSection        from '../components/stats/StatsSection.jsx'
+import AutoridadesSection  from '../components/autoridades/AutoridadesSection.jsx'
+import GaleriaProyectos    from '../components/proyectos/GaleriaProyectos.jsx'
+import CalendarioSection   from '../components/Calendario/CalendarioSection.jsx'
+import TestimoniosSection  from '../components/Testimonios/TestimoniosSection.jsx'
+import UbicacionSection    from '../components/Ubicacion/UbicacionSection.jsx'
+
 /* Comunicados */
 import ComunicadosTable from '../components/comunicados/ComunicadosTable.jsx'
 import Filtros          from '../components/comunicados/Filtros.jsx'
- 
+
 /* Estilos compartidos del comunicados-wrap */
 import '../components/comunicados/comunicados.css'
- 
+
 export default function Home() {
   const [tag, setTag] = useState('all')
- 
+
   return (
     <>
       <Header />
- 
+
       <main id="contenido" tabIndex={-1}>
- 
+
         {/* ─── 1. HERO ──────────────────────────────── */}
         <Hero />
- 
+
         {/* ─── 2. PANELS (TIC / Multimedia / 360°) + ticker ── */}
         <HeroShowcase />
- 
-        {/* ─── 3. COMPROMISO ──────────────────────── */}
+
+        {/* ─── 3. COMPROMISO ───────────────────────── */}
         <Compromiso />
 
-        {/* ─── 4. ESTADÍSTICAS ────────────────────── */}
+        {/* ─── 4. ESPECIALIDADES ───────────────────── */}
+        <Especialidades />
+
+        {/* ─── 5. ESTADÍSTICAS ─────────────────────── */}
         <StatsSection />
 
-        {/* ─── 5. AUTORIDADES ──────────────────────── */}
+        {/* ─── 6. AUTORIDADES ──────────────────────── */}
         <AutoridadesSection />
- 
-        {/* ─── 6. PROYECTOS (galería masonry) ─────── */}
+
+        {/* ─── 7. PROYECTOS ────────────────────────── */}
         <GaleriaProyectos />
 
-        {/* ─── 7. CALENDARIO ───────────────────────── */}
+        {/* ─── 8. CALENDARIO ───────────────────────── */}
         <CalendarioSection />
 
-        {/* ─── 8. TESTIMONIOS ──────────────────────── */}
+        {/* ─── 9. TESTIMONIOS ──────────────────────── */}
         <TestimoniosSection />
 
-        {/* ─── 9. COMUNICADOS ─────────────────────── */}
+        {/* ─── 10. COMUNICADOS ─────────────────────── */}
         <section
           id="comunicados"
           aria-labelledby="ttl-comunicados"
@@ -65,25 +69,30 @@ export default function Home() {
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <header className="sec-header">
               <span className="sec-eyebrow">Novedades oficiales</span>
-              <h2 className="sec-title" id="ttl-comunicados">Comunicados</h2>
-              <p className="sec-subtitle">Información importante de la institución.</p>
+              <h2 className="sec-title" id="ttl-comunicados">
+                Comunicados
+              </h2>
+              <p className="sec-subtitle">
+                Información importante de la institución.
+              </p>
             </header>
- 
+
             <div className="comunicados-wrap">
               <div className="com-head">
                 <h3 className="com-subtitle">Todos los comunicados</h3>
                 <Filtros value={tag} onChange={setTag} />
               </div>
+
               <ComunicadosTable filter={tag} />
             </div>
           </div>
         </section>
- 
-        {/* ─── 10. UBICACIÓN ───────────────────────── */}
+
+        {/* ─── 11. UBICACIÓN ───────────────────────── */}
         <UbicacionSection />
- 
+
       </main>
- 
+
       <Footer />
       <A11yControls />
     </>
