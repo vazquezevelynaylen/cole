@@ -1,13 +1,10 @@
 import { useState } from 'react'
-
 /* Layout */
 import Header          from '../components/header/Header_v2.jsx'
 import Footer          from '../components/footer/Footer_v2.jsx'
 import A11yControls    from '../components/a11y/A11yControls.jsx'
-
 /* Secciones en orden */
 import Hero                from '../components/hero/Hero_v2.jsx'
-import Compromiso          from '../components/compromiso/Compromiso.jsx'
 import Especialidades      from '../components/especialidades/Especialidades.jsx'
 import HeroShowcase        from '../components/hero/HeroShowcase_v2.jsx'
 import StatsSection        from '../components/stats/StatsSection.jsx'
@@ -16,51 +13,35 @@ import GaleriaProyectos    from '../components/proyectos/GaleriaProyectos.jsx'
 import CalendarioSection   from '../components/Calendario/CalendarioSection.jsx'
 import TestimoniosSection  from '../components/Testimonios/TestimoniosSection.jsx'
 import UbicacionSection    from '../components/Ubicacion/UbicacionSection.jsx'
-
 /* Comunicados */
 import ComunicadosTable from '../components/comunicados/ComunicadosTable.jsx'
 import Filtros          from '../components/comunicados/Filtros.jsx'
-
 /* Estilos compartidos del comunicados-wrap */
 import '../components/comunicados/comunicados.css'
 
 export default function Home() {
   const [tag, setTag] = useState('all')
-
   return (
     <>
       <Header />
-
       <main id="contenido" tabIndex={-1}>
-
         {/* ─── 1. HERO ──────────────────────────────── */}
         <Hero />
-
         {/* ─── 2. PANELS (TIC / Multimedia / 360°) + ticker ── */}
         <HeroShowcase />
-
-        {/* ─── 3. COMPROMISO ───────────────────────── */}
-        <Compromiso />
-
-        {/* ─── 4. ESPECIALIDADES ───────────────────── */}
+        {/* ─── 3. ESPECIALIDADES ───────────────────── */}
         <Especialidades />
-
-        {/* ─── 5. ESTADÍSTICAS ─────────────────────── */}
+        {/* ─── 4. ESTADÍSTICAS ─────────────────────── */}
         <StatsSection />
-
-        {/* ─── 6. AUTORIDADES ──────────────────────── */}
+        {/* ─── 5. AUTORIDADES ──────────────────────── */}
         <AutoridadesSection />
-
-        {/* ─── 7. PROYECTOS ────────────────────────── */}
+        {/* ─── 6. PROYECTOS ────────────────────────── */}
         <GaleriaProyectos />
-
-        {/* ─── 8. CALENDARIO ───────────────────────── */}
+        {/* ─── 7. CALENDARIO ───────────────────────── */}
         <CalendarioSection />
-
-        {/* ─── 9. TESTIMONIOS ──────────────────────── */}
+        {/* ─── 8. TESTIMONIOS ──────────────────────── */}
         <TestimoniosSection />
-
-        {/* ─── 10. COMUNICADOS ─────────────────────── */}
+        {/* ─── 9. COMUNICADOS ─────────────────────── */}
         <section
           id="comunicados"
           aria-labelledby="ttl-comunicados"
@@ -76,23 +57,18 @@ export default function Home() {
                 Información importante de la institución.
               </p>
             </header>
-
             <div className="comunicados-wrap">
               <div className="com-head">
                 <h3 className="com-subtitle">Todos los comunicados</h3>
                 <Filtros value={tag} onChange={setTag} />
               </div>
-
               <ComunicadosTable filter={tag} />
             </div>
           </div>
         </section>
-
-        {/* ─── 11. UBICACIÓN ───────────────────────── */}
+        {/* ─── 10. UBICACIÓN ───────────────────────── */}
         <UbicacionSection />
-
       </main>
-
       <Footer />
       <A11yControls />
     </>
