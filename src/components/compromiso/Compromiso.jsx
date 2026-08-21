@@ -1,11 +1,10 @@
-import React from 'react';
-import './Compromiso.css';
+import React from 'react'
+import './Compromiso.css'
 
 export const Compromiso = () => {
   return (
-    <section className="compromiso-section">
+    <section className="compromiso-section" id="compromiso">
       <div className="compromiso-container">
-        {/* Tarjeta con logo e iluminación suave */}
         <div className="compromiso-card">
           <div className="compromiso-glow"></div>
           <img 
@@ -15,7 +14,6 @@ export const Compromiso = () => {
           />
         </div>
 
-        {/* Bloque de texto e identidad */}
         <div className="compromiso-content">
           <span className="compromiso-badge">• NUESTRO COMPROMISO</span>
           <h2 className="compromiso-title">
@@ -33,7 +31,7 @@ export const Compromiso = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Compromiso;
+export default Compromiso
