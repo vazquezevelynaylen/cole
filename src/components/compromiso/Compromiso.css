@@ -1,6 +1,6 @@
 .compromiso-section {
   padding: 80px 24px;
-  background-color: #f1f5f9; /* Gris claro frío de fondo */
+  background-color: #f1f5f9;
   display: flex;
   justify-content: center;
 }
@@ -20,10 +20,9 @@
   }
 }
 
-/* Tarjeta con efecto Glassmorphism suave */
 .compromiso-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(226, 232, 240, 0.8);
   border-radius: 24px;
@@ -51,13 +50,12 @@
   z-index: 1;
 }
 
-/* Tipografía y Etiquetas */
 .compromiso-badge {
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #2563eb; /* Azul tecnología */
+  color: #2563eb;
   background-color: #e0e7ff;
   padding: 6px 14px;
   border-radius: 100px;
@@ -79,7 +77,6 @@
   margin-bottom: 24px;
 }
 
-/* Etiquetas de valores */
 .compromiso-tags {
   display: flex;
   flex-wrap: wrap;
@@ -94,16 +91,16 @@
 }
 
 .tag-solidaridad {
-  color: #0d9488; /* Verde/Teal solidaridad */
+  color: #0d9488;
   background-color: #ccfbf1;
 }
 
 .tag-conocimiento {
-  color: #4f46e5; /* Indigo conocimiento */
+  color: #4f46e5;
   background-color: #e0e7ff;
 }
 
 .tag-tecnologia {
-  color: #2563eb; /* Azul tecnología */
+  color: #2563eb;
   background-color: #dbeafe;
 }
