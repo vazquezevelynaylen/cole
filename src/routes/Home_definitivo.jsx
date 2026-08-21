@@ -6,6 +6,7 @@ import A11yControls    from '../components/a11y/A11yControls.jsx'
 /* Secciones en orden */
 import Hero                from '../components/hero/Hero_v2.jsx'
 import HeroShowcase        from '../components/hero/HeroShowcase_v2.jsx'
+import Compromiso          from '../components/compromiso/Compromiso.jsx'
 import Especialidades      from '../components/especialidades/Especialidades.jsx'
 import StatsSection        from '../components/stats/StatsSection.jsx'
 import AutoridadesSection  from '../components/autoridades/AutoridadesSection.jsx'
@@ -29,19 +30,21 @@ export default function Home() {
         <Hero />
         {/* ─── 2. PANELS (TIC / Multimedia / 360°) + ticker ── */}
         <HeroShowcase />
-        {/* ─── 3. ESPECIALIDADES ───────────────────── */}
+        {/* ─── 3. COMPROMISO ────────────────────────── */}
+        <Compromiso />
+        {/* ─── 4. ESPECIALIDADES ───────────────────── */}
         <Especialidades />
-        {/* ─── 4. ESTADÍSTICAS ─────────────────────── */}
+        {/* ─── 5. ESTADÍSTICAS ─────────────────────── */}
         <StatsSection />
-        {/* ─── 5. AUTORIDADES ──────────────────────── */}
+        {/* ─── 6. AUTORIDADES ──────────────────────── */}
         <AutoridadesSection />
-        {/* ─── 6. PROYECTOS ────────────────────────── */}
+        {/* ─── 7. PROYECTOS ────────────────────────── */}
         <GaleriaProyectos />
-        {/* ─── 7. CALENDARIO ───────────────────────── */}
+        {/* ─── 8. CALENDARIO ───────────────────────── */}
         <CalendarioSection />
-        {/* ─── 8. TESTIMONIOS ──────────────────────── */}
+        {/* ─── 9. TESTIMONIOS ──────────────────────── */}
         <TestimoniosSection />
-        {/* ─── 9. COMUNICADOS ─────────────────────── */}
+        {/* ─── 10. COMUNICADOS ─────────────────────── */}
         <section
           id="comunicados"
           aria-labelledby="ttl-comunicados"
@@ -66,7 +69,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* ─── 10. UBICACIÓN ───────────────────────── */}
+        {/* ─── 11. UBICACIÓN ───────────────────────── */}
         <UbicacionSection />
       </main>
       <Footer />
