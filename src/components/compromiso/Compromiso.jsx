@@ -23,12 +23,6 @@ export const Compromiso = () => {
           <p className="compromiso-text">
             Nuestra escuela técnica se compromete a brindar una formación pública de excelencia, donde la tecnología se transforma en una herramienta de inclusión, conocimiento y trabajo en equipo para construir un futuro sólido junto a nuestra comunidad.
           </p>
-
-          <div className="compromiso-tags">
-            <span className="tag">+ SOLIDARIDAD</span>
-            <span className="tag">+ CONOCIMIENTO</span>
-            <span className="tag">+ TECNOLOGÍA</span>
-          </div>
         </div>
       </div>
     </section>
