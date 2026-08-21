@@ -1,457 +1,107 @@
-/* =====================================================
-   ESPECIALIDADES — BLOQUE INSTITUCIONAL
-   Basado en la referencia visual enviada
-===================================================== */
-
-.especialidades {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 24px 70px;
-  background: #f8f8f6;
-  color: #172033;
-  font-family: Inter, Arial, sans-serif;
+.especialidades-section {
+  padding: 100px 24px;
+  background-color: #0b0f17;
+  color: #ffffff;
 }
 
-/* =====================================================
-   BLOQUE "MUCHO MÁS QUE UNA ESCUELA"
-===================================================== */
+.especialidades-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-.es-intro {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto 28px;
-  min-height: 330px;
+.especialidades-grid {
   display: grid;
-  grid-template-columns: 1.08fr .92fr;
-  align-items: stretch;
-  background: #fff;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.esp-card {
+  background: #161e2e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
   overflow: hidden;
-  border-radius: 22px;
-}
-
-.es-intro-image {
-  min-height: 330px;
-  overflow: hidden;
-  border-radius: 0 0 22px 0;
-}
-
-.es-intro-image img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-}
-
-.es-intro-content {
-  padding: 38px 42px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.es-label {
-  display: block;
-  margin-bottom: 8px;
-  color: #667085;
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: .12em;
+.esp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.es-intro-content h2 {
+.esp-image-container {
   position: relative;
-  margin: 0 0 16px;
-  padding-left: 0;
-  color: #172033;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(34px, 4vw, 50px);
-  font-weight: 800;
-  line-height: .94;
-  letter-spacing: -.045em;
-}
-
-.es-intro-content h2::before {
-  content: '';
-  display: block;
-  width: 34px;
-  height: 3px;
-  margin-bottom: 10px;
-  background: #e21b23;
-}
-
-.es-intro-content h2 span {
-  color: #f0b900;
-}
-
-.es-intro-content p {
-  max-width: 410px;
-  margin: 0 0 19px;
-  color: #667085;
-  font-size: 10px;
-  line-height: 1.55;
-}
-
-.es-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  width: fit-content;
-  padding: 9px 13px;
-  border: 1px solid #d0d5dd;
-  border-radius: 7px;
-  color: #172033;
-  background: #fff;
-  text-decoration: none;
-  font-size: 9px;
-  font-weight: 800;
-  transition: .2s ease;
-}
-
-.es-button:hover {
-  border-color: #f0b900;
-  transform: translateY(-2px);
-}
-
-.es-button span {
-  color: #f0b900;
-  font-size: 13px;
-}
-
-/* =====================================================
-   ESTADÍSTICAS
-===================================================== */
-
-.es-stats {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto 30px;
-  padding: 13px 8px;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  background: #fff;
-  border: 1px solid #eef0f3;
-  border-radius: 12px;
-}
-
-.es-stat {
-  min-height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border-right: 1px solid #eaecf0;
-}
-
-.es-stat:last-child {
-  border-right: 0;
-}
-
-.es-stat strong {
-  color: #172033;
-  font-size: 19px;
-  font-weight: 900;
-  letter-spacing: -.03em;
-}
-
-.es-stat span {
-  color: #667085;
-  font-size: 7px;
-  line-height: 1.25;
-  font-weight: 700;
-}
-
-/* =====================================================
-   ENCABEZADOS
-===================================================== */
-
-.es-section-heading {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto 12px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.es-section-heading > div > span {
-  display: block;
-  margin-bottom: 3px;
-  color: #98a2b3;
-  font-size: 7px;
-  font-weight: 800;
-  letter-spacing: .1em;
-}
-
-.es-section-heading h2 {
-  margin: 0;
-  color: #172033;
-  font-size: 16px;
-  font-weight: 900;
-  letter-spacing: -.02em;
-}
-
-.es-section-heading > a {
-  color: #667085;
-  text-decoration: none;
-  font-size: 8px;
-  font-weight: 800;
-}
-
-.es-section-heading > a span {
-  color: #f0b900;
-}
-
-/* =====================================================
-   ESPECIALIDADES — TIC + ELECTRÓNICA + MULTIMEDIA
-===================================================== */
-
-.es-specialties {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto 34px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.es-specialty {
-  position: relative;
-  min-height: 135px;
-  box-sizing: border-box;
-  padding: 17px 18px 38px;
+  height: 220px;
   overflow: hidden;
-  border-radius: 12px;
-  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.es-specialty:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(16, 24, 40, .08);
-}
-
-.es-tic {
-  background: #dce7ff;
-}
-
-.es-electronica {
-  background: #e8eaf6;
-}
-
-.es-multimedia {
-  background: #fff0c9;
-}
-
-.es-specialty-icon {
-  width: 25px;
-  height: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 9px;
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.es-tic .es-specialty-icon {
-  color: #3157b7;
-}
-
-.es-electronica .es-specialty-icon {
-  color: #5e35b1;
-}
-
-.es-multimedia .es-specialty-icon {
-  color: #e6a900;
-}
-
-.es-specialty h3 {
-  margin: 0 0 4px;
-  color: #172033;
-  font-size: 14px;
-  font-weight: 900;
-}
-
-.es-specialty p {
-  max-width: 290px;
-  margin: 0;
-  color: #667085;
-  font-size: 8px;
-  line-height: 1.45;
-}
-
-.es-specialty-link {
-  position: absolute;
-  left: 18px;
-  bottom: 12px;
-  width: 19px;
-  height: 19px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(23, 32, 51, .13);
-  border-radius: 50%;
-  color: #172033;
-  background: rgba(255,255,255,.35);
-  text-decoration: none;
-  font-size: 10px;
-  transition: .2s ease;
-}
-
-.es-specialty-link:hover {
-  background: #fff;
-  transform: translateX(2px);
-}
-
-/* =====================================================
-   PROYECTOS
-===================================================== */
-
-.es-projects {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto 34px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
-.es-project {
-  border-radius: 12px;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-}
-
-.es-project img {
+.esp-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform .3s ease;
+  transition: transform 0.5s ease;
 }
 
-.es-project:hover img {
+.esp-card:hover .esp-image {
   transform: scale(1.05);
 }
 
-.es-project-heading {
-  margin-top: 20px;
+.esp-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  color: #38bdf8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 100px;
 }
 
-/* =====================================================
-   CTA
-===================================================== */
-
-.es-cta {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 19px 24px;
-  box-sizing: border-box;
+.esp-body {
+  padding: 28px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  border-radius: 12px;
-  background: linear-gradient(110deg, #172554, #1e3a8a);
-  color: #fff;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.es-cta h2 {
-  margin: 0 0 3px;
-  font-size: 14px;
-  font-weight: 900;
+.esp-body h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #f8fafc;
 }
 
-.es-cta p {
-  margin: 0;
-  color: rgba(255,255,255,.7);
-  font-size: 8px;
+.esp-body p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
 }
 
-.es-cta a {
+.esp-btn {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  padding: 9px 13px;
-  border-radius: 7px;
-  background: #f5c000;
-  color: #172033;
+  gap: 8px;
+  color: #38bdf8;
+  font-weight: 600;
   text-decoration: none;
-  font-size: 8px;
-  font-weight: 900;
+  font-size: 1rem;
+  transition: color 0.2s ease;
 }
 
-.es-cta a span {
-  font-size: 12px;
+.esp-btn .arrow {
+  transition: transform 0.2s ease;
 }
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
-@media (max-width: 850px) {
-  .es-intro {
-    grid-template-columns: 1fr;
-  }
-
-  .es-intro-image {
-    min-height: 270px;
-    border-radius: 0;
-  }
-
-  .es-intro-content {
-    padding: 30px;
-  }
-
-  .es-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .es-stat:nth-child(2) {
-    border-right: 0;
-  }
-
-  .es-stat:nth-child(1),
-  .es-stat:nth-child(2) {
-    border-bottom: 1px solid #eaecf0;
-  }
-
-  .es-projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.esp-btn:hover {
+  color: #60a5fa;
 }
 
-@media (max-width: 600px) {
-  .especialidades {
-    padding: 0 14px 45px;
-  }
-
-  .es-intro-content {
-    padding: 25px 20px;
-  }
-
-  .es-intro-content h2 {
-    font-size: 38px;
-  }
-
-  .es-specialties {
-    grid-template-columns: 1fr;
-  }
-
-  .es-cta {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .es-cta a {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .es-projects {
-    grid-template-columns: 1fr;
-  }
+.esp-btn:hover .arrow {
+  transform: translateX(6px);
 }
