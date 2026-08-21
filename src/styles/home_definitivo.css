@@ -1,140 +1,200 @@
 /* ==========================================================================
-   ESTILOS GENERALES Y ESPACIADOS MODERNOS (WOODHOUSE GROVE STYLE)
+   WOODHOUSE GROVE STYLE - FULL BLEED & ASYMMETRIC EDITORIAL LAYOUT
    ========================================================================== */
 
-/* Espaciado de secciones amplio */
-.section-spacious {
-  padding: 100px 24px;
-  max-width: 1280px;
-  margin: 0 auto;
+:root {
+  --wg-burgundy: #6b1329;
+  --wg-green: #1b4332;
+  --wg-cream: #f9f6f0;
+  --wg-dark: #121212;
+  --wg-text-muted: #555555;
 }
 
-/* Fondo alternado amplio */
-.bg-alt {
-  background-color: #f8fafc;
-  max-width: 100% !important;
-  padding-left: max(24px, calc((100vw - 1280px) / 2));
-  padding-right: max(24px, calc((100vw - 1280px) / 2));
+/* Reset de contenedor general para permitir bloques full-bleed */
+main#contenido {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* --------------------------------------------------------------------------
-   COMPONENTE COMPROMISO
+   1. BLOQUES EDITORIALES (IMAGEN 50% / TEXTO 50% EDGE-TO-EDGE)
    -------------------------------------------------------------------------- */
-.compromiso-container {
-  width: 100%;
-}
-
-.compromiso-grid {
+.text-image-block {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4rem;
-  align-items: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 550px;
 }
 
 @media (min-width: 992px) {
-  .compromiso-grid {
-    grid-template-columns: 1.1fr 0.9fr;
+  .text-image-block {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-.badge-eyebrow {
-  display: inline-block;
-  font-size: 0.85rem;
+/* Variación Borgoña (Sección Compromiso / Institucional) */
+.text-image-block--burgundy {
+  background-color: var(--wg-burgundy);
+  color: #ffffff;
+}
+
+.text-image-block--burgundy .block-subtitle {
+  color: #e2b4bd;
+}
+
+.text-image-block--burgundy .block-title {
+  color: #ffffff;
+}
+
+.text-image-block--burgundy .block-description {
+  color: #f1e6e8;
+}
+
+/* Variación Blanca / Crema */
+.text-image-block--white {
+  background-color: #ffffff;
+  color: var(--wg-dark);
+}
+
+.text-image-block--white .block-subtitle {
+  color: var(--wg-green);
+}
+
+/* Columna de Imagen: cubre el 100% de la mitad de la pantalla */
+.text-image-block .col-image {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  position: relative;
+}
+
+.text-image-block .col-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Columna de Texto: alineada a la izquierda con padding amplio */
+.text-image-block .col-text {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  .text-image-block .col-text {
+    padding: 6rem 5rem;
+  }
+}
+
+/* Tipografía Editorial */
+.block-subtitle {
+  font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #004d40;
-  background-color: #e6f4f1;
-  padding: 6px 14px;
-  border-radius: 20px;
+  letter-spacing: 0.15em;
   margin-bottom: 1rem;
 }
 
-.compromiso-title {
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
+.block-title {
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
   font-weight: 800;
-  line-height: 1.2;
-  color: #111827;
-  margin-bottom: 1.25rem;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
 }
 
-.compromiso-description {
-  font-size: 1.125rem;
+.block-description {
+  font-size: 1.15rem;
   line-height: 1.7;
-  color: #4b5563;
   margin-bottom: 2rem;
+  max-width: 580px;
 }
 
-.compromiso-features {
+/* Botón transparente estilo Woodhouse */
+.btn-wg-outline {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  border: 2px solid currentColor;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.btn-wg-outline:hover {
+  background-color: #ffffff;
+  color: var(--wg-burgundy);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   2. BANNERS DE ACCESO SPLIT (ESPECIALIDADES)
+   -------------------------------------------------------------------------- */
+.banner-ctas-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+@media (min-width: 768px) {
+  .banner-ctas-split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cta-panel {
+  padding: 5rem 3rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-}
-
-.feature-card {
-  display: flex;
-  gap: 1.25rem;
-  padding: 1.25rem;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
-
-.feature-icon {
-  font-size: 1.75rem;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #f3f4f6;
-  border-radius: 10px;
-  flex-shrink: 0;
+  align-items: flex-start;
+  color: #ffffff;
+  text-decoration: none;
+  transition: filter 0.3s ease;
 }
 
-.feature-card h4 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #111827;
-  margin: 0 0 0.25rem 0;
+.cta-panel.green { background-color: var(--wg-green); }
+.cta-panel.burgundy { background-color: var(--wg-burgundy); }
+
+.cta-panel:hover {
+  filter: brightness(1.1);
 }
 
-.feature-card p {
-  font-size: 0.95rem;
-  color: #6b7280;
-  margin: 0;
-  line-height: 1.5;
+.cta-panel .cta-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
 }
 
-.compromiso-media .image-wrapper {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  background: #ffffff;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.cta-panel .cta-subtitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
 }
 
-.compromiso-img {
+/* Separadores de sección */
+.section-wrapper-full {
   width: 100%;
-  max-height: 420px;
-  object-fit: contain;
-  border-radius: 12px;
-}
-
-@media (max-width: 768px) {
-  .section-spacious {
-    padding: 60px 16px;
-  }
+  padding: 80px 0;
 }
