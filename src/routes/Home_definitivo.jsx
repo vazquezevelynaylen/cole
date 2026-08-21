@@ -1,61 +1,104 @@
-import React from 'react';
+import { useState } from 'react'
 
-// Importamos TU Header / Nav original sin tocarlo
-import Header from '../components/header/Header'; 
-// O si usás Nav directamente: import Nav from '../components/nav/Nav';
+/* Layout */
+import Header          from '../components/header/Header_v2.jsx'
+import Footer          from '../components/footer/Footer_v2.jsx'
+import A11yControls    from '../components/a11y/A11yControls.jsx'
 
-import Hero from '../components/hero/Hero';
-import Compromiso from '../components/compromiso/Compromiso';
-import Especialidades from '../components/especialidades/Especialidades';
-import Proyectos from '../components/proyectos/Proyectos';
-import Autoridades from '../components/autoridades/Autoridades';
-import Testimonios from '../components/Testimonios/Testimonios';
-import Ubicacion from '../components/Ubicacion/Ubicacion';
-import Footer from '../components/footer/Footer';
+/* Secciones principales en orden estilo Woodhouse */
+import Hero                from '../components/hero/Hero_v2.jsx'
+import HeroShowcase        from '../components/hero/HeroShowcase_v2.jsx'
+import CompromisoSection   from '../components/compromiso/Compromiso.jsx' // Ajustar extensión/nombre exacto si difiere
+import Especialidades      from '../components/especialidades/Especialidades.jsx'
+import GaleriaProyectos    from '../components/proyectos/GaleriaProyectos.jsx'
+import AutoridadesSection  from '../components/autoridades/AutoridadesSection.jsx'
+import TestimoniosSection  from '../components/Testimonios/TestimoniosSection.jsx'
+
+/* Secciones de apoyo y novedades */
+import StatsSection        from '../components/stats/StatsSection.jsx'
+import CalendarioSection   from '../components/Calendario/CalendarioSection.jsx'
+import UbicacionSection    from '../components/Ubicacion/UbicacionSection.jsx'
+
+/* Comunicados */
+import ComunicadosTable    from '../components/comunicados/ComunicadosTable.jsx'
+import Filtros             from '../components/comunicados/Filtros.jsx'
+import '../components/comunicados/comunicados.css'
 
 export default function HomeDefinitivo() {
+  const [tag, setTag] = useState('all')
+
   return (
-    <div className="home-container">
-      {/* Tu Header / Nav intacto */}
+    <>
       <Header />
 
-      <main>
-        {/* 1. Hero Principal */}
-        <Hero imageSrc="/img/colegio1.jpg" />
+      <main id="contenido" tabIndex={-1}>
+        {/* ─── 1. HERO & SHOWCASE ──────────────────── */}
+        <Hero />
+        <HeroShowcase />
 
-        {/* 2. Compromiso (Sobre nosotros) */}
-        <section id="compromiso" className="text-image-block">
-          <Compromiso logo="/img/logocompromiso.png" />
+        {/* ─── 2. COMPROMISO (Sobre Nosotros) ────── */}
+        <section id="compromiso" className="section-spacious">
+          <CompromisoSection />
         </section>
 
-        {/* 3. Especialidades */}
-        <section id="especialidades" className="bg-light">
-          <Especialidades imageTic="/img/tic1.jpg" imageMulti="/img/multi1.jpg" />
+        {/* ─── 3. ESPECIALIDADES ───────────────────── */}
+        <section id="especialidades" className="section-spacious bg-alt">
+          <Especialidades />
         </section>
 
-        {/* 4. Proyectos */}
-        <section id="proyectos">
-          <Proyectos />
+        {/* ─── 4. PROYECTOS ────────────────────────── */}
+        <section id="proyectos" className="section-spacious">
+          <GaleriaProyectos />
         </section>
 
-        {/* 5. Autoridades */}
-        <section id="autoridades" className="text-image-block reverse">
-          <Autoridades directorImg="/img/director1.jpeg" />
+        {/* ─── 5. AUTORIDADES ──────────────────────── */}
+        <section id="autoridades" className="section-spacious bg-alt">
+          <AutoridadesSection />
         </section>
 
-        {/* 6. Testimonios */}
-        <section id="testimonios" className="bg-light">
-          <Testimonios />
+        {/* ─── 6. TESTIMONIOS ──────────────────────── */}
+        <section id="testimonios" className="section-spacious">
+          <TestimoniosSection />
         </section>
 
-        {/* 7. Ubicación */}
+        {/* ─── 7. ESTADÍSTICAS Y CALENDARIO ────────── */}
+        <StatsSection />
+        <CalendarioSection />
+
+        {/* ─── 8. COMUNICADOS ──────────────────────── */}
+        <section
+          id="comunicados"
+          aria-labelledby="ttl-comunicados"
+          style={{ background: '#111', padding: '100px 40px' }}
+        >
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <header className="sec-header">
+              <span className="sec-eyebrow">Novedades oficiales</span>
+              <h2 className="sec-title" id="ttl-comunicados">
+                Comunicados
+              </h2>
+              <p className="sec-subtitle">
+                Información importante de la institución.
+              </p>
+            </header>
+            <div className="comunicados-wrap">
+              <div className="com-head">
+                <h3 className="com-subtitle">Todos los comunicados</h3>
+                <Filtros value={tag} onChange={setTag} />
+              </div>
+              <ComunicadosTable filter={tag} />
+            </div>
+          </div>
+        </section>
+
+        {/* ─── 9. UBICACIÓN ────────────────────────── */}
         <section id="ubicacion">
-          <Ubicacion />
+          <UbicacionSection />
         </section>
       </main>
 
-      {/* 8. Footer */}
       <Footer />
-    </div>
-  );
+      <A11yControls />
+    </>
+  )
 }
