@@ -1,51 +1,93 @@
-import React from 'react'
+import { useRef, useEffect } from 'react'
+import './compromiso_new.css'
 
 export default function Compromiso() {
-  return (
-    <div className="compromiso-container">
-      <div className="compromiso-grid">
-        <div className="compromiso-content">
-          <span className="badge-eyebrow">Nuestra Identidad</span>
-          <h2 className="compromiso-title">Compromiso Educativo e Innovación Técnica</h2>
-          <p className="compromiso-description">
-            En la Escuela Técnica N.º 20 D.E. 20 “Carolina Muzzilli”, formamos profesionales técnicos 
-            preparados para afrontar los desafíos tecnológicos del siglo XXI. Nuestra propuesta integra 
-            solidez académica, práctica en laboratorios equipados y un fuerte compromiso con la comunidad.
-          </p>
-          
-          <div className="compromiso-features">
-            <div className="feature-card">
-              <div className="feature-icon">💻</div>
-              <div>
-                <h4>Formación Técnica en TIC</h4>
-                <p>Redes, mantenimiento de sistemas, gestión de proyectos y desarrollo web moderno.</p>
-              </div>
-            </div>
+  const ref = useRef(null)
 
-            <div className="feature-card">
-              <div className="feature-icon">🎨</div>
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          ref.current?.classList.add('compromiso--visible')
+        }
+      },
+      { threshold: 0.2 }
+    )
+
+    if (ref.current) io.observe(ref.current)
+
+    return () => io.disconnect()
+  }, [])
+
+  return (
+    <section className="compromiso" aria-labelledby="ttl-compromiso" ref={ref}>
+      
+      {/* 🔝 Línea superior */}
+      <div className="compromiso__line" aria-hidden="true" />
+
+      <div className="compromiso__wrap">
+
+        {/* Columna texto */}
+        <div className="compromiso__text">
+          <span className="compromiso__eyebrow">Nuestra misión</span>
+
+          <h2 id="ttl-compromiso">
+            Compromiso con la <em>excelencia técnica</em>
+          </h2>
+
+          <p>
+            Formamos profesionales con sólidos conocimientos técnicos, valores éticos
+            y visión innovadora. Cada proyecto, cada práctica y cada desafío es una
+            oportunidad para que nuestros estudiantes construyan el futuro.
+          </p>
+
+          <ul className="compromiso__pilares">
+            <li>
+              <span className="pilares__icon">◆</span>
               <div>
-                <h4>Diseño y Multimedia</h4>
-                <p>Creación de contenido audiovisual, diseño UX/UI y herramientas digitales de vanguardia.</p>
+                <strong>Profesionalismo</strong>
+                <span>Formación rigurosa alineada con el mundo laboral.</span>
               </div>
-            </div>
-          </div>
+            </li>
+
+            <li>
+              <span className="pilares__icon">◆</span>
+              <div>
+                <strong>Innovación</strong>
+                <span>Tecnologías actuales y metodologías de vanguardia.</span>
+              </div>
+            </li>
+
+            <li>
+              <span className="pilares__icon">◆</span>
+              <div>
+                <strong>Comunidad</strong>
+                <span>Vínculos reales con el sector productivo y social.</span>
+              </div>
+            </li>
+          </ul>
         </div>
 
-        <div className="compromiso-media">
-          <div className="image-wrapper">
-            <img 
-              src="/img/logocompromiso.png" 
-              alt="Compromiso Institucional Carolina Muzzilli" 
-              className="compromiso-img"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = '/img/colegio1.jpg';
-              }}
+        {/* Columna imagen */}
+        <div className="compromiso__media">
+          <div className="compromiso__img-wrap">
+            <img
+              src="/img/logocompromiso.png"
+              alt="Logo ET20 — Compromiso institucional"
+              width="420"
+              height="420"
+              loading="lazy"
             />
           </div>
+
+          <div className="compromiso__geo" aria-hidden="true" />
         </div>
+
       </div>
-    </div>
+
+      {/* 🔻 Línea inferior */}
+      <div className="compromiso__line--bottom" aria-hidden="true" />
+
+    </section>
   )
 }

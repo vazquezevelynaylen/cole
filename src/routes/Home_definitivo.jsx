@@ -1,71 +1,47 @@
 import { useState } from 'react'
-
 /* Layout */
 import Header          from '../components/header/Header_v2.jsx'
 import Footer          from '../components/footer/Footer_v2.jsx'
 import A11yControls    from '../components/a11y/A11yControls.jsx'
-
-/* Secciones principales en orden estilo Woodhouse */
+/* Secciones en orden */
 import Hero                from '../components/hero/Hero_v2.jsx'
 import HeroShowcase        from '../components/hero/HeroShowcase_v2.jsx'
-import CompromisoSection   from '../components/compromiso/Compromiso.jsx' // Ajustar extensión/nombre exacto si difiere
 import Especialidades      from '../components/especialidades/Especialidades.jsx'
-import GaleriaProyectos    from '../components/proyectos/GaleriaProyectos.jsx'
-import AutoridadesSection  from '../components/autoridades/AutoridadesSection.jsx'
-import TestimoniosSection  from '../components/Testimonios/TestimoniosSection.jsx'
-
-/* Secciones de apoyo y novedades */
 import StatsSection        from '../components/stats/StatsSection.jsx'
+import AutoridadesSection  from '../components/autoridades/AutoridadesSection.jsx'
+import GaleriaProyectos    from '../components/proyectos/GaleriaProyectos.jsx'
 import CalendarioSection   from '../components/Calendario/CalendarioSection.jsx'
+import TestimoniosSection  from '../components/Testimonios/TestimoniosSection.jsx'
 import UbicacionSection    from '../components/Ubicacion/UbicacionSection.jsx'
-
 /* Comunicados */
-import ComunicadosTable    from '../components/comunicados/ComunicadosTable.jsx'
-import Filtros             from '../components/comunicados/Filtros.jsx'
+import ComunicadosTable from '../components/comunicados/ComunicadosTable.jsx'
+import Filtros          from '../components/comunicados/Filtros.jsx'
+/* Estilos compartidos del comunicados-wrap */
 import '../components/comunicados/comunicados.css'
 
-export default function HomeDefinitivo() {
+export default function Home() {
   const [tag, setTag] = useState('all')
-
   return (
     <>
       <Header />
-
       <main id="contenido" tabIndex={-1}>
-        {/* ─── 1. HERO & SHOWCASE ──────────────────── */}
+        {/* ─── 1. HERO ──────────────────────────────── */}
         <Hero />
+        {/* ─── 2. PANELS (TIC / Multimedia / 360°) + ticker ── */}
         <HeroShowcase />
-
-        {/* ─── 2. COMPROMISO (Sobre Nosotros) ────── */}
-        <section id="compromiso" className="section-spacious">
-          <CompromisoSection />
-        </section>
-
         {/* ─── 3. ESPECIALIDADES ───────────────────── */}
-        <section id="especialidades" className="section-spacious bg-alt">
-          <Especialidades />
-        </section>
-
-        {/* ─── 4. PROYECTOS ────────────────────────── */}
-        <section id="proyectos" className="section-spacious">
-          <GaleriaProyectos />
-        </section>
-
-        {/* ─── 5. AUTORIDADES ──────────────────────── */}
-        <section id="autoridades" className="section-spacious bg-alt">
-          <AutoridadesSection />
-        </section>
-
-        {/* ─── 6. TESTIMONIOS ──────────────────────── */}
-        <section id="testimonios" className="section-spacious">
-          <TestimoniosSection />
-        </section>
-
-        {/* ─── 7. ESTADÍSTICAS Y CALENDARIO ────────── */}
+        <Especialidades />
+        {/* ─── 4. ESTADÍSTICAS ─────────────────────── */}
         <StatsSection />
+        {/* ─── 5. AUTORIDADES ──────────────────────── */}
+        <AutoridadesSection />
+        {/* ─── 6. PROYECTOS ────────────────────────── */}
+        <GaleriaProyectos />
+        {/* ─── 7. CALENDARIO ───────────────────────── */}
         <CalendarioSection />
-
-        {/* ─── 8. COMUNICADOS ──────────────────────── */}
+        {/* ─── 8. TESTIMONIOS ──────────────────────── */}
+        <TestimoniosSection />
+        {/* ─── 9. COMUNICADOS ─────────────────────── */}
         <section
           id="comunicados"
           aria-labelledby="ttl-comunicados"
@@ -90,13 +66,9 @@ export default function HomeDefinitivo() {
             </div>
           </div>
         </section>
-
-        {/* ─── 9. UBICACIÓN ────────────────────────── */}
-        <section id="ubicacion">
-          <UbicacionSection />
-        </section>
+        {/* ─── 10. UBICACIÓN ───────────────────────── */}
+        <UbicacionSection />
       </main>
-
       <Footer />
       <A11yControls />
     </>
