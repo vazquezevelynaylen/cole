@@ -1,93 +1,39 @@
-import { useRef, useEffect } from 'react'
-import './compromiso_new.css'
+import React from 'react';
+import './Compromiso.css';
 
-export default function Compromiso() {
-  const ref = useRef(null)
-
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
-          ref.current?.classList.add('compromiso--visible')
-        }
-      },
-      { threshold: 0.2 }
-    )
-
-    if (ref.current) io.observe(ref.current)
-
-    return () => io.disconnect()
-  }, [])
-
+export const Compromiso = () => {
   return (
-    <section className="compromiso" aria-labelledby="ttl-compromiso" ref={ref}>
-      
-      {/* 🔝 Línea superior */}
-      <div className="compromiso__line" aria-hidden="true" />
+    <section className="compromiso-section">
+      <div className="compromiso-container">
+        {/* Tarjeta con logo e iluminación suave */}
+        <div className="compromiso-card">
+          <div className="compromiso-glow"></div>
+          <img 
+            src="/img/logocompromiso.png" 
+            alt="Logo Compromiso Institucional" 
+            className="compromiso-logo" 
+          />
+        </div>
 
-      <div className="compromiso__wrap">
-
-        {/* Columna texto */}
-        <div className="compromiso__text">
-          <span className="compromiso__eyebrow">Nuestra misión</span>
-
-          <h2 id="ttl-compromiso">
-            Compromiso con la <em>excelencia técnica</em>
+        {/* Bloque de texto e identidad */}
+        <div className="compromiso-content">
+          <span className="compromiso-badge">• NUESTRO COMPROMISO</span>
+          <h2 className="compromiso-title">
+            Educación técnica orientada a la innovación y al desarrollo humano
           </h2>
-
-          <p>
-            Formamos profesionales con sólidos conocimientos técnicos, valores éticos
-            y visión innovadora. Cada proyecto, cada práctica y cada desafío es una
-            oportunidad para que nuestros estudiantes construyan el futuro.
+          <p className="compromiso-text">
+            Nuestra escuela técnica se compromete a brindar una formación pública de excelencia, donde la tecnología se transforma en una herramienta de inclusión, conocimiento y trabajo en equipo para construir un futuro sólido junto a nuestra comunidad.
           </p>
 
-          <ul className="compromiso__pilares">
-            <li>
-              <span className="pilares__icon">◆</span>
-              <div>
-                <strong>Profesionalismo</strong>
-                <span>Formación rigurosa alineada con el mundo laboral.</span>
-              </div>
-            </li>
-
-            <li>
-              <span className="pilares__icon">◆</span>
-              <div>
-                <strong>Innovación</strong>
-                <span>Tecnologías actuales y metodologías de vanguardia.</span>
-              </div>
-            </li>
-
-            <li>
-              <span className="pilares__icon">◆</span>
-              <div>
-                <strong>Comunidad</strong>
-                <span>Vínculos reales con el sector productivo y social.</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        {/* Columna imagen */}
-        <div className="compromiso__media">
-          <div className="compromiso__img-wrap">
-            <img
-              src="/img/logocompromiso.png"
-              alt="Logo ET20 — Compromiso institucional"
-              width="420"
-              height="420"
-              loading="lazy"
-            />
+          <div className="compromiso-tags">
+            <span className="tag tag-solidaridad">Solidaridad</span>
+            <span className="tag tag-conocimiento">Conocimiento</span>
+            <span className="tag tag-tecnologia">Tecnología</span>
           </div>
-
-          <div className="compromiso__geo" aria-hidden="true" />
         </div>
-
       </div>
-
-      {/* 🔻 Línea inferior */}
-      <div className="compromiso__line--bottom" aria-hidden="true" />
-
     </section>
-  )
-}
+  );
+};
+
+export default Compromiso;
