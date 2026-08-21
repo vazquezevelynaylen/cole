@@ -1,76 +1,61 @@
-import { useState } from 'react'
-/* Layout */
-import Header          from '../components/header/Header_v2.jsx'
-import Footer          from '../components/footer/Footer_v2.jsx'
-import A11yControls    from '../components/a11y/A11yControls.jsx'
-/* Secciones en orden */
-import Hero                from '../components/hero/Hero_v2.jsx'
-import HeroShowcase        from '../components/hero/HeroShowcase_v2.jsx'
-import Especialidades      from '../components/especialidades/Especialidades.jsx'
-import StatsSection        from '../components/stats/StatsSection.jsx'
-import AutoridadesSection  from '../components/autoridades/AutoridadesSection.jsx'
-import GaleriaProyectos    from '../components/proyectos/GaleriaProyectos.jsx'
-import CalendarioSection   from '../components/Calendario/CalendarioSection.jsx'
-import TestimoniosSection  from '../components/Testimonios/TestimoniosSection.jsx'
-import UbicacionSection    from '../components/Ubicacion/UbicacionSection.jsx'
-/* Comunicados */
-import ComunicadosTable from '../components/comunicados/ComunicadosTable.jsx'
-import Filtros          from '../components/comunicados/Filtros.jsx'
-/* Estilos compartidos del comunicados-wrap */
-import '../components/comunicados/comunicados.css'
+import React from 'react';
 
-export default function Home() {
-  const [tag, setTag] = useState('all')
+// Importamos TU Header / Nav original sin tocarlo
+import Header from '../components/header/Header'; 
+// O si usás Nav directamente: import Nav from '../components/nav/Nav';
+
+import Hero from '../components/hero/Hero';
+import Compromiso from '../components/compromiso/Compromiso';
+import Especialidades from '../components/especialidades/Especialidades';
+import Proyectos from '../components/proyectos/Proyectos';
+import Autoridades from '../components/autoridades/Autoridades';
+import Testimonios from '../components/Testimonios/Testimonios';
+import Ubicacion from '../components/Ubicacion/Ubicacion';
+import Footer from '../components/footer/Footer';
+
+export default function HomeDefinitivo() {
   return (
-    <>
+    <div className="home-container">
+      {/* Tu Header / Nav intacto */}
       <Header />
-      <main id="contenido" tabIndex={-1}>
-        {/* ─── 1. HERO ──────────────────────────────── */}
-        <Hero />
-        {/* ─── 2. PANELS (TIC / Multimedia / 360°) + ticker ── */}
-        <HeroShowcase />
-        {/* ─── 3. ESPECIALIDADES ───────────────────── */}
-        <Especialidades />
-        {/* ─── 4. ESTADÍSTICAS ─────────────────────── */}
-        <StatsSection />
-        {/* ─── 5. AUTORIDADES ──────────────────────── */}
-        <AutoridadesSection />
-        {/* ─── 6. PROYECTOS ────────────────────────── */}
-        <GaleriaProyectos />
-        {/* ─── 7. CALENDARIO ───────────────────────── */}
-        <CalendarioSection />
-        {/* ─── 8. TESTIMONIOS ──────────────────────── */}
-        <TestimoniosSection />
-        {/* ─── 9. COMUNICADOS ─────────────────────── */}
-        <section
-          id="comunicados"
-          aria-labelledby="ttl-comunicados"
-          style={{ background: '#111', padding: '100px 40px' }}
-        >
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <header className="sec-header">
-              <span className="sec-eyebrow">Novedades oficiales</span>
-              <h2 className="sec-title" id="ttl-comunicados">
-                Comunicados
-              </h2>
-              <p className="sec-subtitle">
-                Información importante de la institución.
-              </p>
-            </header>
-            <div className="comunicados-wrap">
-              <div className="com-head">
-                <h3 className="com-subtitle">Todos los comunicados</h3>
-                <Filtros value={tag} onChange={setTag} />
-              </div>
-              <ComunicadosTable filter={tag} />
-            </div>
-          </div>
+
+      <main>
+        {/* 1. Hero Principal */}
+        <Hero imageSrc="/img/colegio1.jpg" />
+
+        {/* 2. Compromiso (Sobre nosotros) */}
+        <section id="compromiso" className="text-image-block">
+          <Compromiso logo="/img/logocompromiso.png" />
         </section>
-        {/* ─── 10. UBICACIÓN ───────────────────────── */}
-        <UbicacionSection />
+
+        {/* 3. Especialidades */}
+        <section id="especialidades" className="bg-light">
+          <Especialidades imageTic="/img/tic1.jpg" imageMulti="/img/multi1.jpg" />
+        </section>
+
+        {/* 4. Proyectos */}
+        <section id="proyectos">
+          <Proyectos />
+        </section>
+
+        {/* 5. Autoridades */}
+        <section id="autoridades" className="text-image-block reverse">
+          <Autoridades directorImg="/img/director1.jpeg" />
+        </section>
+
+        {/* 6. Testimonios */}
+        <section id="testimonios" className="bg-light">
+          <Testimonios />
+        </section>
+
+        {/* 7. Ubicación */}
+        <section id="ubicacion">
+          <Ubicacion />
+        </section>
       </main>
+
+      {/* 8. Footer */}
       <Footer />
-      <A11yControls />
-    </>
-  )
+    </div>
+  );
 }
