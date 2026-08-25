@@ -28,10 +28,10 @@ export default function Home() {
       <main id="contenido" tabIndex={-1}>
         {/* ─── 1. HERO ──────────────────────────────── */}
         <Hero />
-        {/* ─── 2. PANELS (TIC / Multimedia / 360°) + ticker ── */}
-        <HeroShowcase />
-        {/* ─── 3. COMPROMISO ────────────────────────── */}
+        {/* ─── 2. COMPROMISO ───────────────────────── */}
         <Compromiso />
+        {/* ─── 3. PANELS (TIC / Multimedia / 360°) ──── */}
+        <HeroShowcase />
         {/* ─── 4. ESPECIALIDADES ───────────────────── */}
         <Especialidades />
         {/* ─── 5. ESTADÍSTICAS ─────────────────────── */}

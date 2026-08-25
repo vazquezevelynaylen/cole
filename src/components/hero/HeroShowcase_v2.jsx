@@ -73,19 +73,6 @@ export default function HeroShowcase() {
  
   return (
     <div className="hs-wrap">
-      {/* Ticker dorado */}
-      <div className="hs-ticker" aria-hidden="true">
-        <div className="hs-ticker__track">
-          {[...Array(4)].map((_, r) => (
-            <span key={r} className="hs-ticker__row">
-              {['TIC','MULTIMEDIA','TÉCNICA','INNOVACIÓN','FUTURO','ET 20','MATADEROS','EDUCACIÓN'].map((w, i) => (
-                <span key={i} className="hs-ticker__item">✦ {w}</span>
-              ))}
-            </span>
-          ))}
-        </div>
-      </div>
- 
       {/* Panels */}
       <section className="hs-panels" aria-label="Accesos a especialidades">
         {PANELS.map((p, i) => (

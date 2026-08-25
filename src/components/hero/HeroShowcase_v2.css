@@ -1,39 +1,5 @@
 .hs-wrap { background: var(--bg); }
 
-/* ── Ticker ── */
-.hs-ticker {
-  background: var(--r-yellow);
-  overflow: hidden;
-  padding: 11px 0;
-  border-top: 1px solid rgba(0,0,0,.08);
-}
-
-.hs-ticker__track {
-  display: flex;
-  width: max-content;
-  animation: hs-scroll 24s linear infinite;
-}
-
-.hs-ticker__row {
-  display: flex;
-  align-items: center;
-}
-
-.hs-ticker__item {
-  padding: 0 20px;
-  font-size: .72rem;
-  font-weight: 900;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: #0a0a0a;
-  white-space: nowrap;
-}
-
-@keyframes hs-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-25%); }
-}
-
 /* ── Panels ── */
 .hs-panels {
   display: grid;
