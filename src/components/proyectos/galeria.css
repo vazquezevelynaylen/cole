@@ -1,19 +1,14 @@
 /* ===================================================
-   Galería Flip — ET20 (PRO 2026)
+   Galería Flip — ET20 (tema claro + acento)
    =================================================== */
 
 .galeria-section {
+  --accent: var(--r-pink);
   padding: 120px 20px;
-  background: linear-gradient(
-    135deg,
-    #0a0a0a 0%,
-    #0b1f3a 60%,
-    #0a0a0a 100%
-  );
+  background: var(--bg);
   scroll-margin-top: 68px;
 }
 
-/* CONTENEDOR */
 .galeria-wrap {
   max-width: 1200px;
   margin: 0 auto;
@@ -23,13 +18,12 @@
 .galeria-title {
   font-size: clamp(2rem, 3vw, 2.6rem);
   margin-bottom: 50px;
-  color: #fff;
+  color: var(--fg);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .6s ease, transform .6s ease;
 }
 
-/* SCROLL */
 .galeria-scroll {
   display: flex;
   justify-content: center;
@@ -42,7 +36,7 @@
 
 /* =========================
    FLIP CARD BASE
-========================= */
+   ========================= */
 
 .galeria-card {
   perspective: 1000px;
@@ -50,7 +44,6 @@
   height: 320px;
 }
 
-/* INNER */
 .galeria-card-inner {
   position: relative;
   width: 100%;
@@ -59,12 +52,10 @@
   transform-style: preserve-3d;
 }
 
-/* FLIP */
 .galeria-card:hover .galeria-card-inner {
   transform: rotateY(180deg);
 }
 
-/* CARAS */
 .galeria-front,
 .galeria-back {
   position: absolute;
@@ -73,40 +64,33 @@
   overflow: hidden;
   backface-visibility: hidden;
 
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid var(--line);
 }
 
-/* FRONT */
 .galeria-front {
   background-size: cover;
   background-position: center;
 }
 
-/* overlay */
+/* overlay sólido (sin degradado) para legibilidad */
 .galeria-front::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.7),
-    transparent
-  );
+  background: rgba(15, 23, 42, .55);
 }
 
-/* título frontal */
 .galeria-front h3 {
   position: absolute;
   bottom: 12px;
   left: 16px;
+  z-index: 1;
   color: #fff;
   font-size: 1rem;
 }
 
-/* BACK */
 .galeria-back {
-  background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(6px);
+  background: var(--surface);
   transform: rotateY(180deg);
 
   display: flex;
@@ -116,25 +100,22 @@
   text-align: left;
 }
 
-/* texto back */
 .galeria-back h3 {
-  color: #ffd60a;
+  color: var(--accent);
   margin-bottom: 10px;
 }
 
 .galeria-back p {
-  color: rgba(255,255,255,0.7);
+  color: var(--muted);
   font-size: .9rem;
 }
 
-/* hover glow sutil */
 .galeria-card:hover .galeria-front,
 .galeria-card:hover .galeria-back {
-  border-color: #ffd60a;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
 }
 
-/* MOBILE (sin flip, importante) */
 @media (max-width: 768px) {
   .galeria-card:hover .galeria-card-inner {
     transform: none;

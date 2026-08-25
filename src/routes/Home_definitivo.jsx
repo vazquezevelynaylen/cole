@@ -48,7 +48,7 @@ export default function Home() {
         <section
           id="comunicados"
           aria-labelledby="ttl-comunicados"
-          style={{ background: '#111', padding: '100px 40px' }}
+          style={{ background: '#ffffff', padding: '100px 40px' }}
         >
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <header className="sec-header">

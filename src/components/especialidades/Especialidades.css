@@ -1,7 +1,8 @@
 .especialidades-section {
+  --accent: var(--r-violet);
   padding: 100px 24px;
-  background-color: #0b0f17;
-  color: #ffffff;
+  background-color: var(--surface-alt);
+  color: var(--fg);
 }
 
 .especialidades-container {
@@ -17,18 +18,19 @@
 }
 
 .esp-card {
-  background: #161e2e;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .esp-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
 }
 
 .esp-image-container {
@@ -52,9 +54,8 @@
   position: absolute;
   top: 16px;
   left: 16px;
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(8px);
-  color: #38bdf8;
+  background: color-mix(in srgb, var(--accent) 15%, #fff);
+  color: var(--accent);
   font-size: 0.75rem;
   font-weight: 700;
   padding: 6px 14px;
@@ -72,11 +73,11 @@
   font-size: 1.35rem;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #f8fafc;
+  color: var(--fg);
 }
 
 .esp-body p {
-  color: #94a3b8;
+  color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 24px;
@@ -87,7 +88,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #38bdf8;
+  color: var(--accent);
   font-weight: 600;
   text-decoration: none;
   font-size: 1rem;
@@ -99,7 +100,8 @@
 }
 
 .esp-btn:hover {
-  color: #60a5fa;
+  color: var(--accent);
+  filter: brightness(.92);
 }
 
 .esp-btn:hover .arrow {

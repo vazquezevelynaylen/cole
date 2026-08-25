@@ -1,6 +1,7 @@
 .autoridades-section {
+  --accent: var(--r-blue);
   padding: 100px 24px;
-  background: #0a0a0a;
+  background: var(--bg);
 }
 
 .autoridades-wrap {
@@ -13,7 +14,7 @@
   font-weight: 900;
   text-align: center;
   margin-bottom: 50px;
-  color: #fff;
+  color: var(--fg);
   text-transform: uppercase;
   letter-spacing: -.01em;
 }
@@ -26,8 +27,8 @@
 
 .autoridad-card {
   text-align: center;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 16px;
   padding: 32px 24px;
   transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
@@ -41,18 +42,13 @@
   transition: opacity .6s ease, transform .6s ease;
 }
 
-.autoridades--visible .autoridad-card:nth-child(2) {
-  transition-delay: .1s;
-}
-
-.autoridades--visible .autoridad-card:nth-child(3) {
-  transition-delay: .2s;
-}
+.autoridades--visible .autoridad-card:nth-child(2) { transition-delay: .1s; }
+.autoridades--visible .autoridad-card:nth-child(3) { transition-delay: .2s; }
 
 .autoridad-card:hover {
   transform: translateY(-6px);
-  border-color: #ffd60a;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
 }
 
 .autoridad-img {
@@ -62,37 +58,24 @@
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  border: 2px solid rgba(255, 214, 10, 0.2);
+  border: 2px solid color-mix(in srgb, var(--accent) 30%, transparent);
 }
 
 .autoridad-card h3 {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #fff;
+  color: var(--fg);
 }
 
 .autoridad-card p {
   font-size: .9rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--muted);
 }
 
 @media (max-width: 768px) {
-  .autoridades-section {
-    padding: 80px 16px;
-  }
-
-  .autoridades-title {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-
-  .autoridades-grid {
-    gap: 24px;
-  }
-
-  .autoridad-img {
-    width: 150px;
-    height: 150px;
-  }
+  .autoridades-section { padding: 80px 16px; }
+  .autoridades-title { font-size: 1.8rem; margin-bottom: 40px; }
+  .autoridades-grid { gap: 24px; }
+  .autoridad-img { width: 150px; height: 150px; }
 }

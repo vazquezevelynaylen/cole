@@ -1,22 +1,40 @@
 :root {
-  /* Colores institucionales */
-  --color-bg: #0a0a0a;        /* negro principal */
-  --color-fg: #fdfdfd;        /* texto blanco/gris claro */
-  --color-accent: #ffd60a;    /* amarillo institucional */
-  --color-muted: #9ca3af;     /* gris secundario */
+  /* ═══ Fondo y superficies (modo claro) ═══ */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-alt: #f6f7f9;
+  --fg: #0f172a;
+  --muted: #64748b;
+  --line: #e5e7eb;
+  --line-strong: #d1d5db;
+  --card: #ffffff;
+  --ring: 0 1px 3px rgba(15, 23, 42, .06), 0 10px 28px rgba(15, 23, 42, .08);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, .08);
+  --shadow-md: 0 16px 40px rgba(15, 23, 42, .12);
 
-  /* Superficies y bordes */
-  --color-card: #111111;
-  --color-line: #2a2a2a;
+  /* ═══ Arcoíris (sólidos, sin degradados) ═══ */
+  --r-red:    #ef4444;
+  --r-rose:   #f43f5e;
+  --r-orange: #f97316;
+  --r-amber:  #f59e0b;
+  --r-yellow: #eab308;
+  --r-lime:   #84cc16;
+  --r-green:  #22c55e;
+  --r-teal:   #14b8a6;
+  --r-cyan:   #06b6d4;
+  --r-blue:   #3b82f6;
+  --r-indigo: #6366f1;
+  --r-violet: #8b5cf6;
+  --r-pink:   #ec4899;
 
-  /* Sombras */
-  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
-  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.3);
-
-  /* Bordes */
-  --radius: 12px;
-  --radius-lg: 18px;
+  /* Acento de sección (lo sobreescribe cada componente) */
+  --accent: var(--r-blue);
+  --accent-2: var(--r-indigo);
+  --accent-ink: #ffffff; /* color de texto sobre el acento */
 
   /* Tipografía */
   --font-body: 'Roboto', system-ui, sans-serif;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
 }

@@ -8,7 +8,7 @@ export default function ComunicadosFeed({ filter = 'all' }) {
   if (view.length === 0) {
     return (
       <div className="com-grid">
-        <p style={{ color: 'rgba(255,255,255,.5)', gridColumn: '1 / -1', textAlign: 'center' }}>
+        <p style={{ color: 'var(--muted)', gridColumn: '1 / -1', textAlign: 'center' }}>
           No hay comunicados en esta categoría.
         </p>
       </div>

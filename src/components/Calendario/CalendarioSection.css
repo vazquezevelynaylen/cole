@@ -1,47 +1,35 @@
 /* ===================================================
-   Calendario — ET20 (PRO 2026)
+   Calendario — ET20 (tema claro + acento)
    =================================================== */
 
 .calendario {
-  background:
-    linear-gradient(
-      135deg,
-      #0a0a0a 0%,
-      #0b1f3a 60%,
-      #0a0a0a 100%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(255,214,10,0.06),
-      transparent 60%
-    );
-
-  padding: 120px 20px; /* + aire */
+  --accent: var(--r-orange);
+  background: var(--bg);
+  padding: 120px 20px;
   position: relative;
   overflow: hidden;
 }
 
-/* 🔝 línea superior más sutil */
+/* línea superior sólida (sin degradado) */
 .calendario::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
+  height: 3px;
+  background: var(--accent);
   opacity: 0.7;
 }
 
-/* 🔻 línea inferior */
+/* línea inferior */
 .calendario::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ffd60a, transparent);
+  height: 3px;
+  background: var(--accent);
   opacity: 0.5;
 }
 
-/* CONTENEDOR */
 .calendario__inner {
   max-width: 860px;
   margin: 0 auto;
@@ -49,7 +37,6 @@
   z-index: 1;
 }
 
-/* GRID */
 .cal-grid {
   position: relative;
 }
@@ -58,10 +45,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* más aire entre eventos */
+  gap: 10px;
 }
 
-/* Línea timeline */
 .cal-items::before {
   content: '';
   position: absolute;
@@ -69,10 +55,9 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: rgba(255,255,255,0.08);
+  background: var(--line);
 }
 
-/* ITEM */
 .ev-item {
   display: grid;
   grid-template-columns: 64px 20px 1fr;
@@ -84,14 +69,12 @@
   transform: translateX(-16px);
 }
 
-/* animación */
 .ev-item--visible {
   opacity: 1;
   transform: translateX(0);
   transition: opacity .5s ease, transform .5s ease;
 }
 
-/* FECHA */
 .ev-item__fecha {
   text-align: right;
 }
@@ -99,93 +82,76 @@
 .ev-item__dia {
   font-size: 1.6rem;
   font-weight: 900;
-  color: var(--primary, #ffd000);
+  color: var(--accent);
 }
 
 .ev-item__mes {
   font-size: .7rem;
   letter-spacing: .14em;
-  color: rgba(255,255,255,.4);
+  color: var(--muted);
 }
 
-/* DOT */
 .ev-item__dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--primary, #ffd000);
-  border: 2px solid #0a0a0a;
-  box-shadow: 0 0 8px rgba(255,214,10,.4); /* glow sutil */
+  background: var(--accent);
+  border: 2px solid var(--bg);
 }
 
-/* BODY */
 .ev-item__body {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,.05);
-  border-left: 3px solid var(--primary, #ffd000);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
   border-radius: 12px;
   padding: 18px 20px;
 
-  backdrop-filter: blur(6px); /* toque moderno */
   transition: all .25s ease;
 }
 
-/* hover pro */
 .ev-item:hover .ev-item__body {
   transform: translateX(4px);
-  border-left-color: #ffd60a;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
 }
 
-/* TEXTO */
 .ev-item__tipo {
   font-size: .65rem;
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--primary, #ffd000);
+  color: var(--accent);
   margin-bottom: 6px;
 }
 
 .ev-item__titulo {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--fg);
   margin-bottom: 6px;
 }
 
 .ev-item__desc {
   font-size: .85rem;
-  color: rgba(255,255,255,.65);
+  color: var(--muted);
   line-height: 1.6;
 }
 
-/* ✨ efecto suave al pasar el mouse */
 .ev-item:hover .ev-item__titulo {
-  color: #ffd60a;
+  color: var(--accent);
 }
 
-/* MOBILE */
 @media (max-width: 600px) {
-
-  .calendario {
-    padding: 90px 16px;
-  }
+  .calendario { padding: 90px 16px; }
 
   .ev-item {
     grid-template-columns: 52px 16px 1fr;
     gap: 0 12px;
   }
 
-  .ev-item__dia {
-    font-size: 1.3rem;
-  }
+  .ev-item__dia { font-size: 1.3rem; }
 
-  .cal-items::before {
-    left: 58px;
-  }
+  .cal-items::before { left: 58px; }
 
-  .ev-item__body {
-    padding: 14px 16px;
-  }
+  .ev-item__body { padding: 14px 16px; }
 }

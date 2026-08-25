@@ -1,20 +1,18 @@
 /* ══════════════════════════════════════════
-   UBICACIÓN — versión ajustada
+   UBICACIÓN — tema claro + acento
    ══════════════════════════════════════════ */
 
 .ubicacion {
-  background: #0a0a0a;
+  --accent: var(--r-red);
+  background: var(--bg);
   padding: 0;
   overflow: hidden;
 }
 
-/* 🔧 CONTENEDOR GENERAL
-   - Define layout en 2 columnas
-   - Bajamos altura total */
 .ubicacion__inner {
   display: grid;
-  grid-template-columns: 1fr 400px; /* ⬅ antes 420px (más ancho el panel derecho) */
-  min-height: 460px; /* ⬅ antes 520px (más bajo ahora) */
+  grid-template-columns: 1fr 400px;
+  min-height: 460px;
 }
 
 /* ═════════════ MAPA ═════════════ */
@@ -24,63 +22,48 @@
   overflow: hidden;
 }
 
-/* 🔧 MAPA
-   - ocupa todo el espacio disponible
-   - filtros para estilo oscuro */
 .ubicacion__mapa iframe {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  filter: grayscale(1) contrast(1.1) brightness(0.6);
+  filter: grayscale(.15) contrast(1.05) brightness(1);
   transition: filter .4s ease;
+  border: 0;
 }
 
-/* 🔧 HOVER (se aclara un poco) */
 .ubicacion__mapa:hover iframe {
-  filter: grayscale(.3) contrast(1.05) brightness(.75);
+  filter: grayscale(0) contrast(1.05) brightness(1);
 }
 
-/* 🔧 OVERLAY LATERAL
-   - genera fade hacia el panel derecho */
-.ubicacion__mapa-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px; /* ⬅ antes 120px (más sutil) */
-  height: 100%;
-  background: linear-gradient(to left, #0a0a0a 0%, transparent 100%);
-  pointer-events: none;
-}
+/* Overlay lateral eliminado (sin degradados): separación por borde */
+.ubicacion__mapa-overlay { display: none; }
 
 /* ═════════════ PANEL DERECHO ═════════════ */
 
 .ubicacion__info {
-  background: #0a0a0a;
-  padding: 48px 40px; /* ⬅ antes 64px 48px (menos alto y menos ancho) */
+  background: var(--surface-alt);
+  padding: 48px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0;
-  border-left: 1px solid rgba(255,255,255,.06);
+  border-left: 1px solid var(--line);
 }
 
-/* 🔧 TÍTULO */
 .ubicacion__info h2 {
-  font-size: clamp(1.6rem, 2.2vw, 2rem); /* ⬅ ligeramente más chico */
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
   font-weight: 900;
-  color: #fff;
-  margin: 6px 0 24px; /* ⬅ menos espacio abajo */
+  color: var(--fg);
+  margin: 6px 0 24px;
 }
-
-/* ═════════════ DATOS ═════════════ */
 
 .ubicacion__datos {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* ⬅ antes 24px (más compacto) */
-  margin-bottom: 32px; /* ⬅ menos espacio antes del botón */
+  gap: 20px;
+  margin-bottom: 32px;
 }
 
 .ubicacion__datos li {
@@ -89,36 +72,34 @@
   gap: 12px;
 }
 
-/* 🔧 ICONOS */
 .ubic-dato__icon {
   font-size: 1rem;
   flex-shrink: 0;
   margin-top: 2px;
+  color: var(--accent);
 }
 
-/* 🔧 LABELS (Dirección, Tel, etc.) */
 .ubicacion__datos strong {
   display: block;
   font-size: .75rem;
   font-weight: 700;
-  color: rgba(255,255,255,.35);
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: .08em;
   margin-bottom: 2px;
 }
 
-/* 🔧 TEXTO */
 .ubicacion__datos span,
 .ubicacion__datos a {
   font-size: .9rem;
-  color: rgba(255,255,255,.75);
+  color: var(--fg);
   text-decoration: none;
   line-height: 1.4;
   transition: color .2s;
 }
 
 .ubicacion__datos a:hover {
-  color: #ffd60a;
+  color: var(--accent);
 }
 
 /* ═════════════ BOTÓN ═════════════ */
@@ -127,11 +108,11 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #ffd60a;
-  color: #0a0a0a;
+  background: var(--accent);
+  color: #fff;
   font-weight: 800;
-  font-size: .85rem; /* ⬅ más chico */
-  padding: .8em 1.3em; /* ⬅ más compacto */
+  font-size: .85rem;
+  padding: .8em 1.3em;
   border-radius: 999px;
   text-decoration: none;
   width: fit-content;
@@ -139,9 +120,8 @@
 }
 
 .ubic-cta:hover {
-  background: #ffe033;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255,214,10,.2);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 .ubic-cta__arrow {
@@ -156,27 +136,18 @@
 /* ═════════════ RESPONSIVE ═════════════ */
 
 @media (max-width: 960px) {
-
-  .ubicacion__inner {
-    grid-template-columns: 1fr; /* ⬅ pasa a una columna */
-  }
+  .ubicacion__inner { grid-template-columns: 1fr; }
 
   .ubicacion__mapa {
-    min-height: 280px; /* ⬅ antes 320px (más bajo en mobile) */
+    min-height: 280px;
     position: relative;
   }
 
-  .ubicacion__mapa iframe {
-    position: absolute;
-  }
-
-  .ubicacion__mapa-overlay {
-    display: none;
-  }
+  .ubicacion__mapa iframe { position: absolute; }
 
   .ubicacion__info {
-    padding: 40px 20px; /* ⬅ más compacto */
+    padding: 40px 20px;
     border-left: none;
-    border-top: 1px solid rgba(255,255,255,.06);
+    border-top: 1px solid var(--line);
   }
 }
