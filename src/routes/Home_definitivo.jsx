@@ -11,7 +11,7 @@ import Especialidades      from '../components/especialidades/Especialidades.jsx
 import StatsSection        from '../components/stats/StatsSection.jsx'
 import AutoridadesSection  from '../components/autoridades/AutoridadesSection.jsx'
 import GaleriaProyectos    from '../components/proyectos/GaleriaProyectos.jsx'
-import CalendarioAcademico from '../components/calendario/CalendarioAcademico.jsx'
+import CalendarioAcademico from '../components/Calendario/CalendarioAcademico.jsx'
 import Proyectos            from '../components/proyectos/Proyectos.jsx'
 import TestimoniosSection  from '../components/Testimonios/TestimoniosSection.jsx'
 import UbicacionSection    from '../components/Ubicacion/UbicacionSection.jsx'
