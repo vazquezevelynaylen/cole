@@ -5,6 +5,7 @@ import NotFound from './routes/NotFound'
 
 import TicPage from './Pages/TicPage'
 import MultimediaPage from './Pages/MultimediaPage'
+import CalendarioPage from './Pages/CalendarioPage'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
 
       <Route path="/tic" element={<TicPage />} />
       <Route path="/multimedia" element={<MultimediaPage />} />
+      <Route path="/calendario" element={<CalendarioPage />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

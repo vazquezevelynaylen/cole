@@ -21,7 +21,7 @@ const NAV_ITEMS = [
   {
     label: 'Académico',
     sub: [
-      { label: 'Calendario', href: '#academico' },
+      { label: 'Calendario', href: '/calendario' },
       { label: 'Comunicados', href: '#comunicados' },
       { label: 'Exámenes', href: '#comunicados' },
     ],

@@ -11,7 +11,8 @@ import Especialidades      from '../components/especialidades/Especialidades.jsx
 import StatsSection        from '../components/stats/StatsSection.jsx'
 import AutoridadesSection  from '../components/autoridades/AutoridadesSection.jsx'
 import GaleriaProyectos    from '../components/proyectos/GaleriaProyectos.jsx'
-import CalendarioSection   from '../components/Calendario/CalendarioSection.jsx'
+import CalendarioAcademico from '../components/calendario/CalendarioAcademico.jsx'
+import Proyectos            from '../components/proyectos/Proyectos.jsx'
 import TestimoniosSection  from '../components/Testimonios/TestimoniosSection.jsx'
 import UbicacionSection    from '../components/Ubicacion/UbicacionSection.jsx'
 /* Comunicados */
@@ -40,8 +41,10 @@ export default function Home() {
         <AutoridadesSection />
         {/* ─── 7. PROYECTOS ────────────────────────── */}
         <GaleriaProyectos />
-        {/* ─── 8. CALENDARIO ───────────────────────── */}
-        <CalendarioSection />
+        {/* ─── 8. CALENDARIO ACADÉMICO (teaser) ─────── */}
+        <CalendarioAcademico />
+        {/* ─── 9. PROYECTOS ────────────────────────── */}
+        <Proyectos />
         {/* ─── 9. TESTIMONIOS ──────────────────────── */}
         <TestimoniosSection />
         {/* ─── 10. COMUNICADOS ─────────────────────── */}
