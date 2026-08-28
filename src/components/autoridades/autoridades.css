@@ -1,7 +1,19 @@
+/* ══════════════════════════════════════════
+   AUTORIDADES — ET20  (identidad fachada)
+   Tarjetas claras, limpias · detalles azul y naranja
+   ══════════════════════════════════════════ */
+
 .autoridades-section {
-  --accent: var(--r-blue);
+  /* Paleta de marca */
+  --c-navy: #181A4D;
+  --c-blue: #273287;
+  --c-orange: #FFAE00;
+  --c-cream: #F9F3DB;
+
+  --accent: var(--c-blue);
+
   padding: 100px 24px;
-  background: var(--bg);
+  background: #ffffff;
 }
 
 .autoridades-wrap {
@@ -14,7 +26,7 @@
   font-weight: 900;
   text-align: center;
   margin-bottom: 50px;
-  color: var(--fg);
+  color: var(--c-navy);
   text-transform: uppercase;
   letter-spacing: -.01em;
 }
@@ -27,10 +39,13 @@
 
 .autoridad-card {
   text-align: center;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 32px 24px;
+  background: #ffffff;
+  border: 1px solid rgba(24, 26, 77, .1);
+  border-top: 4px solid var(--c-orange);
+  border-radius: 18px;
+  padding: 36px 24px;
+  box-shadow: 0 14px 34px rgba(24, 26, 77, .08);
+
   transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
   opacity: 0;
   transform: translateY(20px);
@@ -47,8 +62,9 @@
 
 .autoridad-card:hover {
   transform: translateY(-6px);
-  border-color: var(--accent);
-  box-shadow: var(--shadow-md);
+  border-color: var(--c-blue);
+  border-top-color: var(--c-blue);
+  box-shadow: 0 24px 48px rgba(24, 26, 77, .16);
 }
 
 .autoridad-img {
@@ -58,19 +74,20 @@
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  border: 2px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border: 3px solid var(--c-blue);
+  box-shadow: 0 10px 24px rgba(24, 26, 77, .14);
 }
 
 .autoridad-card h3 {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 8px;
-  color: var(--fg);
+  color: var(--c-navy);
 }
 
 .autoridad-card p {
   font-size: .9rem;
-  color: var(--muted);
+  color: rgba(24, 26, 77, .6);
 }
 
 @media (max-width: 768px) {

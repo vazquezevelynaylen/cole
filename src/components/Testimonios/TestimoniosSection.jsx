@@ -8,7 +8,7 @@ const TESTIMONIOS = [
     anio: 'Egresada 2019',
     texto: 'La ET20 me dio las bases técnicas y la mentalidad para crecer. Hoy trabajo en una de las empresas más grandes de Latinoamérica y todo empezó aquí.',
     iniciales: 'LF',
-    color: '#ffd60a',
+    color: '#FFAE00',
   },
   {
     nombre: 'Matías Gómez',
@@ -16,7 +16,7 @@ const TESTIMONIOS = [
     anio: 'Egresado 2017',
     texto: 'La especialidad en Multimedia me abrió puertas que ni imaginaba. Aprendí a pensar visualmente y a comunicar ideas complejas de forma simple.',
     iniciales: 'MG',
-    color: '#38bdf8',
+    color: '#F03172',
   },
   {
     nombre: 'Valentina Cruz',
@@ -24,7 +24,7 @@ const TESTIMONIOS = [
     anio: 'Egresada 2020',
     texto: 'El laboratorio de redes fue mi primera experiencia real con infraestructura. Salí de la escuela lista para trabajar, sin necesidad de adaptarme.',
     iniciales: 'VC',
-    color: '#a78bfa',
+    color: '#E990A2',
   },
   {
     nombre: 'Diego Muñoz',
@@ -32,7 +32,7 @@ const TESTIMONIOS = [
     anio: 'Egresado 2018',
     texto: 'Nunca pensé que desde Mataderos llegaría a trabajar en animación profesional. El ET20 me enseñó que la creatividad y la técnica van de la mano.',
     iniciales: 'DM',
-    color: '#34d399',
+    color: '#FFAE00',
   },
 ]
 

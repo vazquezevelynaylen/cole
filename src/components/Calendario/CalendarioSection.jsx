@@ -11,10 +11,10 @@ const EVENTOS = [
 ]
 
 const TIPO_STYLES = {
-  institucional: { color: '#ffd60a', label: 'Institucional' },
-  academico: { color: '#38bdf8', label: 'Académico' },
-  examen: { color: '#fb7185', label: 'Examen' },
-  vacaciones: { color: '#34d399', label: 'Vacaciones' },
+  institucional: { color: '#E4070F', label: 'Institucional' }, /* rojo — importante */
+  academico: { color: '#FFAE00', label: 'Académico' },        /* naranja — destacado */
+  examen: { color: '#E4070F', label: 'Examen' },              /* rojo — importante */
+  vacaciones: { color: '#273287', label: 'Vacaciones' },       /* azul */
 }
 
 export default function CalendarioSection() {

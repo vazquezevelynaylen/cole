@@ -1,8 +1,11 @@
+/* ══════════════════════════════════════════
+   ESPECIALIDADES — ET20  (3 cards)
+   Fondo crema · títulos azul noche · acentos de color
+   ══════════════════════════════════════════ */
+
 .especialidades-section {
-  --accent: var(--r-violet);
-  padding: 100px 24px;
-  background-color: var(--surface-alt);
-  color: var(--fg);
+  padding: 80px 40px;
+  background-color: #F9F3DB;
 }
 
 .especialidades-container {
@@ -10,100 +13,112 @@
   margin: 0 auto;
 }
 
+.especialidades-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #181A4D;
+  margin: 0 0 16px;
+}
+
+.especialidades-subtitle {
+  max-width: 650px;
+  margin: 0 auto 48px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #273287;
+}
+
 .especialidades-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
-  margin-top: 48px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .esp-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 20px;
+  position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-height: 300px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(24, 26, 77, 0.10);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(24, 26, 77, 0.08);
+  text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .esp-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+  box-shadow: 0 14px 40px rgba(24, 26, 77, 0.16);
+  border-color: rgba(24, 26, 77, 0.22);
 }
 
-.esp-image-container {
-  position: relative;
-  height: 220px;
-  overflow: hidden;
-}
-
-.esp-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.esp-card:hover .esp-image {
-  transform: scale(1.05);
-}
-
-.esp-tag {
+.esp-card__bar {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  background: color-mix(in srgb, var(--accent) 15%, #fff);
-  color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
 }
 
-.esp-body {
-  padding: 28px;
+.esp-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.esp-body h3 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: var(--fg);
-}
-
-.esp-body p {
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 24px;
-  flex-grow: 1;
-}
-
-.esp-btn {
-  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.2s ease;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.esp-btn .arrow {
-  transition: transform 0.2s ease;
+.esp-card__icon svg {
+  width: 26px;
+  height: 26px;
 }
 
-.esp-btn:hover {
-  color: var(--accent);
-  filter: brightness(.92);
+.esp-card h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #181A4D;
+  margin: 0 0 12px;
 }
 
-.esp-btn:hover .arrow {
-  transform: translateX(6px);
+.esp-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #273287;
+  margin: 0;
+}
+
+/* Tablet: 2 columnas, tercera debajo */
+@media (max-width: 992px) {
+  .especialidades-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celular: 1 columna, cards centradas */
+@media (max-width: 768px) {
+  .especialidades-section {
+    padding: 60px 24px;
+  }
+
+  .especialidades-title {
+    font-size: 28px;
+  }
+
+  .especialidades-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .esp-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }

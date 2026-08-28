@@ -2,27 +2,52 @@ import React from 'react'
 import './Compromiso.css'
 
 export const Compromiso = () => {
+  const valores = [
+    { label: 'Respeto', color: '#E4070F' },
+    { label: 'Compañerismo', color: '#FFAE00' },
+    { label: 'Responsabilidad', color: '#0F4A42' },
+    { label: 'Compromiso', color: '#273287' },
+  ]
+
   return (
     <section className="compromiso-section" id="compromiso">
       <div className="compromiso-container">
-        {/* Tarjeta del logo con borde neon sutil */}
-        <div className="compromiso-card">
-          <img 
-            src="/img/logocompromiso.png" 
-            alt="Logo Compromiso E.T. 20" 
-            className="compromiso-logo" 
+        {/* Imagen (temporal: logocompromiso; luego CarolinaAnimada1) */}
+        <div className="compromiso-media">
+          <img
+            src="/img/logocompromiso.png"
+            alt="Escuela Técnica N.º 20 D.E. 20 — Carolina Muzzilli"
+            className="compromiso-img"
           />
         </div>
 
-        {/* Bloque de texto alineado a la estética industrial */}
+        {/* Contenido */}
         <div className="compromiso-content">
-          <span className="compromiso-badge">+ NUESTRO COMPROMISO</span>
+          <span className="compromiso-eyebrow">CONOCÉ NUESTRA ESCUELA</span>
+
           <h2 className="compromiso-title">
-            EDUCACIÓN TÉCNICA PARA EL <span className="highlight-yellow">DESARROLLO HUMANO</span>
+            Conocé más sobre nuestra escuela
           </h2>
+
           <p className="compromiso-text">
-            Nuestra escuela técnica se compromete a brindar una formación pública de excelencia, donde la tecnología se transforma en una herramienta de inclusión, conocimiento y trabajo en equipo para construir un futuro sólido junto a nuestra comunidad.
+            Somos una institución pública que construye comunidad a través del
+            respeto, la amistad y el compañerismo. Promovemos la responsabilidad,
+            el compromiso y la inclusión como bases de una educación técnica que
+            acompaña el crecimiento conjunto de estudiantes, docentes y familias.
           </p>
+
+          <ul className="compromiso-values">
+            {valores.map((v) => (
+              <li key={v.label}>
+                <span
+                  className="compromiso-dot"
+                  style={{ background: v.color }}
+                  aria-hidden="true"
+                />
+                {v.label}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

@@ -1,9 +1,11 @@
+/* ══════════════════════════════════════════
+   COMPROMISO — ET20  (estilo "About Us")
+   Dos columnas · imagen izquierda · contenido derecha
+   ══════════════════════════════════════════ */
+
 .compromiso-section {
-  --accent: var(--r-yellow);
-  padding: 100px 40px;
-  background-color: var(--surface-alt);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  padding: 90px 40px;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
 }
@@ -11,98 +13,103 @@
 .compromiso-container {
   max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 50px;
+  grid-template-columns: 45% 55%;
+  gap: 60px;
   align-items: center;
 }
 
-@media (min-width: 992px) {
-  .compromiso-container {
-    grid-template-columns: 0.8fr 1.2fr;
-  }
-}
-
-.compromiso-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 48px;
+/* Imagen */
+.compromiso-media {
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
 }
 
-.compromiso-card::after {
-  content: '';
-  position: absolute;
-  bottom: -20%;
-  right: -20%;
-  width: 180px;
-  height: 180px;
-  background: var(--accent);
-  opacity: .08;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.compromiso-logo {
-  max-width: 200px;
+.compromiso-img {
   width: 100%;
+  max-width: 500px;
   height: auto;
   object-fit: contain;
+  border-radius: 28px;
+  box-shadow: 0 10px 30px rgba(24, 26, 77, 0.08);
 }
 
-.compromiso-badge {
+/* Contenido */
+.compromiso-eyebrow {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  color: #1f2937;
-  background-color: var(--accent);
-  padding: 6px 14px;
-  border-radius: 4px;
+  font-size: 13px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  color: #273287;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .compromiso-title {
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  font-weight: 900;
-  color: var(--fg);
+  font-size: 42px;
+  font-weight: 800;
   line-height: 1.15;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
-}
-
-.highlight-yellow {
-  color: #b45309;
+  color: #181A4D;
+  margin: 0 0 20px;
 }
 
 .compromiso-text {
-  font-size: 1.05rem;
+  max-width: 560px;
+  font-size: 17px;
   line-height: 1.7;
-  color: var(--muted);
-  margin-bottom: 28px;
+  color: #273287;
+  margin: 0 0 24px;
 }
 
-.compromiso-tags {
+.compromiso-values {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-.tag {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--fg);
-  background: var(--surface);
-  border: 1px solid var(--line-strong);
-  padding: 8px 16px;
-  border-radius: 6px;
-  letter-spacing: 1px;
+.compromiso-values li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #181A4D;
+}
+
+.compromiso-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .compromiso-container {
+    gap: 40px;
+  }
+
+  .compromiso-title {
+    font-size: 34px;
+  }
+}
+
+/* Celular: una sola columna, imagen primero */
+@media (max-width: 768px) {
+  .compromiso-section {
+    padding: 70px 24px;
+  }
+
+  .compromiso-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .compromiso-title {
+    font-size: 28px;
+  }
 }

@@ -1,13 +1,43 @@
 /* ══════════════════════════════════════════
-   FOOTER v2 — ET20 (tema claro + acento)
+   FOOTER v2 — ET20  (identidad fachada)
+   Azul noche · texto crema · hover naranja
+   Franja decorativa inspirada en la fachada
    ══════════════════════════════════════════ */
 
 .site-footer {
-  --accent: var(--r-rose);
-  background: var(--surface-alt);
-  border-top: 1px solid var(--line);
-  color: var(--muted);
+  /* Paleta de marca */
+  --c-navy: #181A4D;
+  --c-blue: #273287;
+  --c-red: #E4070F;
+  --c-orange: #FFAE00;
+  --c-pink: #F03172;
+  --c-cream: #F9F3DB;
+  --c-green: #0F4A42;
+
+  --accent: var(--c-orange);
+
+  background: var(--c-navy);
+  border-top: none;
+  color: rgba(249, 243, 219, .8);
   font-size: .88rem;
+}
+
+/* Franja decorativa multicolor (fachada) */
+.site-footer::before {
+  content: '';
+  display: block;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #181A4D 0 14.2857%,
+    #273287 14.2857% 28.5714%,
+    #0F4A42 28.5714% 42.8571%,
+    #E4070F 42.8571% 57.1428%,
+    #FFAE00 57.1428% 71.4285%,
+    #F03172 71.4285% 85.7142%,
+    #F9F3DB 85.7142% 100%
+  );
 }
 
 .site-footer__main {
@@ -27,13 +57,13 @@
   font-weight: 900;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--fg);
+  color: var(--c-cream);
   margin: 0 auto 2px;
 }
 
 .sf-brand-sub {
   font-size: .8rem;
-  color: var(--accent);
+  color: var(--c-orange);
   margin: 0 0 16px;
 }
 
@@ -42,6 +72,7 @@
   line-height: 1.6;
   max-width: 28ch;
   margin: 0 0 24px;
+  color: rgba(249, 243, 219, .75);
 }
 
 .sf-social {
@@ -54,9 +85,9 @@
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  color: var(--accent);
+  background: rgba(249, 243, 219, .06);
+  border: 1px solid rgba(249, 243, 219, .16);
+  color: var(--c-cream);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,15 +95,15 @@
 }
 
 .sf-social__link:hover {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
+  background: var(--c-orange);
+  color: var(--c-navy);
+  border-color: var(--c-orange);
 }
 
 .sf-heading {
   font-size: .68rem;
   letter-spacing: .18em;
-  color: var(--fg);
+  color: var(--c-cream);
   margin: 0 0 20px;
 }
 
@@ -85,13 +116,13 @@
 
 .sf-links a {
   font-size: .85rem;
-  color: var(--muted);
+  color: rgba(249, 243, 219, .78);
   text-decoration: none;
   transition: color .15s ease;
 }
 
 .sf-links a:hover {
-  color: var(--accent);
+  color: var(--c-orange);
 }
 
 .sf-contact-list {
@@ -105,7 +136,7 @@
 .sf-contact-list li {
   gap: 10px;
   line-height: 1.45;
-  color: var(--muted);
+  color: rgba(249, 243, 219, .78);
 }
 
 .sf-minimap {
@@ -114,11 +145,11 @@
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(249, 243, 219, .16);
 }
 
 .site-footer__bottom {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(249, 243, 219, .15);
 
   padding: 40px;
 
@@ -131,7 +162,7 @@
   justify-content: center;
 
   gap: 16px;
-  color: var(--muted);
+  color: rgba(249, 243, 219, .7);
 }
 
 .sf-legal {
@@ -143,20 +174,20 @@
 }
 
 .sf-legal a {
-  color: var(--muted);
+  color: rgba(249, 243, 219, .7);
   text-decoration: none;
   transition: color .15s ease;
 }
 
 .sf-legal a:hover {
-  color: var(--accent);
+  color: var(--c-orange);
 }
 
 @media (max-width: 1024px) {
   .site-footer__main {
     grid-template-columns: 1fr 1fr;
     gap: 36px;
-    padding: 48px 24px 36px;
+    padding: 64px 24px 44px;
   }
 
   .sf-col--brand {
@@ -171,7 +202,7 @@
 
   .site-footer__bottom {
     align-items: flex-start;
-    padding: 20px 24px;
+    padding: 24px;
     gap: 10px;
   }
 }

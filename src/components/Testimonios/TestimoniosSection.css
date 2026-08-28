@@ -1,30 +1,41 @@
-/* ===================================================
-   Testimonios — ET20 (tema claro + acento)
-   =================================================== */
+/* ══════════════════════════════════════════
+   TESTIMONIOS — ET20  (identidad fachada)
+   Fondo azul #273287 · texto crema · detalles rosa/naranja
+   ══════════════════════════════════════════ */
 
 .testimonios {
-  --accent: var(--r-cyan);
+  /* Paleta de marca */
+  --c-navy: #181A4D;
+  --c-blue: #273287;
+  --c-orange: #FFAE00;
+  --c-pink: #F03172;
+  --c-pink-light: #E990A2;
+  --c-cream: #F9F3DB;
+
+  --accent: var(--c-orange);
+
   position: relative;
   overflow: hidden;
-  background: var(--bg);
+  background: var(--c-blue);
+  color: var(--c-cream);
 }
 
-/* Línea superior sólida (sin degradado) */
+/* Línea superior (naranja) */
 .testimonios::after {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--accent);
+  height: 4px;
+  background: var(--c-orange);
 }
 
-/* Línea inferior */
+/* Línea inferior (rosa) */
 .testimonios__inner::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--accent);
+  height: 4px;
+  background: var(--c-pink);
 }
 
 .testimonios__inner {
@@ -36,24 +47,23 @@
   z-index: 1;
 }
 
-.section-eyebrow-header .eyebrow {
-  color: var(--accent);
+/* Cabecera de sección (reutiliza .section-eyebrow-header, acotado a esta sección) */
+.testimonios .section-eyebrow-header .eyebrow {
+  color: var(--c-orange);
   font-size: 0.75rem;
   letter-spacing: .22em;
   text-transform: uppercase;
   font-weight: 700;
 }
-
-.section-eyebrow-header h2 {
+.testimonios .section-eyebrow-header h2 {
   font-size: clamp(2.2rem, 3vw, 2.8rem);
   font-weight: 900;
-  color: var(--fg);
+  color: var(--c-cream);
   margin: 14px 0;
   letter-spacing: -0.5px;
 }
-
-.section-eyebrow-header p {
-  color: var(--muted);
+.testimonios .section-eyebrow-header p {
+  color: rgba(249, 243, 219, .8);
   margin-bottom: 55px;
   font-size: 1rem;
 }
@@ -62,13 +72,14 @@
 .test-card {
   position: relative;
 
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(249, 243, 219, .18);
 
   border-radius: 24px;
   padding: 55px 45px;
 
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, .28);
+  backdrop-filter: blur(2px);
 
   transition:
     transform .4s ease,
@@ -82,7 +93,7 @@
 
 .test-card:hover {
   transform: translateY(-6px) scale(1.04);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, .34);
 }
 
 .test-card--out {
@@ -101,8 +112,8 @@
   top: 10px;
   left: 25px;
   font-size: 90px;
-  opacity: 0.12;
-  color: var(--accent);
+  opacity: 0.2;
+  color: var(--c-pink);
   transform: scale(1.2);
 }
 
@@ -110,7 +121,7 @@
   font-size: 1.1rem;
   line-height: 1.85;
   margin-bottom: 40px;
-  color: var(--fg);
+  color: var(--c-cream);
   max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
@@ -127,37 +138,36 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: var(--test-color, var(--accent));
+  background: var(--test-color, var(--c-orange));
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   font-weight: 800;
-  color: #000;
+  color: var(--c-navy);
 
   box-shadow:
-    0 0 0 3px color-mix(in srgb, var(--test-color, var(--accent)) 25%, transparent);
+    0 0 0 3px color-mix(in srgb, var(--test-color, var(--c-orange)) 35%, transparent);
 }
 
 .test-card__nombre {
   display: block;
   font-weight: 700;
   font-size: 1rem;
-  color: var(--fg);
+  color: var(--c-cream);
 }
 
 .test-card__cargo {
   display: block;
   font-size: 0.85rem;
-  color: var(--muted);
+  color: rgba(249, 243, 219, .75);
 }
 
 .test-card__anio {
   display: block;
   font-size: 0.8rem;
-  color: var(--muted);
-  opacity: .8;
+  color: rgba(249, 243, 219, .65);
 }
 
 .test-dots {
@@ -171,22 +181,22 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--line-strong);
+  background: rgba(249, 243, 219, .3);
   border: none;
   cursor: pointer;
 
-  opacity: 0.6;
+  opacity: 0.7;
 
   transition: all .25s ease;
 }
 
 .test-dot:hover {
-  opacity: 0.9;
+  opacity: 1;
   transform: scale(1.2);
 }
 
 .test-dot--active {
-  background: var(--dot-color, var(--accent));
+  background: var(--dot-color, var(--c-orange));
   opacity: 1;
   transform: scale(1.5);
 }

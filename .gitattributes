@@ -1,0 +1,9 @@
+# Normaliza los saltos de línea a LF en el repositorio y en el checkout.
+# Evita el aviso "LF will be converted to CRLF" con core.autocrlf activado.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.webmanifest text eol=lf

@@ -31,10 +31,10 @@ export default function Home() {
         <Hero />
         {/* ─── 2. COMPROMISO ───────────────────────── */}
         <Compromiso />
-        {/* ─── 3. PANELS (TIC / Multimedia / 360°) ──── */}
-        <HeroShowcase />
-        {/* ─── 4. ESPECIALIDADES ───────────────────── */}
+        {/* ─── 3. ESPECIALIDADES ───────────────────── */}
         <Especialidades />
+        {/* ─── 4. PANELS (TIC / Multimedia / 360°) ──── */}
+        <HeroShowcase />
         {/* ─── 5. ESTADÍSTICAS ─────────────────────── */}
         <StatsSection />
         {/* ─── 6. AUTORIDADES ──────────────────────── */}
