@@ -1,11 +1,11 @@
 /* ══════════════════════════════════════════
-   COMPROMISO — ET20  (estilo "About Us")
-   Dos columnas · imagen izquierda · contenido derecha
+   COMPROMISO — ET20  (paleta wireframe)
+   Fondo crema · texto marrón · acentos de marca
    ══════════════════════════════════════════ */
 
 .compromiso-section {
   padding: 90px 40px;
-  background-color: #ffffff;
+  background-color: var(--c-cream);
   display: flex;
   justify-content: center;
 }
@@ -32,7 +32,7 @@
   height: auto;
   object-fit: contain;
   border-radius: 28px;
-  box-shadow: 0 10px 30px rgba(24, 26, 77, 0.08);
+  box-shadow: 0 10px 30px rgba(24, 26, 77, 0.10);
 }
 
 /* Contenido */
@@ -41,7 +41,7 @@
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #273287;
+  color: var(--c-royal-blue);
   font-weight: 700;
   margin-bottom: 16px;
 }
@@ -50,7 +50,7 @@
   font-size: 42px;
   font-weight: 800;
   line-height: 1.15;
-  color: #181A4D;
+  color: var(--c-dark-blue);
   margin: 0 0 20px;
 }
 
@@ -58,7 +58,7 @@
   max-width: 560px;
   font-size: 17px;
   line-height: 1.7;
-  color: #273287;
+  color: var(--c-brown);
   margin: 0 0 24px;
 }
 
@@ -77,7 +77,7 @@
   gap: 8px;
   font-size: 15px;
   font-weight: 600;
-  color: #181A4D;
+  color: var(--c-dark-blue);
 }
 
 .compromiso-dot {

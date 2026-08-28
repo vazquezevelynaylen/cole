@@ -1,0 +1,17 @@
+/* ══════════════════════════════════════════
+   DESTACADO — bloque reservado (wireframe)
+   Contenedor vacío para contenido secundario
+   ══════════════════════════════════════════ */
+
+.destacado-section {
+  background: #ffffff;
+  border-top: 4px solid var(--c-lime, #CAC307);
+  padding: 60px 20px;
+}
+
+.destacado-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 60px;
+}

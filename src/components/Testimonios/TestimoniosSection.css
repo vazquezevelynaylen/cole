@@ -1,41 +1,38 @@
 /* ══════════════════════════════════════════
-   TESTIMONIOS — ET20  (identidad fachada)
-   Fondo azul #273287 · texto crema · detalles rosa/naranja
+   TESTIMONIOS — ET20  (paleta wireframe)
+   Fondo verde petróleo · texto crema · detalles amarillos
    ══════════════════════════════════════════ */
 
 .testimonios {
-  /* Paleta de marca */
-  --c-navy: #181A4D;
-  --c-blue: #273287;
-  --c-orange: #FFAE00;
-  --c-pink: #F03172;
-  --c-pink-light: #E990A2;
+  --c-green: #0F4A42;
+  --c-yellow: #FFAE00;
   --c-cream: #F9F3DB;
+  --c-pink: #F03172;
 
-  --accent: var(--c-orange);
+  --accent: var(--c-yellow);
 
   position: relative;
   overflow: hidden;
-  background: var(--c-blue);
+  background: var(--c-green);
   color: var(--c-cream);
 }
 
-/* Línea superior (naranja) */
+/* Línea superior (amarilla) */
 .testimonios::after {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 4px;
-  background: var(--c-orange);
+  background: var(--c-yellow);
 }
 
-/* Línea inferior (rosa) */
+/* Línea inferior (amarilla) */
 .testimonios__inner::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 4px;
-  background: var(--c-pink);
+  background: var(--c-yellow);
 }
 
 .testimonios__inner {
@@ -47,9 +44,8 @@
   z-index: 1;
 }
 
-/* Cabecera de sección (reutiliza .section-eyebrow-header, acotado a esta sección) */
 .testimonios .section-eyebrow-header .eyebrow {
-  color: var(--c-orange);
+  color: var(--c-yellow);
   font-size: 0.75rem;
   letter-spacing: .22em;
   text-transform: uppercase;
@@ -63,7 +59,7 @@
   letter-spacing: -0.5px;
 }
 .testimonios .section-eyebrow-header p {
-  color: rgba(249, 243, 219, .8);
+  color: rgba(249, 243, 219, .82);
   margin-bottom: 55px;
   font-size: 1rem;
 }
@@ -72,14 +68,13 @@
 .test-card {
   position: relative;
 
-  background: rgba(255, 255, 255, .06);
-  border: 1px solid rgba(249, 243, 219, .18);
+  background: rgba(255, 255, 255, .10);
+  border: 1px solid rgba(249, 243, 219, .22);
 
   border-radius: 24px;
   padding: 55px 45px;
 
-  box-shadow: 0 28px 56px rgba(0, 0, 0, .28);
-  backdrop-filter: blur(2px);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, .25);
 
   transition:
     transform .4s ease,
@@ -106,14 +101,13 @@
   transform: translateY(0) scale(1.03);
 }
 
-/* COMILLA DECORATIVA */
 .test-card__quote {
   position: absolute;
   top: 10px;
   left: 25px;
   font-size: 90px;
-  opacity: 0.2;
-  color: var(--c-pink);
+  opacity: 0.22;
+  color: var(--c-yellow);
   transform: scale(1.2);
 }
 
@@ -138,17 +132,17 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: var(--test-color, var(--c-orange));
+  background: var(--test-color, var(--c-yellow));
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   font-weight: 800;
-  color: var(--c-navy);
+  color: var(--c-green);
 
   box-shadow:
-    0 0 0 3px color-mix(in srgb, var(--test-color, var(--c-orange)) 35%, transparent);
+    0 0 0 3px color-mix(in srgb, var(--test-color, var(--c-yellow)) 35%, transparent);
 }
 
 .test-card__nombre {
@@ -161,13 +155,13 @@
 .test-card__cargo {
   display: block;
   font-size: 0.85rem;
-  color: rgba(249, 243, 219, .75);
+  color: rgba(249, 243, 219, .78);
 }
 
 .test-card__anio {
   display: block;
   font-size: 0.8rem;
-  color: rgba(249, 243, 219, .65);
+  color: rgba(249, 243, 219, .68);
 }
 
 .test-dots {
@@ -196,7 +190,7 @@
 }
 
 .test-dot--active {
-  background: var(--dot-color, var(--c-orange));
+  background: var(--dot-color, var(--c-yellow));
   opacity: 1;
   transform: scale(1.5);
 }

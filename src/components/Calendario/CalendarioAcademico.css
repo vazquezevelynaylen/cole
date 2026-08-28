@@ -1,15 +1,12 @@
 /* ══════════════════════════════════════════
    CALENDARIO ACADÉMICO — teaser (Home)
-   Azul noche · texto crema · botón naranja
+   Azul noche · texto crema · botón naranja/amarillo
    ══════════════════════════════════════════ */
 
 .cal-teaser {
-  /* Paleta de marca */
   --c-navy: #181A4D;
-  --c-orange: #FFAE00;
+  --c-yellow: #FFAE00;
   --c-cream: #F9F3DB;
-
-  --accent: var(--c-orange);
 
   padding: 90px 24px;
   background: var(--c-navy);
@@ -35,7 +32,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--c-orange);
+  background: var(--c-yellow);
   color: var(--c-navy);
   font-weight: 800;
   letter-spacing: .08em;

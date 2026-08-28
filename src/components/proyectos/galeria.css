@@ -1,11 +1,12 @@
-/* ===================================================
-   Galería Flip — ET20 (tema claro + acento)
-   =================================================== */
+/* ══════════════════════════════════════════
+   PROYECTOS (Galería) — ET20  (paleta wireframe)
+   Fondo blanco · acento celeste · panel realce azul
+   ══════════════════════════════════════════ */
 
 .galeria-section {
-  --accent: var(--r-pink);
+  --accent: var(--c-soft-blue);
   padding: 120px 20px;
-  background: var(--bg);
+  background: #ffffff;
   scroll-margin-top: 68px;
 }
 
@@ -18,7 +19,7 @@
 .galeria-title {
   font-size: clamp(2rem, 3vw, 2.6rem);
   margin-bottom: 50px;
-  color: var(--fg);
+  color: var(--c-dark-blue);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .6s ease, transform .6s ease;
@@ -64,7 +65,7 @@
   overflow: hidden;
   backface-visibility: hidden;
 
-  border: 1px solid var(--line);
+  border: 1px solid rgba(24, 26, 77, .12);
 }
 
 .galeria-front {
@@ -72,12 +73,12 @@
   background-position: center;
 }
 
-/* overlay sólido (sin degradado) para legibilidad */
+/* overlay para legibilidad (azul royal) */
 .galeria-front::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, .55);
+  background: rgba(39, 50, 135, .45);
 }
 
 .galeria-front h3 {
@@ -90,7 +91,7 @@
 }
 
 .galeria-back {
-  background: var(--surface);
+  background: var(--c-royal-blue);
   transform: rotateY(180deg);
 
   display: flex;
@@ -101,19 +102,19 @@
 }
 
 .galeria-back h3 {
-  color: var(--accent);
+  color: #fff;
   margin-bottom: 10px;
 }
 
 .galeria-back p {
-  color: var(--muted);
+  color: rgba(255, 255, 255, .85);
   font-size: .9rem;
 }
 
 .galeria-card:hover .galeria-front,
 .galeria-card:hover .galeria-back {
-  border-color: var(--accent);
-  box-shadow: var(--shadow-md);
+  border-color: var(--c-soft-blue);
+  box-shadow: 0 16px 40px rgba(24, 26, 77, .18);
 }
 
 @media (max-width: 768px) {

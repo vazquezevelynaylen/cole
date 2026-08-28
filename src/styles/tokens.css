@@ -37,4 +37,18 @@
   --radius: 12px;
   --radius-lg: 18px;
   --radius-pill: 999px;
+
+  /* ═══ Paleta de marca ET20 (wireframe principal) ═══ */
+  --c-orange: #FF340C;
+  --c-red: #E0070F;
+  --c-pink: #F03172;
+  --c-light-pink: #E990A2;
+  --c-yellow: #FFAE00;
+  --c-lime: #CAC307;
+  --c-green: #0F4A42;
+  --c-soft-blue: #9BB8ED;
+  --c-cream: #F9F3DB;
+  --c-dark-blue: #181A4D;
+  --c-royal-blue: #273287;
+  --c-brown: #441B07;
 }

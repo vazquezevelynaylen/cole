@@ -67,12 +67,12 @@ export const Especialidades = () => {
               <>
                 <span
                   className="esp-card__bar"
-                  style={{ background: card.color }}
+                  style={{ background: 'rgba(255,255,255,.55)' }}
                   aria-hidden="true"
                 />
                 <span
                   className="esp-card__icon"
-                  style={{ background: card.color + '1A', color: card.color }}
+                  style={{ background: 'rgba(255,255,255,.20)', color: '#ffffff' }}
                 >
                   {card.icon}
                 </span>
@@ -82,11 +82,11 @@ export const Especialidades = () => {
             )
 
             return card.to ? (
-              <Link key={card.key} to={card.to} className="esp-card">
+              <Link key={card.key} to={card.to} className="esp-card" style={{ background: card.color }}>
                 {inner}
               </Link>
             ) : (
-              <article key={card.key} className="esp-card">
+              <article key={card.key} className="esp-card" style={{ background: card.color }}>
                 {inner}
               </article>
             )

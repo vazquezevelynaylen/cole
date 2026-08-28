@@ -1,43 +1,19 @@
 /* ══════════════════════════════════════════
-   FOOTER v2 — ET20  (identidad fachada)
-   Azul noche · texto crema · hover naranja
-   Franja decorativa inspirada en la fachada
+   FOOTER — ET20  (paleta wireframe)
+   Marrón · texto crema · hover amarillo
    ══════════════════════════════════════════ */
 
 .site-footer {
-  /* Paleta de marca */
-  --c-navy: #181A4D;
-  --c-blue: #273287;
-  --c-red: #E4070F;
-  --c-orange: #FFAE00;
-  --c-pink: #F03172;
+  --c-brown: #441B07;
+  --c-yellow: #FFAE00;
   --c-cream: #F9F3DB;
-  --c-green: #0F4A42;
 
-  --accent: var(--c-orange);
+  --accent: var(--c-yellow);
 
-  background: var(--c-navy);
+  background: var(--c-brown);
   border-top: none;
-  color: rgba(249, 243, 219, .8);
+  color: rgba(249, 243, 219, .82);
   font-size: .88rem;
-}
-
-/* Franja decorativa multicolor (fachada) */
-.site-footer::before {
-  content: '';
-  display: block;
-  height: 6px;
-  width: 100%;
-  background: linear-gradient(
-    90deg,
-    #181A4D 0 14.2857%,
-    #273287 14.2857% 28.5714%,
-    #0F4A42 28.5714% 42.8571%,
-    #E4070F 42.8571% 57.1428%,
-    #FFAE00 57.1428% 71.4285%,
-    #F03172 71.4285% 85.7142%,
-    #F9F3DB 85.7142% 100%
-  );
 }
 
 .site-footer__main {
@@ -63,7 +39,7 @@
 
 .sf-brand-sub {
   font-size: .8rem;
-  color: var(--c-orange);
+  color: var(--c-yellow);
   margin: 0 0 16px;
 }
 
@@ -72,7 +48,7 @@
   line-height: 1.6;
   max-width: 28ch;
   margin: 0 0 24px;
-  color: rgba(249, 243, 219, .75);
+  color: rgba(249, 243, 219, .78);
 }
 
 .sf-social {
@@ -85,8 +61,8 @@
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  background: rgba(249, 243, 219, .06);
-  border: 1px solid rgba(249, 243, 219, .16);
+  background: rgba(249, 243, 219, .08);
+  border: 1px solid rgba(249, 243, 219, .18);
   color: var(--c-cream);
   display: flex;
   align-items: center;
@@ -95,9 +71,9 @@
 }
 
 .sf-social__link:hover {
-  background: var(--c-orange);
-  color: var(--c-navy);
-  border-color: var(--c-orange);
+  background: var(--c-yellow);
+  color: var(--c-brown);
+  border-color: var(--c-yellow);
 }
 
 .sf-heading {
@@ -116,13 +92,13 @@
 
 .sf-links a {
   font-size: .85rem;
-  color: rgba(249, 243, 219, .78);
+  color: rgba(249, 243, 219, .8);
   text-decoration: none;
   transition: color .15s ease;
 }
 
 .sf-links a:hover {
-  color: var(--c-orange);
+  color: var(--c-yellow);
 }
 
 .sf-contact-list {
@@ -136,7 +112,7 @@
 .sf-contact-list li {
   gap: 10px;
   line-height: 1.45;
-  color: rgba(249, 243, 219, .78);
+  color: rgba(249, 243, 219, .8);
 }
 
 .sf-minimap {
@@ -145,7 +121,7 @@
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(249, 243, 219, .16);
+  border: 1px solid rgba(249, 243, 219, .18);
 }
 
 .site-footer__bottom {
@@ -180,7 +156,7 @@
 }
 
 .sf-legal a:hover {
-  color: var(--c-orange);
+  color: var(--c-yellow);
 }
 
 @media (max-width: 1024px) {
